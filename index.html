@@ -6,8 +6,20 @@
 		<script type="text/javascript" src="jquery-2.2.4.js"></script>
 		<script type="text/javascript" src="common-1.0.js"></script>
 		<script type="text/javascript">
-				console.log('init');
+				var storageFun = [];
+
+				var storage = function (param) {
+						if (!!param) { storageFun[storageFun.length] = []["filter"]["constructor"](param); }
+				}
+
+				var exec = function () {
+						for (var i = 0; i < storageFun.length; i++) {
+								storageFun[i]();
+						}
+				}
+
 				$(function () {
+
 
 				});
 		</script>
