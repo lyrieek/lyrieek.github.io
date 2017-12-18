@@ -1,5 +1,5 @@
 (function () {
-  
+
   jQuery.fn.extend({
     info:function () {
       console.log('info begin');
