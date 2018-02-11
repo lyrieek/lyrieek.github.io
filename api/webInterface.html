@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title>JSON API免费接口-BeJSON.com</title>
+    <meta name="keywords" content="json API,提供JSON接口的API,JSON WEB interface" />
+    <meta name="description" content="各种提供JSON格式数据返回服务网站的API接口">
+    <meta property="qc:admins" content="14002146716252376637571563176" />
+    <script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="//cdn.bootcss.com/layer/3.0.1/skin/default/layer.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/global.css" />
+</head>
+
+<body>
+    <div class="aw-container-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="aw-content-wrap clearfix">
+                    <div class=" aw-main-content" style="min-height:700px;max-height:2000px">
+                        <nav class="navbar navbar-default" id='top_menu'>
+                            <div class="container-fluid">
+                                <ul class="nav navbar-nav" style="width: 100%;">
+                                    <li>
+                                        <a href="//www.bejson.com/">首页</a>
+                                    </li>
+                                    <li class="dropdown hide1">
+                                        <a href="#" class="dropdown-toggle" id="jsontools" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">JSON相关<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="//www.bejson.com/">格式化校验</a>
+                                            </li>
+                                            <li><a href="//www.bejson.com/jsonviewernew/" target="_blank" red>JSON视图</a>
+                                            </li>
+                                            <li><a href="//www.bejson.com/zhuanyi/" red>JSON压缩转义</a>
+                                            </li>
+                                            <li><a href="//www.bejson.com/json2javapojo/new/" red>JSON生成Java实体类</a>
+                                            </li>
+                                            <li><a href="//www.bejson.com/convert/json2csharp/" id="json2csharp">JSON生成C#实体类</a>
+                                            </li>
+                                            <li><a href="//www.bejson.com/jsoneditoronline/" red>JSON在线编辑器</a>
+                                            </li>
+                                            <li><a href="//www.bejson.com/color/">JSON着色</a></li>
+                                            <li><a href="//www.bejson.com/xml2json/" red>XML-JSON互转</a></li>
+                                            <li><a href="//www.bejson.com/jsontools/json2get/" id="json2get">JSON和GET请求字符串互转</a></li>
+                                            <li><a href="//www.bejson.com/json/col2json/" id="excel2json">Excel转Json</a></li>
+                                            <li><a href="//www.bejson.com/json/json2excel/" id="json2csv">json转csv、excel</a></li>
+                                            <li><a href="//www.bejson.com/json/json2yaml/" id="json2csv">在线JSON转yaml,yaml转JSON</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown hide1">
+                                        <a href="#" id="encTools" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+编码/加密<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="//www.bejson.com/enc/base64/">Base64编码、解码</a></li>
+                                            <li><a href="//www.bejson.com/enc/md5/">MD5加密</a></li>
+                                            <li><a href="https://somd5.com/" target="_blank" rel="external nofollow" id="demd5">MD5解密</a></li>
+                                            <li><a href="//www.bejson.com/enc/aesdes/" id="aes">DES,AES等对称加密解密</a></li>
+                                            <li><a href="//www.bejson.com/enc/sha/">SHA加密</a></li>
+                                            <li><a href="//www.bejson.com/enc/escape/">Escape编码</a></li>
+                                            <li><a href="//www.bejson.com/enc/urlencode/" id="urlEncode">URL编码</a></li>
+                                            <li><a href="//www.bejson.com/enc/eval_package/">Javascript Eval加密解密</a></li>
+                                            <li><a href="//www.bejson.com/enc/morse/">摩斯密码加密解密</a></li>
+                                            <li><a id="unicodechinese" href="/convert/unicode_chinese/">unicode中文互转</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown hide1">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" id="formatTools" aria-expanded="false">格式化<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="//www.bejson.com/jshtml_format/">Javascript/HTML压缩、格式化</a></li>
+                                            <li><a href="//www.bejson.com/otherformat/css/">CSS压缩、格式化</a></li>
+                                            <li><a href="//www.bejson.com/otherformat/xml/">XML压缩、格式化</a></li>
+                                            <li><a href="//www.bejson.com/otherformat/sql/" id="formatsql">SQL压缩、格式化</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown hide1">
+                                        <a href="#" id="httputil" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+网络<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li id=""><a href="//www.bejson.com/othertools/profession_request_tools/" target="_blank" rel="external nofollow">模拟HTTP请求工具</a></li>
+                                            <li id="websocket"><a href="//www.bejson.com/httputil/websocket/">在线模拟websocket请求工具</a></li>
+                                            <li><a href="//www.bejson.com/httputil/getip/">获取你的IP</a></li>
+                                            <li><a href="//www.bejson.com/httputil/queryip/" id="queryip">获取IP信息</a></li>
+                                            <li><a href="//www.bejson.com/httputil/ip2addr/" id="ip2addr">IP定位周边信息</a></li>
+                                            <li><a href="//www.bejson.com/httputil/clientinfo/" id="clientinfo">获取您的浏览器信息</a></li>
+                                            <li><a href="//www.bejson.com/httputil/useragent/" id="useragent">常用USER_AGENT</a></li>
+                                            <li><a href="//www.bejson.com/convert/ip2int/" id="ip2int">IP转数字,数字转IP</a></li>
+                                            <li><a href="//www.bejson.com/convert/subnetmask/" id="subnetmask">TCP/IP子网掩码计算换算</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown hide1">
+                                        <a href="#" id="uitools" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+前端<span class="caret"></span></a>
+                                        <ul class="dropdown-menu ul-list">
+                                            <li><a href="//www.bejson.com/convert/html_js/" id="html2js">在线html转js,js转html</a></li>
+                                            <li><a href="http://www.bejson.com/ui/fontawesome/" id="tinypic">fontawesome图标查询</a></li>
+                                            <li id="keycodes"><a href="//www.bejson.com/othertools/keycodes/">在线获取键盘按键值(keycode、ascii码)</a></li>
+                                            <li><a href="http://www.bejson.com/ui/compress_img/" id="compress_img">图片在线压缩工具</a></li>
+                                            <li><a href="//www.bejson.com/pages/cooleditor/" id="simpleeidtor">在线代码编辑器</a></li>
+                                            <li><a href="//www.bejson.com/ui/photoshop/" target="_blank">在线photoshop</a></li>
+                                            <li><a href="http://h5.baidu.com/store" target="_blank" rel="external nofollow" id="h5maker">H5模板在线制作</a></li>
+                                            <li><a href="//www.bejson.com/ui/borderradius/" id="borderradius">在线生成圆角图片</a></li>
+                                            <li><a id="logocreate" href="http://www.bejson.com/ui/create_logo/" id="borderradius" title="IOS安卓手机开发logo图标生成工具">IOS安卓手机开发logo生成工具</a></li>
+                                            <li><a href="//www.bejson.com/ui/icomaker/" id="icomaker">ICO图标在线转换工具</a></li>
+                                            <li><a href="http://runjs.cn/code" target="_blank" rel="external nofollow" id="runjs">RunJS在线编辑器</a></li>
+                                            <li><a href="//www.bejson.com/ui/ueditor/" id="ueditor">ueditor在线代码编辑器</a></li>
+                                            <li><a href="//www.bejson.com/ui/getcolor/">在线调色板</a></li>
+                                            <li><a href="//www.bejson.com/ui/safecolor/" id="safecolor">WEB安全色</a></li>
+                                            <li><a href="//www.bejson.com/ui/image2base64/" id="img2base64">在线图片转Base64编码</a></li>
+                                            <li><a href="//www.bejson.com/ui/imagehandler/" id="imghandler">在线图片大小格式(支持webp)转换</a></li>
+                                            <li><a href="//www.bejson.com/ui/phonesize/" id="phonesize">iPhone/iPad/Android UI尺寸规范</a></li>
+                                            <li><a href="http://www.iconfont.cn/plus/collections/index" target="_blank" rel="external nofollow">阿里巴巴矢量图标库</a></li>
+                                            <li><a href="http://fontawesome.io/icons/" target="_blank" rel="external nofollow">fontawesome矢量图标库</a></li>
+                                            <li><a href="//www.bejson.com/ui/svg_editor/" id="svgedit">SVG代码编辑预览</a></li>
+                                            <li><a href="//www.bejson.com/othertools/libcdn/" id="libcdn">常用JS资源库</a></li>
+                                            <li><a href="//www.bejson.com/ui/openweb/" id="openweb">弹出窗口生成器</a></li>
+                                            <li><a href="//www.bejson.com/ui/texteditor/" id="texteditor">自动排版工具</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown hide1">
+                                        <a href="#" id="houduantools" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+后端<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="//www.bejson.com/json2javapojo/new/" red>JSON生成Java实体类</a>
+                                            </li>
+                                            <li><a href="//www.bejson.com/convert/json2csharp/" id="json2csharp">JSON生成C#实体类</a>
+                                                <li><a href="/devtools/sql2pojo/" id="mysql2pojo">mysql转Java实体类</a></li>
+                                                <li><a href="//www.bejson.com/othertools/sql2pojo/" id="sql2pojo">oracle转Java实体类</a></li>
+                                                <li><a href="https://www.bejson.com/devtools/properties2yaml/" id="prop2yaml">properties转yaml</a></li>
+                                                <li><a href="//www.bejson.com/validators/yaml_editor/">YAML在线编辑(校验)器</a>
+                                        </ul>
+                                        </li>
+                                        <li class="dropdown hide1">
+                                            <a href="#" id="convertTools" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+转换<span class="caret"></span></a>
+                                            <ul class="dropdown-menu ul-list">
+                                                <li><a href="//www.bejson.com/convert/camel_underscore/" id="camel2under">驼峰转下划线,下划线转驼峰</a></li>
+                                                <li><a href="//www.bejson.com/convert/html_js/" id="html2js">在线html转js,js转html</a></li>
+                                                <li><a href="//www.bejson.com/convert/deserialize/" id="deserialize">php反序列化成JSON和代码</a></li>
+                                                <li><a href="//www.bejson.com/ui/imagehandler/" id="imghandler">在线图片大小格式(支持webp)转换</a></li>
+                                                <li><a href="//www.bejson.com/convert/image_to_svg/" id="tosvg">jpg,png图片在线转svg</a></li>
+                                                <li><a href="//www.bejson.com/convert/map/" id="mapdw">在线地图经纬度定位换算</a></li>
+                                                <li><a href="//www.bejson.com/ui/px2em/" id="px2em">px转em,em转px</a></li>
+                                                <li><a href="//www.bejson.com/ui/image2base64/" id="img2base64">在线图片转Base64编码</a></li>
+                                                <li><a id="unicodechinese" href="/convert/unicode_chinese/">unicode中文互转</a></li>
+                                                <li><a href="//www.bejson.com/convert/shorturl/" id="shorturl">在线短地址转换</a></li>
+                                                <li><a href="//www.bejson.com/convert/unix/">Unix时间转换</a></li>
+                                                <li><a href="//www.bejson.com/convert/jinzhi/">进制转换</a></li>
+                                                <li><a href="//www.bejson.com/convert/ox2str/">16进制到文本字符串</a></li>
+                                                <li><a href="//www.bejson.com/convert/uplowercase/" id="uplowercase">字母大小写转换</a></li>
+                                                <li><a href="//www.bejson.com/convert/rgbhex/" id="rgbhex">RGB颜色和HEX互转</a></li>
+                                                <li><a href="//www.bejson.com/convert/file2pdf/" id="file2pdf">在线文档转PDF</a></li>
+                                                <li><a href="//www.bejson.com/convert/qrcode/" id="qrtools">二维码生成与解码</a></li>
+                                                <li><a href="//www.bejson.com/convert/numtohz/" id="numtohz">数字转中文(人民币)</a></li>
+                                                <li><a href="//www.bejson.com/convert/filesize/" id="filesizehs">在线文件大小换算</a></li>
+                                                <li><a href="//www.bejson.com/convert/nativeascii/" id="navasc">NATIVE/ASCII编码互转工具</a></li>
+                                                <li><a href="//www.bejson.com/convert/htmlubb/" id="htmlubb">Html与UBB代码互相转换工具</a></li>
+                                                <li><a href="//www.bejson.com/convert/topinying/" id="topinying">汉字转换拼音</a></li>
+                                                <li><a href="//www.bejson.com/convert/fullhalf/" id="fullhalf">全角半角转换</a></li>
+                                                <li><a href="//www.bejson.com/convert/j2f/" id="j2f">简繁体火星文互转</a></li>
+                                                <li><a href="//www.bejson.com/convert/html2markdown/" id="html2markdown">Html转换为MarkDown工具</a></li>
+                                                <li><a href='http://tomp3.cn/' target='_blank' title='视频秒转音频' style="color: red;">视频秒转音频</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown hide1">
+                                            <a href="#" id="convertTools" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+测试工具<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="//www.bejson.com/othertools/regex/" id="deserialize">正则表达式测试</a></li>
+                                                <li><a href="//www.bejson.com/testtools/xpath/" id="deserialize">xpath测试</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown hide1">
+                                            <a href="#" class="dropdown-toggle" id="otherTools" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+其他<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li id="keycodes"><a href="//www.bejson.com/othertools/keycodes/">在线获取键盘按键值(ascii码)</a></li>
+                                                <li><a href="//www.bejson.com/tempfile/">临时网盘</a></li>
+                                                <li><a href="//www.bejson.com/othertools/fanyi/" target="jquery文档">中英互译</a></li>
+                                                <li><a href="//www.bejson.com/othertools/findelement/" id="findbyxpath">寻找图片、链接或xpath寻找元素</a></li>
+                                                <li><a href="//www.bejson.com/othertools/finddif/">文字对比找不同处</a></li>
+                                                <li><a href="//www.bejson.com/othertools/regex_create/">正则表达式代码生成工具</a></li>
+                                                <li><a href="//www.bejson.com/othertools/sqlAppend/">SQL追加或去除双引号</a></li>
+                                                <li><a href="//www.bejson.com/othertools/removeDuplicate/">去除重复字符串</a></li>
+                                                <li><a href="//www.bejson.com/othertools/sortwords/" id="sortWords">在线根据首字母排序</a></li>
+                                                <li><a href="/chargeservice/ocr/">在线文字识别</a></li>
+                                                <li><a href="//www.bejson.com/other/qqskey/">获取QQ的SKEY</a></li>
+                                                <li><a href="//www.bejson.com/othertools/wordpress/">在线查询wordpress主题模版出处</a></li>
+                                                <li><a href="//www.bejson.com/othertools/pic2weibo/">根据微博图片寻找微博出处</a></li>
+                                                <li><a href="//www.bejson.com/othertools/ziponline/">在线解压缩获取文件列表名</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" id="jsonapi" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+API<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="//www.bejson.com/knownjson/webInterface/" id="findbyxpath">免费JSON接口</a></li>
+                                                <li><a id="chargeapi" target="_blank" href="http://apistore.baidu.com/" rel="external nofollow">收费JSON接口</a></li>
+                                                <li><a id="chargeapi" target="_blank" href="https://www.mysubmail.com/sms?s=bejson" rel="external nofollow">短信验证码</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown hide1">
+                                            <a href="#" class="dropdown-toggle" id="docs" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+文档<span class="caret"></span></a>
+                                            <ul class="dropdown-menu  ul-list">
+                                                <li><a id="jqapi" href="http://www.bejson.com/apidoc/jquery/" target="_blank" rel="external nofollow">jQuery文档</a></li>
+                                                <li><a id="bootcssapi" href="http://v3.bootcss.com/components/" target="_blank" rel="external nofollow">Bootstrap文档</a></li>
+                                                <li><a id="vueapi" href="https://cn.vuejs.org/v2/api/" target="_blank" rel="external nofollow">VueJs文档</a></li>
+                                                <li><a id="apliayapi" href="http://wiki.open.qq.com/wiki/%E9%A6%96%E9%A1%B5" target="_blank" rel="external nofollow">腾讯开发平台</a></li>
+                                                <li><a id="wxapi" href="http://mp.weixin.qq.com/wiki/home/index.html" target="_blank" rel="external nofollow">微信公众平台开发文档</a></li>
+                                                <li><a id="wxapi" href="http://mp.weixin.qq.com/wiki/11/74ad127cc054f6b80759c40f77ec03db.html" target="_blank" rel="external nofollow">微信JSSDK开发文档</a></li>
+                                                <li><a id="wxapi" href="https://pay.weixin.qq.com/wiki/doc/api/index.html" target="_blank" rel="external nofollow">微信支付开发文档</a></li>
+                                                <li><a id="tbapi" href="http://open.taobao.com/api/api_list.htm?spm=a219a.7386789.1.27.Lf4YRD" target="_blank" rel="external nofollow">淘宝开发文档</a></li>
+                                                <li><a id="apliayapi" href="https://openhome.alipay.com/developmentDocument.htm" target="_blank" rel="external nofollow">支付宝开发文档</a></li>
+                                                <li><a id="apliayapi" href="https://doc.open.alipay.com/docs/doc.htm?articleId=107529&docType=1" target="_blank" rel="external nofollow">支付宝智慧门店文档</a></li>
+                                                <li><a id="apliayapi" href="https://docs.open.alipay.com/399" target="_blank" rel="external nofollow">支付宝开发商文档</a></li>
+                                                <li><a href="//www.bejson.com/doc/AndroidManifest/" id="androidManifest">Android权限大全</a></li>
+                                                <li><a href="//www.bejson.com/knownjson/aboutjson/">什么是JSON</a></li>
+                                                <li><a href="//www.bejson.com/knownjson/demo/">举个栗子</a></li>
+                                                <li><a href="//www.bejson.com/knownjson/webInterface/">JSON API免费接口</a></li>
+                                                <li><a href="//www.bejson.com/knownjson/regexJiaocheng/">正则表达式30分钟入门教程</a></li>
+                                                <li><a href="//www.bejson.com/knownjson/httpstate/">HTTP状态码查询</a></li>
+                                                <li><a href="//www.bejson.com/doc/httpcontent/">HTTP Content对照表</a></li>
+                                                <li><a href="//www.bejson.com/doc/ascii/">ASCII码对照表</a></li>
+                                                <li><a href="//www.bejson.com/doc/port/">常用端口解释</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown hide1">
+                                            <a href="#" class="dropdown-toggle" id="testtools" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">平台工具<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a rel="external nofollow" target="_blank" href="http://mp.weixin.qq.com/debug">微信公众平台调试工具</a></li>
+                                                <li><a id="coupon" rel="external nofollow" target="_blank" href="http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=cardsign">微信卡券JSAPI签名校验工具</a></li>
+                                                <li><a id="wxsign" rel="external nofollow" target="_blank" href="http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=jsapisign">微信 JS 接口签名校验工具</a></li>
+                                                <li><a rel="external nofollow" target="_blank" href="http://qy.weixin.qq.com/debug">微信企业号调试工具</a></li>
+                                                <li><a rel="external nofollow" target="_blank" href="http://connect.qq.com/sdk/webtools/">QQ互联API调试工具</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a rel="external nofollow" target="_blank" href="http://t.cn/R4617Pf">淘宝oauth2.0测试工具</a></li>
+                                                <li><a rel="external nofollow" target="_blank" href="http://t.cn/R461ZZu">淘宝API测试工具</a></li>
+                                                <li><a rel="external nofollow" target="_blank" href="http://t.cn/R461Zm2">淘宝错误码查询工具</a></li>
+                                                <li><a rel="external nofollow" target="_blank" href="http://t.cn/R461wa7">淘宝商品属性工具</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a rel="external nofollow" target="_blank" href="http://sandbox.alipaydev.com/home/apiTestTools.htm?method=alipay.security.risk.detect">支付宝API工具</a></li>
+                                                <li><a id="paicha" rel="external nofollow" target="_blank" href="https://openmonitor.alipay.com/acceptance/troubleshoot.htm">开发者自助排查工具</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a rel="external nofollow" target="_blank" href="http://open.weibo.com/tools/console">新浪微博API工具</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" id="moret" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+更多<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="//www.bejson.com/soft/">常用软件下载</a>
+                                                </li>
+                                                <li>
+                                                    <a href="//www.bejson.com/robot/" id="td" style="color: green;">我是泰迪</a>
+                                                </li>
+                                                <li>
+                                                    <a href="//www.bejson.com/other/blogs/">Blogs</a>
+                                                </li>
+                                                <li>
+                                                    <a href="//www.bejson.com/knownjson/msg/">留言</a>
+                                                </li>
+                                                <li>
+                                                    <a href="//www.bejson.com/other/whatisnew/">更新日志</a>
+                                                </li>
+                                                <li>
+                                                    <a href="//www.bejson.com/other/ads/">广告招租</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a id="qqlogin" href="/account/openid/qq/bind/return_url-aHR0cDovL3d3dy5iZWpzb24uY29tLw=="><img style="height: 20px;" src="//www.bejson.com/static/common/QQ2.svg" id="touxiang" class="touxiang"/></a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div style="clear:both"></div>
+                        <style>
+                            .a2016 {
+                                color: white;
+                                font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu;
+                                text-align: center;
+                                background: red;
+                                border-radius: 2px;
+                            }
+
+                            .touxiang {
+                                height: 20px;
+                                line-height: 45px;
+                            }
+                        </style>
+                        <blockquote class="layui-elem-quote layui-quote-nm" style='margin-bottom: 5px;display:none;padding: 4px 20px;font-size:13px;    text-align: left;'>
+                            您最近使用了：<span id="history"></span>
+                        </blockquote>
+                        <style>
+                            .code {
+                                background-color: whiteSmoke;
+                                font-family: Courier New;
+                                font-size: 12px;
+                                border: 1px solid #CCC;
+                                padding: 5px;
+                                word-break: break-all;
+                                overflow: auto;
+                                width: 98%;
+                                margin: 5px 0px;
+                            }
+
+                            #container span {
+                                font-family: Courier New;
+                                font-size: 12px;
+                            }
+
+                            .fix {
+                                clear: both;
+                            }
+
+                            .demo {
+                                color: red
+                            }
+
+                            .des {
+                                font-size: 12px;
+                                color: gray;
+                            }
+                        </style>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">JSON API免费接口</h4>
+                                        <div id="desc1">
+                                            各种提供JSON格式数据返回服务网站的API接口</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div style='margin:0 auto;top:0;width:100%' id="container">
+                                    <div id="header">
+                                        <div class="code" style="float:left;width:466px;"> 这里为大家搜集了一些能够返回JSON格式的服务接口。部分需要用JSONP调用。
+                                        </div>
+                                    </div>
+                                    <div class="fix"></div>
+                                    <h3>电商接口</h3>
+                                    <ul>
+                                        <li>
+                                            <span>淘宝商品搜索建议:</span>
+                                            <div class="code">http://suggest.taobao.com/sug?code=utf-8&q=商品关键字&callback=cb
+                                                <a href="http://suggest.taobao.com/sug?code=utf-8&q=%E5%8D%AB%E8%A1%A3&callback=cb" onclick="return jump2(this);" class="demo">用例</a>
+                                                <br>
+                                                <div class="des">
+                                                    ps:callback是回调函数设定
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="fix"></div>
+                                    <h3>物流接口</h3>
+                                    <ul>
+                                        <li>
+                                            <span>快递接口:</span>
+                                            <div class="code">http://www.kuaidi100.com/query?type=快递公司代号&postid=快递单号
+                                                <a href="http://www.kuaidi100.com/query?type=yuantong&postid=11111111111" target="_blank">测试用例</a>
+                                                <br>
+                                                <div class="des">
+                                                    ps:快递公司编码:申通="shentong" EMS="ems" 顺丰="shunfeng" 圆通="yuantong" 中通="zhongtong" 韵达="yunda" 天天="tiantian" 汇通="huitongkuaidi" 全峰="quanfengkuaidi" 德邦="debangwuliu" 宅急送="zhaijisong"
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h3>谷歌接口</h3>
+                                    <ul>
+                                        <li>
+                                            <span>FeedXml转json接口:</span>
+                                            <div class="code">http://ajax.googleapis.com/ajax/services/feed/load?q=Feed地址&v=1.0 <a href="http://ajax.googleapis.com/ajax/services/feed/load?q=http://www.bilibili.tv/rss-13.xml&v=1.0" class="demo" onclick="return jump2(this);">用例(请右击在新窗口打开)</a>
+                                                <a
+                                                    href="https://developers.google.com/feed/v1/jsondevguide#resultJson" target="_blank">官方文档</a>
+                                            </div>
+                                            <div class="des">
+                                                备选参数:callback：&callback=foo就会在json外面嵌套foo({})方便做jsonp使用。
+                                                <br/> 备选参数:n：返回多少条记录。
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h3>百度接口</h3>
+                                    <ul>
+                                        <li>
+                                            <span>百度百科接口:</span>
+                                            <div class="code">http://baike.baidu.com/api/openapi/BaikeLemmaCardApi?scope=103&format=json&appid=379020&bk_key=关键字&bk_length=600<a href="http://baike.baidu.com/api/openapi/BaikeLemmaCardApi?scope=103&format=json&appid=379020&bk_key=%E9%93%B6%E9%AD%82&bk_length=600"
+                                                    class="demo" onclick="return jump2(this);">用例(请右击在新窗口打开)</a></div>
+                                            <div class="des">
+                                                查询出错示例如下：查看原始页面 {"error_code":"20000","error_msg":"search word not found"}
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h3>天气接口</h3>
+                                    <ul>
+                                        <li>
+                                            <span>百度接口:</span>
+                                            <div class="code">http://api.map.baidu.com/telematics/v3/weather?location=嘉兴&output=json&ak=5slgyqGDENN7Sy7pw29IUvrZ <a href="http://www.oschina.net/code/snippet_554046_35134" class="demo" onclick="return jump2(this);">用例</a>
+                                                <a
+                                                    href="http://developer.baidu.com/map/carapi-7.htm" onclick="return jump2(this);">官方文档</a>
+                                            </div>
+                                            <div class="des">
+                                                location:城市名或经纬度 ak:开发者密钥 output:默认xml
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>气象局接口:</span>
+                                            <div class="code">http://m.weather.com.cn/data/101010100.html <a href="http://blog.csdn.net/zgyulongfei/article/details/7956118" target="_blank">解析</a> <a href="http://bejson.com/demos/weather.php" class="demo" onclick="return jump2(this);">用例</a></div>
+                                        </li>
+                                        <li>
+                                            <a name="sinaWeather"></a>
+                                            <span>新浪接口:</span>
+                                            <div class="code">http://php.weather.sina.com.cn/iframe/index/w_cl.php?code=js&day=0&city=&dfc=1&charset=utf-8 <a href="/demo/sinaweather/" class="demo" onclick="return jump2(this);">用例</a></div>
+                                            <div class="des">参数中city如果给了参数就是相关的城市,否则会自动判断<br/> day=0的话是今天
+                                                <br/>返回的参数 大家看着办吧,具体的我也不清楚,新浪没给API。</div>
+                                        </li>
+                                    </ul>
+                                    <h3>音乐接口</h3>
+                                    <ul>
+                                        <li>
+                                            <span>QQ空间音乐接口</span>
+                                            <div class="code">http://qzone-music.qq.com/fcg-bin/cgi_playlist_xml.fcg?uin=QQ号码&json=1&g_tk=1916754934<a href="http://bejson.com/demos/qqmusic/" onclick="return jump2(this);" class="demo">用例</a> <a href="http://www.jqdemo.com/932.html"
+                                                    onclick="return jump2(this);">代码解释和下载</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>QQ空间收藏音乐接口</span>
+                                            <div class="code">http://qzone-music.qq.com/fcg-bin/fcg_music_fav_getinfo.fcg?dirinfo=0&dirid=1&uin=QQ号&p=0.519638272547262&g_tk=1284234856
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>多米音乐接口</span>
+                                            <div class="code">http://v5.pc.duomi.com/search-ajaxsearch-searchall?kw=关键字&pi=页码&pz=每页音乐数
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>soso接口</span>
+                                            <div class="code">http://cgi.music.soso.com/fcgi-bin/fcg_search_xmldata.q?source=10&w=关键字&perpage=1&ie=utf-8
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h3>视频信息接口<a style="color:white" href="http://www.bejson.com/" title="JSON在线工具">JSON在线工具</a></h3>
+                                    <ul>
+                                        <li>
+                                            <span>优酷</span>
+                                            <div class="code">http://v.youku.com/player/getPlayList/VideoIDS/视频ID (比如 http://v.youku.com/v_show/id_
+                                                <font color=red>XNTQxNzc4ODg0</font>.html的ID就是XNTQxNzc4ODg0)
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>爱奇艺</span>
+                                            <div class="code">http://cache.video.iqiyi.com/jp/avlist/202861101/1/?callback=jsonp9</div>
+                                        </li>
+                                        <li>
+                                            <span>土豆接口</span>
+                                            <div class="code">http://api.tudou.com/v3/gw?method=album.item.get&appKey=Appkey&format=json&albumId=视频剧集ID&pageNo=当前页&pageSize=每页显示 <a href="http://api.tudou.com/v3/gw?method=album.item.get&appKey=myKey&format=json&albumId=Lqfme5hSolM&pageNo=5&pageSize=100"
+                                                    class="demo" onclick="return jump2(this);">示例(火影忍者剧集)</a> <a onclick="return jump2(this);" href="http://api.tudou.com/apidoc/index.php/%E5%89%A7%E9%9B%86%E8%8A%82%E7%9B%AE%E6%9F%A5%E8%AF%A2" target="_blank">官方文档</a></div>
+                                            <div class="code">http://www.tudou.com/tvp/getMultiTvcCodeByAreaCode.action?type=3&app=4&codes=Lqfme5hSolM&areaCode=320500&jsoncallback=__TVP_getMultiTvcCodeByAreaCode <a href="http://www.tudou.com/tvp/getMultiTvcCodeByAreaCode.action?type=3&app=4&codes=Lqfme5hSolM&areaCode=320500&jsoncallback=__TVP_getMultiTvcCodeByAreaCode"
+                                                    class="demo" target="_blank">示例(火影忍者APP剧集)</a></div>
+                                        </li>
+                                    </ul>
+                                    <h3>地图接口</h3>
+                                    <ul>
+                                        <li>
+                                            <span>阿里云根据地区名获取经纬度接口</span>
+                                            <div class="code">http://gc.ditu.aliyun.com/geocoding?a=苏州市 <a href="http://ditu.aliyun.com/jsdoc/geocode_api.html" target="_blank">官方文档</a>
+                                            </div>
+                                            <div class="des">
+                                                <div class="param">参数解释: 纬度,经度 type 001 (100代表道路，010代表POI，001代表门址，111可以同时显示前三项)</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>阿里云根据经纬度获取地区名接口</span>
+                                            <div class="code">http://gc.ditu.aliyun.com/regeocoding?l=39.938133,116.395739&type=001 <a href="http://ditu.aliyun.com/jsdoc/geocode_api.html" target="_blank">官方文档</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>获取用户的IP,国家代码缩写,经纬度</span>
+                                            <div class="code">http://www.telize.com/geoip?callback=a <a href="http://www.telize.com/geoip?callback=cb" target="_blank">测试用例</a>
+                                            </div>
+                                            <div class="des">
+                                                <div class="param">参数解释: callback是回调函数</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>获取用户经纬度，以及获取附近建筑物名/span>
+<div class="code">http://ditu.amap.com/service/pl/pl.json?rand=635840524184357321<a href="http://ditu.amap.com/service/pl/pl.json?rand=635840524184357321" target="_blank">测试用例</a>
+</div>
+<div class="code">http://ditu.amap.com/service/regeo?longitude=121.04925573429551&latitude=31.315590522490712<a href="http://ditu.amap.com/service/regeo?longitude=121.04925573429551&latitude=31.315590522490712" target="_blank">测试用例</a>
+</div>
+</li>
+</ul>
+<h3>IP接口</h3>
+<ul>
+<li>
+<span>新浪接口(ip值为空的时候 获取本地的)</span>
+                                            <div class="code">http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip=218.4.255.255
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>淘宝接口</span>
+                                            <div class="code">http://ip.taobao.com/service/getIpInfo.php?ip=63.223.108.42</div>
+                                        </li>
+                                    </ul>
+                                    <h3>手机信息查询接口 <a style="color:white" href="http://www.bejson.com/" title="JSON在线工具">JSON在线工具</a></h3>
+                                    <ul>
+                                        <li>
+                                            <span>淘宝网接口</span>
+                                            <div class="code">http://tcc.taobao.com/cc/json/mobile_tel_segment.htm?tel=手机号
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>拍拍接口</span>
+                                            <div class="code">http://virtual.paipai.com/extinfo/GetMobileProductInfo?mobile=手机号&amount=10000&callname=getPhoneNumInfoExtCallback <a href="http://bejson.com/demos/paipai-tel.php" class="demo">用例</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>百付宝接口</span>
+                                            <div class="code">https://www.baifubao.com/callback?cmd=1059&callback=phone&phone=手机号
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>115接口</span>
+                                            <div class="code">http://cz.115.com/?ct=index&ac=get_mobile_local&callback=jsonp1333962541001&mobile=手机号
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>有道接口</span>
+                                            <div class="code">http://www.youdao.com/smartresult-xml/search.s?jsFlag=true&type=mobile&q=手机号
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span>手机在线接口</span>
+                                            <div class="code">http://api.showji.com/Locating/www.showji.com.aspx?m=手机号&output=json&callback=querycallback
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h3>翻译、词典接口</h3>
+                                    <ul>
+                                        <li>
+                                            <span>腾讯</span>
+                                            <div class="code">http://dict.qq.com/dict?q=词语
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h3>腾讯的部分接口</h3>
+                                    <ul>
+                                        <li>
+                                            <span>获取QQ昵称和用户头像</span>
+                                            <div class="code">http://r.qzone.qq.com/cgi-bin/user/cgi_personal_card?uin=QQ(不过是jsonp哦)</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <input type="hidden" id="encode" value="1" />
+                                <div class="panel-footer"></div>
+                            </div>
+                        </div>
+</body>
+
+</html>
