@@ -74,9 +74,6 @@
         "no-unreachable": 2,
         // 要求使用 isNaN() 检查 NaN
         "use-isnan": 2,
-        // 强制使用有效的 JSDoc 注释
-        "valid-jsdoc": 1,
-
 
         //////////////
         // 最佳实践 //
@@ -251,17 +248,12 @@
         "brace-style": [2, "1tbs", {
             "allowSingleLine": true
         }],
-        // 双峰驼命名格式
-        "camelcase": 2,
         // 控制逗号在行尾出现还是在行首出现 (默认行尾)
         // http://eslint.org/docs/rules/comma-style
         "comma-style": [2, "last"],
         //"SwitchCase" (默认：0) 强制 switch 语句中的 case 子句的缩进水平
         // 以方括号取对象属性时，[ 后面和 ] 前面是否需要空格, 可选参数 never, always
         "computed-property-spacing": [2, "never"],
-        // 用于指统一在回调函数中指向this的变量名，箭头函数中的this已经可以指向外层调用者，应该没卵用了
-        // e.g [0,"that"] 指定只能 var that = this. that不能指向其他任何值，this也不能赋值给that以外的其他值
-        "consistent-this": [1, "that"],
         // 强制使用命名的 function 表达式
         "func-names": 0,
         // 文件末尾强制换行
@@ -288,8 +280,6 @@
         "id-match": 0,
         // 强制在 JSX 属性中一致地使用双引号或单引号
         "jsx-quotes": 0,
-        // 强制在关键字前后使用一致的空格 (前后腰需要)
-        "keyword-spacing": 2,
         // 强制一行的最大长度
         "max-len": [1, 5000],
         // 强制最大行数
@@ -372,8 +362,6 @@
         "padded-blocks": 0,
         // 要求对象字面量属性名称用引号括起来
         "quote-props": 0,
-        // 要求使用 JSDoc 注释
-        "require-jsdoc": 1,
         // 强制分号之前和之后使用一致的空格
         "semi-spacing": 0,
         // 要求同一个声明块中的变量按顺序排列
