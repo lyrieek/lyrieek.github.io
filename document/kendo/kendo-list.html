@@ -7,6 +7,7 @@
     <meta name="restype" content="api">
     <meta name="product" content="kendo-ui">
     <meta name="subproduct" content="date-time-pickers">
+    <base href="https://docs.telerik.com/kendo-ui/api/javascript/ui/" target="_blank">
     <title>Kendo UI ListBox</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
     <style media="screen" type="text/css">
@@ -26,83 +27,78 @@
 </head>
 
 <body>
-    <div style="height: 100%;">
+    <div id="page-article" style="height: 100%;">
+        <article>
+            <!-- replace -->
+            <h1 id="kendouilistbox"><a href="#kendouilistbox">kendo.ui.ListBox</a></h1>
 
-        <a id="page-edit-link" href="https://github.com/telerik/kendo-ui-core/edit/master/docs/api/javascript/ui/timepicker.md"><span class="k-icon k-i-pencil"></span> Edit this page</a>
-        <div id="markdown-toc"></div>
+            <div id="api-filter">
+                <i class="fa fa-search search-icon"></i>
+                <input type="search" class="search" placeholder="Filter...">
+            </div>
 
-        <div id="page-article" style="height: 100%;">
-            <article>
-                <h1 id="kendouilistbox"><a href="#kendouilistbox">kendo.ui.ListBox</a></h1>
+            <h2 id="configuration"><a href="#configuration">Configuration</a></h2>
 
-                <div id="api-filter">
-                    <i class="fa fa-search search-icon"></i>
-                    <input type="search" class="search" placeholder="Filter...">
-                </div>
+            <ul>
+                <li><a href="listbox/configuration/autobind">autoBind</a></li>
+                <li><a href="listbox/configuration/connectwith">connectWith</a></li>
+                <li><a href="listbox/configuration/datasource">dataSource</a></li>
+                <li><a href="listbox/configuration/datatextfield">dataTextField</a></li>
+                <li><a href="listbox/configuration/datavaluefield">dataValueField</a></li>
+                <li><a href="listbox/configuration/draggable">draggable</a></li>
+                <li><a href="listbox/configuration/draggable#draggable.enabled">draggable.enabled</a></li>
+                <li><a href="listbox/configuration/draggable#draggable.hint">draggable.hint</a></li>
+                <li><a href="listbox/configuration/draggable#draggable.placeholder">draggable.placeholder</a></li>
+                <li><a href="listbox/configuration/dropsources">dropSources</a></li>
+                <li><a href="listbox/configuration/navigatable">navigatable</a></li>
+                <li><a href="listbox/configuration/messages">messages</a></li>
+                <li><a href="listbox/configuration/messages#messages.tools">messages.tools</a></li>
+                <li><a href="listbox/configuration/messages#messages.tools.moveDown">messages.tools.moveDown</a></li>
+                <li><a href="listbox/configuration/messages#messages.tools.moveUp">messages.tools.moveUp</a></li>
+                <li><a href="listbox/configuration/messages#messages.tools.remove">messages.tools.remove</a></li>
+                <li><a href="listbox/configuration/messages#messages.tools.transferAllFrom">messages.tools.transferAllFrom</a></li>
+                <li><a href="listbox/configuration/messages#messages.tools.transferAllTo">messages.tools.transferAllTo</a></li>
+                <li><a href="listbox/configuration/messages#messages.tools.transferFrom">messages.tools.transferFrom</a></li>
+                <li><a href="listbox/configuration/messages#messages.tools.transferTo">messages.tools.transferTo</a></li>
+                <li><a href="listbox/configuration/selectable">selectable</a></li>
+                <li><a href="listbox/configuration/template">template</a></li>
+                <li><a href="listbox/configuration/toolbar">toolbar</a></li>
+                <li><a href="listbox/configuration/toolbar#toolbar.position">toolbar.position</a></li>
+                <li><a href="listbox/configuration/toolbar#toolbar.tools">toolbar.tools</a></li>
+            </ul>
 
-                <h2 id="configuration"><a href="#configuration">Configuration</a></h2>
+            <h2 id="methods"><a href="#methods">Methods</a></h2>
 
-                <ul>
-                    <li><a href="listbox/configuration/autobind">autoBind</a></li>
-                    <li><a href="listbox/configuration/connectwith">connectWith</a></li>
-                    <li><a href="listbox/configuration/datasource">dataSource</a></li>
-                    <li><a href="listbox/configuration/datatextfield">dataTextField</a></li>
-                    <li><a href="listbox/configuration/datavaluefield">dataValueField</a></li>
-                    <li><a href="listbox/configuration/draggable">draggable</a></li>
-                    <li><a href="listbox/configuration/draggable#draggable.enabled">draggable.enabled</a></li>
-                    <li><a href="listbox/configuration/draggable#draggable.hint">draggable.hint</a></li>
-                    <li><a href="listbox/configuration/draggable#draggable.placeholder">draggable.placeholder</a></li>
-                    <li><a href="listbox/configuration/dropsources">dropSources</a></li>
-                    <li><a href="listbox/configuration/navigatable">navigatable</a></li>
-                    <li><a href="listbox/configuration/messages">messages</a></li>
-                    <li><a href="listbox/configuration/messages#messages.tools">messages.tools</a></li>
-                    <li><a href="listbox/configuration/messages#messages.tools.moveDown">messages.tools.moveDown</a></li>
-                    <li><a href="listbox/configuration/messages#messages.tools.moveUp">messages.tools.moveUp</a></li>
-                    <li><a href="listbox/configuration/messages#messages.tools.remove">messages.tools.remove</a></li>
-                    <li><a href="listbox/configuration/messages#messages.tools.transferAllFrom">messages.tools.transferAllFrom</a></li>
-                    <li><a href="listbox/configuration/messages#messages.tools.transferAllTo">messages.tools.transferAllTo</a></li>
-                    <li><a href="listbox/configuration/messages#messages.tools.transferFrom">messages.tools.transferFrom</a></li>
-                    <li><a href="listbox/configuration/messages#messages.tools.transferTo">messages.tools.transferTo</a></li>
-                    <li><a href="listbox/configuration/selectable">selectable</a></li>
-                    <li><a href="listbox/configuration/template">template</a></li>
-                    <li><a href="listbox/configuration/toolbar">toolbar</a></li>
-                    <li><a href="listbox/configuration/toolbar#toolbar.position">toolbar.position</a></li>
-                    <li><a href="listbox/configuration/toolbar#toolbar.tools">toolbar.tools</a></li>
-                </ul>
+            <ul>
+                <li><a href="listbox/methods/clearselection">clearSelection</a></li>
+                <li><a href="listbox/methods/dataitem">dataItem</a></li>
+                <li><a href="listbox/methods/dataitems">dataItems</a></li>
+                <li><a href="listbox/methods/destroy">destroy</a></li>
+                <li><a href="listbox/methods/enable">enable</a></li>
+                <li><a href="listbox/methods/items">items</a></li>
+                <li><a href="listbox/methods/refresh">refresh</a></li>
+                <li><a href="listbox/methods/reorder">reorder</a></li>
+                <li><a href="listbox/methods/remove">remove</a></li>
+                <li><a href="listbox/methods/select">select</a></li>
+                <li><a href="listbox/methods/setdatasource">setDataSource</a></li>
+            </ul>
 
-                <h2 id="methods"><a href="#methods">Methods</a></h2>
+            <h2 id="events"><a href="#events">Events</a></h2>
 
-                <ul>
-                    <li><a href="listbox/methods/clearselection">clearSelection</a></li>
-                    <li><a href="listbox/methods/dataitem">dataItem</a></li>
-                    <li><a href="listbox/methods/dataitems">dataItems</a></li>
-                    <li><a href="listbox/methods/destroy">destroy</a></li>
-                    <li><a href="listbox/methods/enable">enable</a></li>
-                    <li><a href="listbox/methods/items">items</a></li>
-                    <li><a href="listbox/methods/refresh">refresh</a></li>
-                    <li><a href="listbox/methods/reorder">reorder</a></li>
-                    <li><a href="listbox/methods/remove">remove</a></li>
-                    <li><a href="listbox/methods/select">select</a></li>
-                    <li><a href="listbox/methods/setdatasource">setDataSource</a></li>
-                </ul>
-
-                <h2 id="events"><a href="#events">Events</a></h2>
-
-                <ul>
-                    <li><a href="listbox/events/add">add</a></li>
-                    <li><a href="listbox/events/change">change</a></li>
-                    <li><a href="listbox/events/databound">dataBound</a></li>
-                    <li><a href="listbox/events/dragstart">dragstart</a></li>
-                    <li><a href="listbox/events/drag">drag</a></li>
-                    <li><a href="listbox/events/drop">drop</a></li>
-                    <li><a href="listbox/events/dragend">dragend</a></li>
-                    <li><a href="listbox/events/remove">remove</a></li>
-                    <li><a href="listbox/events/reorder">reorder</a></li>
-                </ul>
-            </article>
-        </div>
-
+            <ul>
+                <li><a href="listbox/events/add">add</a></li>
+                <li><a href="listbox/events/change">change</a></li>
+                <li><a href="listbox/events/databound">dataBound</a></li>
+                <li><a href="listbox/events/dragstart">dragstart</a></li>
+                <li><a href="listbox/events/drag">drag</a></li>
+                <li><a href="listbox/events/drop">drop</a></li>
+                <li><a href="listbox/events/dragend">dragend</a></li>
+                <li><a href="listbox/events/remove">remove</a></li>
+                <li><a href="listbox/events/reorder">reorder</a></li>
+            </ul>
+        </article>
     </div>
+
 </body>
 
 </html>
