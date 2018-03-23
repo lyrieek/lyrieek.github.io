@@ -1,0 +1,1227 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://keithlea.com/idea-actions/
+Subject: IntelliJ IDEA Plugin API: Action ID's
+Date: Sat, 16 Mar 2018 02:21:12 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--DdDeZk1VudLpoLIcHZeKsDKDFULVMuA7YiIrqFVu9x----"
+
+------MultipartBoundary--DdDeZk1VudLpoLIcHZeKsDKDFULVMuA7YiIrqFVu9x----
+Content-Type: text/html
+Content-ID: <frame-3534-4c8becb0-fd4e-4255-bdb8-c03ba189ea42@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://keithlea.com/idea-actions/
+
+<!--?xml version=3D"1.0"?--><html xmlns=3D"http://www.w3.org/1999/xhtml"><h=
+ead><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindo=
+ws-1252"><title>IntelliJ IDEA Plugin API: Action ID's</title><style type=3D=
+"text/css" xml:space=3D"preserve">
+          table.actions td, table.actions th {
+          padding: 0.25em 1em;
+          }
+          table.actions {
+          margin-bottom: 2em;
+          }
+          th.group {
+          text-align: center;
+          background-color: #fc3;
+          }
+          h1 {
+          font-family: sans-serif;
+          }
+          .main-id {
+            font-weight: bold;
+          }
+          .parent-id {
+            font-weight: normal;
+            color: #340;
+          }
+        </style></head><body style=3D"position: static;"><h1>Built-in Actio=
+n ID's</h1><p>
+          These are the names of the actions built into IntelliJ IDEA. You =
+can
+          use these ID's and group names in <code>&lt;add-to-group&gt;</cod=
+e>
+          tags in your plugin's <code>plugin.xml</code>.
+        </p><p>
+          Each table shows the actions in a group, whose ID is shown in
+          <code>fixed-width font</code>, along with the ID of its parent gr=
+oups
+          (for reference) and its displayed name. You can use the group ID =
+in
+          <code>&lt;add-to-group&gt;</code>'s <code>group-id</code> attribu=
+te.
+        </p><p>
+          Each row in the table represents an action, whose ID can be used =
+in
+          <code>&lt;add-to-group&gt;</code>'s <code>relative-to-action</cod=
+e>
+          attribute.
+        </p><p style=3D"font-style: italic">Last updated: IDEA 5.0.2 build =
+3511.</p><table border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr=
+><th colspan=3D"2" class=3D"group"><em>Root Action Group</em></th></tr><tr>=
+<th>ID</th><th>Name</th></tr><tr><td title=3D"Capture memory snapshot"><cod=
+e>CaptureMemorySnapShot</code></td><td title=3D"Capture memory snapshot">Ca=
+pture memory snapshot</td></tr><tr><td title=3D"Capture cpu usage data"><co=
+de>CaptureCPUUsageData</code></td><td title=3D"Capture cpu usage data">Capt=
+ure cpu usage data</td></tr><tr><td title=3D"Show context help"><code>Conte=
+xtHelp</code></td><td title=3D"Show context help">Context Help</td></tr><tr=
+><td title=3D"Select Run/Debug Configuration"><code>RunConfiguration</code>=
+</td><td title=3D"Select Run/Debug Configuration">Select Run/Debug Configur=
+ation</td></tr><tr><td title=3D""><code>ShowIntentionActions</code></td><td=
+ title=3D"">Show Intention Actions</td></tr><tr><td title=3D"Toggle read-on=
+ly attribute of current file"><code>ToggleReadOnlyAttribute</code></td><td =
+title=3D"Toggle read-only attribute of current file">Toggle Read-Only Attri=
+bute</td></tr><tr><td title=3D""><code>TogglePopupHints</code></td><td titl=
+e=3D"">Toggle Popup Hints for Current File</td></tr><tr><td title=3D""><cod=
+e>RunGc</code></td><td title=3D"">Run Garbage Collector</td></tr><tr><td ti=
+tle=3D""><code>ShowPopupMenu</code></td><td title=3D"">Show Context Menu</t=
+d></tr><tr><td title=3D""><code>CloseWindow</code></td><td title=3D"">Close=
+ Active Window</td></tr><tr><td title=3D"Show history of file"><code>Vcs.Sh=
+owHistory</code></td><td title=3D"Show history of file">Show File History</=
+td></tr><tr><td title=3D"Show history for editor selection"><code>Vcs.ShowH=
+istoryForBlock</code></td><td title=3D"Show history for editor selection">S=
+how History for Selection</td></tr><tr><td title=3D"Show history of file"><=
+code>Vcs.ShowTabbedFileHistory</code></td><td title=3D"Show history of file=
+">Show History</td></tr><tr><td title=3D"Add selected node to favorites"><c=
+ode>AddToFavoritesPopup</code></td><td title=3D"Add selected node to favori=
+tes">Add To Favorites</td></tr><tr><td title=3D"Add New Favorites List"><co=
+de>AddNewFavoritesList</code></td><td title=3D"Add New Favorites List">Add =
+New Favorites List</td></tr><tr><td title=3D""><code>ExpandAll</code></td><=
+td title=3D"">Expand All</td></tr><tr><td title=3D""><code>CollapseAll</cod=
+e></td><td title=3D"">Collapse All</td></tr><tr><td title=3D""><code>Export=
+ToTextFile</code></td><td title=3D"">Export to Text File</td></tr><tr><td t=
+itle=3D""><code>ExpandTreeNode</code></td><td title=3D"">Expand Tree Node</=
+td></tr><tr><td title=3D""><code>CollapseTreeNode</code></td><td title=3D""=
+>Collapse Tree Node</td></tr><tr><td title=3D""><code>FullyExpandTreeNode</=
+code></td><td title=3D"">Fully Expand Tree Node</td></tr><tr><td title=3D"M=
+ove to the next difference"><code>NextDiff</code></td><td title=3D"Move to =
+the next difference">Move to the next difference</td></tr><tr><td title=3D"=
+Move to the previous difference"><code>PreviousDiff</code></td><td title=3D=
+"Move to the previous difference">Move to the previous difference</td></tr>=
+<tr><td title=3D""><code>Refresh</code></td><td title=3D"">Refresh</td></tr=
+><tr><td title=3D""><code>CheckinProject</code></td><td title=3D"">Check In=
+ Project</td></tr><tr><td title=3D""><code>CheckinFiles</code></td><td titl=
+e=3D"">Check In</td></tr><tr><td title=3D""><code>UpdateFiles</code></td><t=
+d title=3D"">Update</td></tr><tr><td title=3D""><code>CheckStatusForFiles</=
+code></td><td title=3D"">Check Status</td></tr><tr><td title=3D"Show inform=
+ation about last modification date and author for each line"><code>Annotate=
+</code></td><td title=3D"Show information about last modification date and =
+author for each line">Annotate</td></tr><tr><td title=3D""><code>Compare.Sa=
+meVersion</code></td><td title=3D"">Compare with The Same Repository Versio=
+n</td></tr><tr><td title=3D""><code>Compare.LastVersion</code></td><td titl=
+e=3D"">Compare with The Last Repository Version</td></tr><tr><td title=3D""=
+><code>Compare.Selected</code></td><td title=3D"">Compare with...</td></tr>=
+<tr><td title=3D""><code>Compare.Specified</code></td><td title=3D"">Compar=
+e with Specified Revision...</td></tr><tr><td title=3D"Compare two selected=
+ files"><code>CompareTwoFiles</code></td><td title=3D"Compare two selected =
+files">Compare Two Files</td></tr><tr><td title=3D"Compare selected file wi=
+th editor"><code>CompareFileWithEditor</code></td><td title=3D"Compare sele=
+cted file with editor">Compare File with Editor</td></tr><tr><td title=3D"O=
+pen settings dialog for selected module"><code>ModuleSettings</code></td><t=
+d title=3D"Open settings dialog for selected module">Module Settings...</td=
+></tr></tbody></table><table border=3D"1" cellspacing=3D"0" class=3D"action=
+s"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code>RunContextGroup=
+</code></code></th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=3D"C=
+reate run configuration from context"><code>CreateRunConfiguration</code></=
+td><td title=3D"Create run configuration from context">Create Run Configura=
+tion</td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" class=
+=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code>Edito=
+rActions</code></code>
+                    (Editor Actions)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D""><code>EditorChooseLookupItem</code></td><td title=3D"">Choose Lookup =
+Item</td></tr><tr><td title=3D""><code>EditorChooseLookupItemReplace</code>=
+</td><td title=3D"">Choose Lookup Item Replace</td></tr><tr><td title=3D"">=
+<code>NextTemplateVariable</code></td><td title=3D"">Next Template Variable=
+</td></tr><tr><td title=3D""><code>PreviousTemplateVariable</code></td><td =
+title=3D"">Previous Template Variable</td></tr><tr><td title=3D""><code>Nex=
+tParameter</code></td><td title=3D"">Next Parameter</td></tr><tr><td title=
+=3D""><code>PrevParameter</code></td><td title=3D"">Prev Parameter</td></tr=
+><tr><td title=3D""><code>EditorPageUp</code></td><td title=3D"">Page Up</t=
+d></tr><tr><td title=3D""><code>EditorPageDown</code></td><td title=3D"">Pa=
+ge Down</td></tr><tr><td title=3D""><code>EditorPageUpWithSelection</code><=
+/td><td title=3D"">Page Up with Selection</td></tr><tr><td title=3D""><code=
+>EditorPageDownWithSelection</code></td><td title=3D"">Page Up with Selecti=
+on</td></tr><tr><td title=3D""><code>EditorCopy</code></td><td title=3D"">C=
+opy</td></tr><tr><td title=3D""><code>EditorCut</code></td><td title=3D"">C=
+ut</td></tr><tr><td title=3D""><code>EditorPaste</code></td><td title=3D"">=
+Paste</td></tr><tr><td title=3D"Paste without formatting, autoimport, liter=
+al escaping etc."><code>EditorPasteSimple</code></td><td title=3D"Paste wit=
+hout formatting, autoimport, literal escaping etc.">Paste Simple</td></tr><=
+tr><td title=3D""><code>EditorPasteFromX11</code></td><td title=3D"">Paste =
+from X clipboard</td></tr><tr><td title=3D""><code>EditorDelete</code></td>=
+<td title=3D"">Delete</td></tr><tr><td title=3D""><code>EditorBackSpace</co=
+de></td><td title=3D"">Backspace</td></tr><tr><td title=3D""><code>EditorMo=
+veToPageTop</code></td><td title=3D"">Move Caret to Page Top</td></tr><tr><=
+td title=3D""><code>EditorMoveToPageBottom</code></td><td title=3D"">Move C=
+aret to Page Bottom</td></tr><tr><td title=3D""><code>EditorMoveToPageTopWi=
+thSelection</code></td><td title=3D"">Move Caret to Page Top with Selection=
+</td></tr><tr><td title=3D""><code>EditorMoveToPageBottomWithSelection</cod=
+e></td><td title=3D"">Move Caret to Page Bottom with Selection</td></tr><tr=
+><td title=3D""><code>EditorEnter</code></td><td title=3D"">Enter</td></tr>=
+<tr><td title=3D""><code>EditorEscape</code></td><td title=3D"">Escape</td>=
+</tr><tr><td title=3D""><code>EditorUp</code></td><td title=3D"">Up</td></t=
+r><tr><td title=3D""><code>EditorDown</code></td><td title=3D"">Down</td></=
+tr><tr><td title=3D""><code>EditorLeft</code></td><td title=3D"">Left</td><=
+/tr><tr><td title=3D""><code>EditorRight</code></td><td title=3D"">Right</t=
+d></tr><tr><td title=3D""><code>EditorUpWithSelection</code></td><td title=
+=3D"">Up with Selection</td></tr><tr><td title=3D""><code>EditorDownWithSel=
+ection</code></td><td title=3D"">Down with Selection</td></tr><tr><td title=
+=3D""><code>EditorLeftWithSelection</code></td><td title=3D"">Left with Sel=
+ection</td></tr><tr><td title=3D""><code>EditorRightWithSelection</code></t=
+d><td title=3D"">Right with Selection</td></tr><tr><td title=3D""><code>Edi=
+torIndentSelection</code></td><td title=3D"">Indent Selection</td></tr><tr>=
+<td title=3D""><code>EditorUnindentSelection</code></td><td title=3D"">Unin=
+dent Selection</td></tr><tr><td title=3D""><code>EditorTab</code></td><td t=
+itle=3D"">Tab</td></tr><tr><td title=3D""><code>EmacsStyleIndent</code></td=
+><td title=3D"">Emacs Tab</td></tr><tr><td title=3D""><code>EditorScrollUp<=
+/code></td><td title=3D"">Scroll Up</td></tr><tr><td title=3D""><code>Edito=
+rScrollDown</code></td><td title=3D"">Scroll Down</td></tr><tr><td title=3D=
+""><code>EditorMoveUpAndScroll</code></td><td title=3D"">Move Up and Scroll=
+</td></tr><tr><td title=3D""><code>EditorMoveDownAndScroll</code></td><td t=
+itle=3D"">Move Down and Scroll</td></tr><tr><td title=3D""><code>EditorMove=
+UpAndScrollWithSelection</code></td><td title=3D"">Move Up and Scroll with =
+Selection</td></tr><tr><td title=3D""><code>EditorMoveDownAndScrollWithSele=
+ction</code></td><td title=3D"">Move Down and Scroll with Selection</td></t=
+r><tr><td title=3D""><code>EditorLineStart</code></td><td title=3D"">Move C=
+aret to Line Start</td></tr><tr><td title=3D""><code>EditorLineEnd</code></=
+td><td title=3D"">Move Caret to Line End</td></tr><tr><td title=3D""><code>=
+EditorCutLineEnd</code></td><td title=3D"">Cut up to Line End</td></tr><tr>=
+<td title=3D""><code>EditorTextStart</code></td><td title=3D"">Move Caret t=
+o Text Start</td></tr><tr><td title=3D""><code>EditorTextEnd</code></td><td=
+ title=3D"">Move Caret to Text End</td></tr><tr><td title=3D""><code>Editor=
+LineStartWithSelection</code></td><td title=3D"">Move Caret to Line Start w=
+ith Selection</td></tr><tr><td title=3D""><code>EditorLineEndWithSelection<=
+/code></td><td title=3D"">Move Caret to Line End with Selection</td></tr><t=
+r><td title=3D""><code>EditorTextStartWithSelection</code></td><td title=3D=
+"">Move Caret to Text Start with Selection</td></tr><tr><td title=3D""><cod=
+e>EditorTextEndWithSelection</code></td><td title=3D"">Move Caret to Text E=
+nd with Selection</td></tr><tr><td title=3D""><code>EditorNextWord</code></=
+td><td title=3D"">Move Caret to Next Word</td></tr><tr><td title=3D""><code=
+>EditorPreviousWord</code></td><td title=3D"">Move Caret to Previous Word</=
+td></tr><tr><td title=3D""><code>EditorNextWordWithSelection</code></td><td=
+ title=3D"">Move Caret to Next Word with Selection</td></tr><tr><td title=
+=3D""><code>EditorPreviousWordWithSelection</code></td><td title=3D"">Move =
+Caret to Previous Word with Selection</td></tr><tr><td title=3D""><code>Edi=
+torCodeBlockStart</code></td><td title=3D"">Move Caret to Code Block Start<=
+/td></tr><tr><td title=3D""><code>EditorCodeBlockEnd</code></td><td title=
+=3D"">Move Caret to Code Block End</td></tr><tr><td title=3D""><code>Editor=
+CodeBlockStartWithSelection</code></td><td title=3D"">Move Caret to Code Bl=
+ock Start with Selection</td></tr><tr><td title=3D""><code>EditorCodeBlockE=
+ndWithSelection</code></td><td title=3D"">Move Caret to Code Block End with=
+ Selection</td></tr><tr><td title=3D""><code>EditorDeleteToWordStart</code>=
+</td><td title=3D"">Delete to Word Start</td></tr><tr><td title=3D""><code>=
+EditorDeleteToWordEnd</code></td><td title=3D"">Delete to Word End</td></tr=
+><tr><td title=3D""><code>EditorDeleteLine</code></td><td title=3D"">Delete=
+ Line at Caret</td></tr><tr><td title=3D""><code>EditorDuplicate</code></td=
+><td title=3D"">Duplicate Line or Block</td></tr><tr><td title=3D""><code>E=
+ditorSelectWord</code></td><td title=3D"">Select Word at Caret</td></tr><tr=
+><td title=3D""><code>EditorUnSelectWord</code></td><td title=3D"">Unselect=
+ Word at Caret</td></tr><tr><td title=3D""><code>EditorToggleInsertState</c=
+ode></td><td title=3D"">Toggle Insert/Overwrite</td></tr><tr><td title=3D"T=
+oggle editor column mode"><code>EditorToggleColumnMode</code></td><td title=
+=3D"Toggle editor column mode">Column Mode</td></tr><tr><td title=3D"Toggle=
+ display whitespaces in current editor"><code>EditorToggleShowWhitespaces</=
+code></td><td title=3D"Toggle display whitespaces in current editor">Show W=
+hitespaces</td></tr><tr><td title=3D"Toggle display line numbers in current=
+ editor"><code>EditorToggleShowLineNumbers</code></td><td title=3D"Toggle d=
+isplay line numbers in current editor">Show Line Numbers</td></tr><tr><td t=
+itle=3D""><code>EditorScrollToCenter</code></td><td title=3D"">Scroll to Ce=
+nter</td></tr><tr><td title=3D""><code>EditorToggleCase</code></td><td titl=
+e=3D"">Toggle Case</td></tr><tr><td title=3D""><code>EditorJoinLines</code>=
+</td><td title=3D"">Join Lines</td></tr><tr><td title=3D""><code>EditorSele=
+ctLine</code></td><td title=3D"">Select Line at Caret</td></tr><tr><td titl=
+e=3D""><code>EditorSplitLine</code></td><td title=3D"">Split Line</td></tr>=
+<tr><td title=3D""><code>EditorStartNewLine</code></td><td title=3D"">Start=
+ New Line</td></tr><tr><td title=3D""><code>EditorCompleteStatement</code><=
+/td><td title=3D"">Complete Current Statement</td></tr></tbody></table><tab=
+le border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=
+=3D"2" class=3D"group"><code><code>J2EEGenerateGroup</code></code></th></tr=
+><tr><th>ID</th><th>Name</th></tr><tr><td title=3D""><code>CreateSessionBea=
+n</code></td><td title=3D"">Session Bean</td></tr><tr><td title=3D""><code>=
+CreateContainerManagedEntityBeanAction</code></td><td title=3D"">CMP Entity=
+ Bean</td></tr><tr><td title=3D""><code>CreateBeanManagedEntityBeanAction</=
+code></td><td title=3D"">BMP Entity Bean</td></tr><tr><td title=3D""><code>=
+CreateMessageBean</code></td><td title=3D"">Message Bean</td></tr><tr><td t=
+itle=3D""><code>CreateTransferObject</code></td><td title=3D"">Transfer Obj=
+ect</td></tr><tr><td title=3D""><code>CreateCMPField</code></td><td title=
+=3D"">CMP Field</td></tr><tr><td title=3D""><code>CreateEJBRelationship</co=
+de></td><td title=3D"">EJB Relationship</td></tr><tr><td title=3D"Create ne=
+w JSP file in this directory"><code>CreateJSPAction</code></td><td title=3D=
+"Create new JSP file in this directory">Jsp</td></tr><tr><td title=3D"Creat=
+e new JSPX file in this directory"><code>CreateJSPXAction</code></td><td ti=
+tle=3D"Create new JSPX file in this directory">Jspx</td></tr><tr><td title=
+=3D"Create new servlet"><code>CreateServletAction</code></td><td title=3D"C=
+reate new servlet">Servlet</td></tr><tr><td title=3D"Create new filter"><co=
+de>CreateFilterAction</code></td><td title=3D"Create new filter">Filter</td=
+></tr><tr><td title=3D"Create new listener"><code>CreateListenerAction</cod=
+e></td><td title=3D"Create new listener">Listener</td></tr></tbody></table>=
+<table border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th cols=
+pan=3D"2" class=3D"group"><code><code>GenerateGroup</code></code>
+                    (Generate)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D""><code>GenerateConstructor</code></td><td title=3D"">Constructor</td><=
+/tr><tr><td title=3D""><code>GenerateGetter</code></td><td title=3D"">Gette=
+r</td></tr><tr><td title=3D""><code>GenerateSetter</code></td><td title=3D"=
+">Setter</td></tr><tr><td title=3D""><code>GenerateGetterAndSetter</code></=
+td><td title=3D"">Getter and Setter</td></tr><tr><td title=3D""><code>Gener=
+ateEquals</code></td><td title=3D"">equals() and hashCode()</td></tr><tr><t=
+d title=3D"Override base class methods in the current class"><code>Override=
+Methods</code></td><td title=3D"Override base class methods in the current =
+class">Override Methods...</td></tr><tr><td title=3D"Implement base interfa=
+ce/class methods in the current class"><code>ImplementMethods</code></td><t=
+d title=3D"Implement base interface/class methods in the current class">Imp=
+lement Methods...</td></tr><tr><td title=3D"Generate delegate method to a f=
+ield/getter"><code>DelegateMethods</code></td><td title=3D"Generate delegat=
+e method to a field/getter">Delegate Methods...</td></tr><tr><td title=3D""=
+><code>GenerateSuperMethodCall</code></td><td title=3D"">super method call<=
+/td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" class=3D"act=
+ions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code>NewGroup</co=
+de></code>
+                    (New)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D""><code>NewClass</code></td><td title=3D"">Class</td></tr><tr><td title=
+=3D""><code>NewInterface</code></td><td title=3D"">Interface</td></tr><tr><=
+td title=3D""><code>NewEnum</code></td><td title=3D"">Enum</td></tr><tr><td=
+ title=3D""><code>NewAnnotationType</code></td><td title=3D"">@Interface</t=
+d></tr><tr><td title=3D""><code>NewFile</code></td><td title=3D"">File</td>=
+</tr><tr><td title=3D""><code>NewDir</code></td><td title=3D"">Directory/Pa=
+ckage</td></tr><tr><td title=3D""><code>NewFromTemplate</code></td><td titl=
+e=3D"">From Template</td></tr><tr><td title=3D""><code>NewDialog</code></td=
+><td title=3D"">Dialog</td></tr></tbody></table><table border=3D"1" cellspa=
+cing=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"group"><=
+code><code>LocalVcsGroup</code></code>
+                    (Local History)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Show local history"><code>LocalVcs.ShowHistory</code></td><td title=3D"=
+Show local history">Show History</td></tr><tr><td title=3D"Show local histo=
+ry for editor selection"><code>LocalVcs.HistoryForBlock</code></td><td titl=
+e=3D"Show local history for editor selection">Show History for Selection</t=
+d></tr><tr><td title=3D"Add label"><code>LocalVcs.AddLabel</code></td><td t=
+itle=3D"Add label">Add Label...</td></tr></tbody></table><table border=3D"1=
+" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D=
+"group"><code><code>VcsGroups</code></code>
+                    (Version Control)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Mark sources as up-to-date"><code>Vcs.MarkSourcesAsCurrent</code></td><=
+td title=3D"Mark sources as up-to-date">Mark Project as Current</td></tr></=
+tbody></table><table border=3D"1" cellspacing=3D"0" class=3D"actions"><tbod=
+y><tr><th colspan=3D"2" class=3D"group"><code><code class=3D"parent-id">Vcs=
+Groups</code><span class=3D"parent-id"> &gt; </span><code>VcsGlobalGroup</c=
+ode></code>
+                    (Version Control Group)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Show version control related information for all local files"><code>Vcs=
+.FileView</code></td><td title=3D"Show version control related information =
+for all local files">Show File View</td></tr><tr><td title=3D""><code>Vcs.U=
+pdateProject</code></td><td title=3D"">Update Project</td></tr><tr><td titl=
+e=3D""><code>Vcs.ProjectStatus</code></td><td title=3D"">Check Project Stat=
+us</td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" class=3D"=
+actions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code class=3D"=
+parent-id">MainMenu</code><span class=3D"parent-id"> &gt; </span><code>File=
+Menu</code></code>
+                    (File)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Create a new project"><code>NewProject</code></td><td title=3D"Create a=
+ new project">New Project...</td></tr><tr><td title=3D"Add new module to th=
+e project"><code>NewModule</code></td><td title=3D"Add new module to the pr=
+oject">New Module...</td></tr><tr><td title=3D"Open an existing project"><c=
+ode>OpenProject</code></td><td title=3D"Open an existing project">Open Proj=
+ect...</td></tr><tr><td title=3D"Open file in editor"><code>OpenFile</code>=
+</td><td title=3D"Open file in editor">Open File...</td></tr><tr><td title=
+=3D"Close current project"><code>CloseProject</code></td><td title=3D"Close=
+ current project">Close Project</td></tr><tr><td title=3D"Configure applica=
+tion and current project settings"><code>ShowSettings</code></td><td title=
+=3D"Configure application and current project settings">Settings</td></tr><=
+tr><td title=3D"Configure template settings for all new projects"><code>Tem=
+plateProjectProperties</code></td><td title=3D"Configure template settings =
+for all new projects">Template Project Settings</td></tr><tr><td title=3D"S=
+ave all files and settings"><code>SaveAll</code></td><td title=3D"Save all =
+files and settings">Save All</td></tr><tr><td title=3D"Export global settin=
+gs"><code>ExportSettings</code></td><td title=3D"Export global settings">Ex=
+port Settings...</td></tr><tr><td title=3D"Import global settings"><code>Im=
+portSettings</code></td><td title=3D"Import global settings">Import Setting=
+s...</td></tr><tr><td title=3D"Load Modules From JBuilder Project"><code>Im=
+portFromJBuilder</code></td><td title=3D"Load Modules From JBuilder Project=
+">Import From JBuilder</td></tr><tr><td title=3D"Detect all externally chan=
+ged files and reload them from disk"><code>Synchronize</code></td><td title=
+=3D"Detect all externally changed files and reload them from disk">Synchron=
+ize</td></tr><tr><td title=3D"Reload current file from disk and lose all ch=
+anges"><code>ReloadFromDisk</code></td><td title=3D"Reload current file fro=
+m disk and lose all changes">Reload from Disk</td></tr><tr><td title=3D"Sav=
+e file content in HTML format with syntax coloring"><code>ExportToHTML</cod=
+e></td><td title=3D"Save file content in HTML format with syntax coloring">=
+Export to HTML...</td></tr><tr><td title=3D"Print file"><code>Print</code><=
+/td><td title=3D"Print file">Print...</td></tr><tr><td title=3D"Quit IDEA">=
+<code>Exit</code></td><td title=3D"Quit IDEA">Exit</td></tr></tbody></table=
+><table border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th col=
+span=3D"2" class=3D"group"><code><code class=3D"parent-id">MainMenu</code><=
+span class=3D"parent-id"> &gt; </span><code>EditMenu</code></code>
+                    (Edit)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Undo last operation"><code>$Undo</code></td><td title=3D"Undo last oper=
+ation">Undo</td></tr><tr><td title=3D"Redo last undone operation"><code>$Re=
+do</code></td><td title=3D"Redo last undone operation">Redo</td></tr><tr><t=
+d title=3D"Select all"><code>$SelectAll</code></td><td title=3D"Select all"=
+>Select All</td></tr><tr><td title=3D"Create new class, interface, file or =
+directory"><code>NewElement</code></td><td title=3D"Create new class, inter=
+face, file or directory">New...</td></tr><tr><td title=3D"Delete selected i=
+tem"><code>$Delete</code></td><td title=3D"Delete selected item">Delete</td=
+></tr><tr><td title=3D"Toggle bookmark at the current location"><code>Toggl=
+eBookmark</code></td><td title=3D"Toggle bookmark at the current location">=
+Toggle Bookmark</td></tr><tr><td title=3D"Show list of all bookmarks"><code=
+>ShowBookmarks</code></td><td title=3D"Show list of all bookmarks">Show Boo=
+kmarks</td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" class=
+=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code class=
+=3D"parent-id">MainMenu</code><span class=3D"parent-id"> &gt; </span><code =
+class=3D"parent-id">EditMenu</code><span class=3D"parent-id"> &gt; </span><=
+code>CutCopyPasteGroup</code></code></th></tr><tr><th>ID</th><th>Name</th><=
+/tr><tr><td title=3D"Cut to clipboard"><code>$Cut</code></td><td title=3D"C=
+ut to clipboard">Cut</td></tr><tr><td title=3D"Copy to clipboard"><code>$Co=
+py</code></td><td title=3D"Copy to clipboard">Copy</td></tr><tr><td title=
+=3D"Copy paths corresponding to selected files or directories to clipboard"=
+><code>CopyPaths</code></td><td title=3D"Copy paths corresponding to select=
+ed files or directories to clipboard">Copy Paths</td></tr><tr><td title=3D"=
+Copy Java class/method/field reference"><code>CopyReference</code></td><td =
+title=3D"Copy Java class/method/field reference">Copy Reference</td></tr><t=
+r><td title=3D"Paste from clipboard"><code>$Paste</code></td><td title=3D"P=
+aste from clipboard">Paste</td></tr><tr><td title=3D"Paste from recent clip=
+boards"><code>PasteMultiple</code></td><td title=3D"Paste from recent clipb=
+oards">Paste...</td></tr></tbody></table><table border=3D"1" cellspacing=3D=
+"0" class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><c=
+ode class=3D"parent-id">MainMenu</code><span class=3D"parent-id"> &gt; </sp=
+an><code>SearchMenu</code></code>
+                    (Search)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Find a string in active editor"><code>Find</code></td><td title=3D"Find=
+ a string in active editor">Find...</td></tr><tr><td title=3D"Replace a str=
+ing in active editor with another string"><code>Replace</code></td><td titl=
+e=3D"Replace a string in active editor with another string">Replace...</td>=
+</tr><tr><td title=3D"Repeat the last Find/Replace operation"><code>FindNex=
+t</code></td><td title=3D"Repeat the last Find/Replace operation">Find Next=
+</td></tr><tr><td title=3D"Repeat the last Find/Replace operation in revers=
+e direction"><code>FindPrevious</code></td><td title=3D"Repeat the last Fin=
+d/Replace operation in reverse direction">Find Previous</td></tr><tr><td ti=
+tle=3D"Find next occurrence of the word at caret"><code>FindWordAtCaret</co=
+de></td><td title=3D"Find next occurrence of the word at caret">Find Word a=
+t Caret</td></tr><tr><td title=3D"Start incremental search (searches string=
+ as you type)"><code>IncrementalSearch</code></td><td title=3D"Start increm=
+ental search (searches string as you type)">Incremental Search</td></tr><tr=
+><td title=3D"Find usages of the symbol at caret"><code>FindUsages</code></=
+td><td title=3D"Find usages of the symbol at caret">Find Usages...</td></tr=
+><tr><td title=3D"Find usages of the symbol at caret in active editor"><cod=
+e>FindUsagesInFile</code></td><td title=3D"Find usages of the symbol at car=
+et in active editor">Find Usages in File...</td></tr><tr><td title=3D"Highl=
+ight usages of the symbol at caret in active editor"><code>HighlightUsagesI=
+nFile</code></td><td title=3D"Highlight usages of the symbol at caret in ac=
+tive editor">Highlight Usages in File</td></tr><tr><td title=3D"Find join p=
+oint identified by pointcut"><code>FindJoinpointsByPointcutAction</code></t=
+d><td title=3D"Find join point identified by pointcut">Find Join Point Iden=
+tified by Pointcut</td></tr><tr><td title=3D"Find a string in multiple file=
+s"><code>FindInPath</code></td><td title=3D"Find a string in multiple files=
+">Find in Path...</td></tr><tr><td title=3D"Replace a string in multiple fi=
+les with another string"><code>ReplaceInPath</code></td><td title=3D"Replac=
+e a string in multiple files with another string">Replace in Path...</td></=
+tr></tbody></table><table border=3D"1" cellspacing=3D"0" class=3D"actions">=
+<tbody><tr><th colspan=3D"2" class=3D"group"><code><code class=3D"parent-id=
+">MainMenu</code><span class=3D"parent-id"> &gt; </span><code>ViewMenu</cod=
+e></code>
+                    (View)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Show/hide the main toolbar"><code>ViewToolBar</code></td><td title=3D"S=
+how/hide the main toolbar">Toolbar</td></tr><tr><td title=3D"Show/hide the =
+status bar"><code>ViewStatusBar</code></td><td title=3D"Show/hide the statu=
+s bar">Status Bar</td></tr><tr><td title=3D"Maximize window to full screen"=
+><code>ToggleFullScreenMode</code></td><td title=3D"Maximize window to full=
+ screen">Full Screen</td></tr><tr><td title=3D"Open editor for the selected=
+ item and give focus to it"><code>EditSource</code></td><td title=3D"Open e=
+ditor for the selected item and give focus to it">Jump to Source</td></tr><=
+tr><td title=3D"Open editor for the selected item"><code>ViewSource</code><=
+/td><td title=3D"Open editor for the selected item">Show Source</td></tr><t=
+r><td title=3D""><code>OpenInBrowser</code></td><td title=3D"">Open in Brow=
+ser</td></tr><tr><td title=3D"Open browser with JavaDoc for the selected it=
+em"><code>ExternalJavaDoc</code></td><td title=3D"Open browser with JavaDoc=
+ for the selected item">External JavaDoc</td></tr><tr><td title=3D"Show lis=
+t of recently edited files"><code>RecentFiles</code></td><td title=3D"Show =
+list of recently edited files">Recent Files...</td></tr><tr><td title=3D"Ch=
+ange current code style scheme, color&amp;fonts scheme, keymap or Look&amp;=
+Feel"><code>QuickChangeScheme</code></td><td title=3D"Change current code s=
+tyle scheme, color&amp;fonts scheme, keymap or Look&amp;Feel">Quick Switch =
+Scheme...</td></tr><tr><td title=3D"Browse hierarchy for the selected class=
+"><code>TypeHierarchy</code></td><td title=3D"Browse hierarchy for the sele=
+cted class">Type Hierarchy</td></tr><tr><td title=3D"Browse method hierarch=
+y for the selected method"><code>MethodHierarchy</code></td><td title=3D"Br=
+owse method hierarchy for the selected method">Method Hierarchy</td></tr><t=
+r><td title=3D"Browse call hierarchy for the selected method"><code>CallHie=
+rarchy</code></td><td title=3D"Browse call hierarchy for the selected metho=
+d">Call Hierarchy</td></tr><tr><td title=3D""><code>RecentChanges</code></t=
+d><td title=3D"">Recent Changes...</td></tr></tbody></table><table border=
+=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" cla=
+ss=3D"group"><code><code class=3D"parent-id">MainMenu</code><span class=3D"=
+parent-id"> &gt; </span><code class=3D"parent-id">ViewMenu</code><span clas=
+s=3D"parent-id"> &gt; </span><code>CodeEditorViewGroup</code></code></th></=
+tr><tr><th>ID</th><th>Name</th></tr><tr><td title=3D"Popup structure of the=
+ current file for quick navigation"><code>FileStructurePopup</code></td><td=
+ title=3D"Popup structure of the current file for quick navigation">File St=
+ructure Popup</td></tr><tr><td title=3D"Select the current class or method =
+in any view"><code>SelectIn</code></td><td title=3D"Select the current clas=
+s or method in any view">Select In...</td></tr><tr><td title=3D"Show a popu=
+p window with JavaDoc for the symbol at caret"><code>QuickJavaDoc</code></t=
+d><td title=3D"Show a popup window with JavaDoc for the symbol at caret">Qu=
+ick Documentation Lookup</td></tr><tr><td title=3D"Show a popup window with=
+ the symbol (and its implementations) content"><code>QuickImplementations</=
+code></td><td title=3D"Show a popup window with the symbol (and its impleme=
+ntations) content">Quick Definition Lookup</td></tr><tr><td title=3D"Show p=
+arameters of the method call at caret"><code>ParameterInfo</code></td><td t=
+itle=3D"Show parameters of the method call at caret">Parameter Info</td></t=
+r><tr><td title=3D"Show the current method or class declaration when it is =
+not visible"><code>EditorContextInfo</code></td><td title=3D"Show the curre=
+nt method or class declaration when it is not visible">Context Info</td></t=
+r><tr><td title=3D"Show description of error or warning at caret"><code>Sho=
+wErrorDescription</code></td><td title=3D"Show description of error or warn=
+ing at caret">Error Description</td></tr></tbody></table><table border=3D"1=
+" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D=
+"group"><code><code class=3D"parent-id">MainMenu</code><span class=3D"paren=
+t-id"> &gt; </span><code class=3D"parent-id">ViewMenu</code><span class=3D"=
+parent-id"> &gt; </span><code>CommanderViewGroup</code></code></th></tr><tr=
+><th>ID</th><th>Name</th></tr><tr><td title=3D"Synchronize both panels"><co=
+de>CommanderSyncViews</code></td><td title=3D"Synchronize both panels">Sync=
+hronize Views</td></tr><tr><td title=3D"Swap the panels"><code>CommanderSwa=
+pPanels</code></td><td title=3D"Swap the panels">Swap Panels</td></tr></tbo=
+dy></table><table border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><=
+tr><th colspan=3D"2" class=3D"group"><code><code class=3D"parent-id">MainMe=
+nu</code><span class=3D"parent-id"> &gt; </span><code class=3D"parent-id">V=
+iewMenu</code><span class=3D"parent-id"> &gt; </span><code>ProjectViewGroup=
+</code></code></th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=3D"C=
+hoose Project, Sourcepath or Classpath tree in the Project View window"><co=
+de>ProjectViewChangeView</code></td><td title=3D"Choose Project, Sourcepath=
+ or Classpath tree in the Project View window">Change View</td></tr></tbody=
+></table><table border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr=
+><th colspan=3D"2" class=3D"group"><code><code class=3D"parent-id">MainMenu=
+</code><span class=3D"parent-id"> &gt; </span><code class=3D"parent-id">Vie=
+wMenu</code><span class=3D"parent-id"> &gt; </span><code>FoldingGroup</code=
+></code>
+                    (Folding)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Expand folding region at caret"><code>ExpandRegion</code></td><td title=
+=3D"Expand folding region at caret">Expand</td></tr><tr><td title=3D"Collap=
+se folding region at caret"><code>CollapseRegion</code></td><td title=3D"Co=
+llapse folding region at caret">Collapse</td></tr><tr><td title=3D"Expand a=
+ll folding regions"><code>ExpandAllRegions</code></td><td title=3D"Expand a=
+ll folding regions">Expand All</td></tr><tr><td title=3D"Collapse all foldi=
+ng regions"><code>CollapseAllRegions</code></td><td title=3D"Collapse all f=
+olding regions">Collapse All</td></tr><tr><td title=3D"Expand all javadoc c=
+omments"><code>ExpandJavadocs</code></td><td title=3D"Expand all javadoc co=
+mments">Expand Javadocs</td></tr><tr><td title=3D"Collapse all javadoc comm=
+ents"><code>CollapseJavadocs</code></td><td title=3D"Collapse all javadoc c=
+omments">Collapse Javadocs</td></tr><tr><td title=3D"Fold selected block"><=
+code>CollapseSelection</code></td><td title=3D"Fold selected block">Fold Se=
+lection / Remove region</td></tr><tr><td title=3D"Fold current code block">=
+<code>CollapseBlock</code></td><td title=3D"Fold current code block">Fold C=
+ode Block</td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" cl=
+ass=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code cl=
+ass=3D"parent-id">MainMenu</code><span class=3D"parent-id"> &gt; </span><co=
+de>GoToMenu</code></code>
+                    (Go To)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Quickly navigate to a class by name"><code>GotoClass</code></td><td tit=
+le=3D"Quickly navigate to a class by name">Class...</td></tr><tr><td title=
+=3D"Quickly navigate to a file by name"><code>GotoFile</code></td><td title=
+=3D"Quickly navigate to a file by name">File...</td></tr><tr><td title=3D"Q=
+uickly navigate to any symbol by name"><code>GotoSymbol</code></td><td titl=
+e=3D"Quickly navigate to any symbol by name">Symbol...</td></tr><tr><td tit=
+le=3D"Navigate to a line in editor by its number"><code>GotoLine</code></td=
+><td title=3D"Navigate to a line in editor by its number">Line...</td></tr>=
+<tr><td title=3D"Navigate to the declaration of the symbol at caret"><code>=
+GotoDeclaration</code></td><td title=3D"Navigate to the declaration of the =
+symbol at caret">Declaration</td></tr><tr><td title=3D"Navigate to the defi=
+nitions of the current value"><code>GotoDefinition</code></td><td title=3D"=
+Navigate to the definitions of the current value">Definition</td></tr><tr><=
+td title=3D"Navigate to the usages of the current value"><code>GotoUsage</c=
+ode></td><td title=3D"Navigate to the usages of the current value">Usage</t=
+d></tr><tr><td title=3D"Navigate to the implementation(s) of the selected c=
+lass or method"><code>GotoImplementation</code></td><td title=3D"Navigate t=
+o the implementation(s) of the selected class or method">Implementation(s)<=
+/td></tr><tr><td title=3D"Navigate to the implementation(s) of the selected=
+ method"><code>SmartGotoImplementation</code></td><td title=3D"Navigate to =
+the implementation(s) of the selected method">Called Implementation(s)</td>=
+</tr><tr><td title=3D"Navigate to the declaration of the symbol's type at c=
+aret"><code>GotoTypeDeclaration</code></td><td title=3D"Navigate to the dec=
+laration of the symbol's type at caret">Type Declaration</td></tr><tr><td t=
+itle=3D"Navigate to the declaration of the method that current method overr=
+ides or implements"><code>GotoSuperMethod</code></td><td title=3D"Navigate =
+to the declaration of the method that current method overrides or implement=
+s">Super Method</td></tr><tr><td title=3D"Navigate to the declaration of th=
+e advice, error or warning declaration that affects a join point at caret">=
+<code>GotoAspect</code></td><td title=3D"Navigate to the declaration of the=
+ advice, error or warning declaration that affects a join point at caret">A=
+spect</td></tr><tr><td title=3D"Navigate to the next highlighted error in t=
+he active editor"><code>GotoNextError</code></td><td title=3D"Navigate to t=
+he next highlighted error in the active editor">Next Highlighted Error</td>=
+</tr><tr><td title=3D"Navigate to the previous highlighted error in the act=
+ive editor"><code>GotoPreviousError</code></td><td title=3D"Navigate to the=
+ previous highlighted error in the active editor">Previous Highlighted Erro=
+r</td></tr><tr><td title=3D"Navigate to the next method in the active edito=
+r"><code>MethodDown</code></td><td title=3D"Navigate to the next method in =
+the active editor">Next Method</td></tr><tr><td title=3D"Navigate to the pr=
+evious method in the active editor"><code>MethodUp</code></td><td title=3D"=
+Navigate to the previous method in the active editor">Previous Method</td><=
+/tr><tr><td title=3D"Navigate to the next bookmark in the active editor"><c=
+ode>GotoNextBookmark</code></td><td title=3D"Navigate to the next bookmark =
+in the active editor">Next Bookmark</td></tr><tr><td title=3D"Navigate to t=
+he previous bookmark in the active editor"><code>GotoPreviousBookmark</code=
+></td><td title=3D"Navigate to the previous bookmark in the active editor">=
+Previous Bookmark</td></tr><tr><td title=3D"Undo last navigation operation"=
+><code>Back</code></td><td title=3D"Undo last navigation operation">Back</t=
+d></tr><tr><td title=3D"Redo last undone navigation operation"><code>Forwar=
+d</code></td><td title=3D"Redo last undone navigation operation">Forward</t=
+d></tr><tr><td title=3D"Move through the most recent change points"><code>J=
+umpToLastChange</code></td><td title=3D"Move through the most recent change=
+ points">Last Edit Location</td></tr><tr><td title=3D"Navigate to the previ=
+ous occurrence"><code>PreviousOccurence</code></td><td title=3D"Navigate to=
+ the previous occurrence">Previous Occurrence</td></tr><tr><td title=3D"Nav=
+igate to the next occurrence"><code>NextOccurence</code></td><td title=3D"N=
+avigate to the next occurrence">Next Occurrence</td></tr><tr><td title=3D"N=
+ext change"><code>VcsShowNextChangeMarker</code></td><td title=3D"Next chan=
+ge">Go To Next Change</td></tr><tr><td title=3D"Prev change"><code>VcsShowP=
+revChangeMarker</code></td><td title=3D"Prev change">Go To Prev Change</td>=
+</tr></tbody></table><table border=3D"1" cellspacing=3D"0" class=3D"actions=
+"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code class=3D"parent-=
+id">MainMenu</code><span class=3D"parent-id"> &gt; </span><code>CodeMenu</c=
+ode></code>
+                    (Code)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Surround selected code fragment with if, while, try/catch or other cons=
+truct"><code>SurroundWith</code></td><td title=3D"Surround selected code fr=
+agment with if, while, try/catch or other construct">Surround With...</td><=
+/tr><tr><td title=3D"Generate constructor, getter or setter method, or EJB =
+components"><code>Generate</code></td><td title=3D"Generate constructor, ge=
+tter or setter method, or EJB components">Generate...</td></tr><tr><td titl=
+e=3D"Show popup list of live templates starting with the specified prefix">=
+<code>InsertLiveTemplate</code></td><td title=3D"Show popup list of live te=
+mplates starting with the specified prefix">Insert Live Template...</td></t=
+r><tr><td title=3D"Surrounds the selection with one of the template"><code>=
+SurroundWithLiveTemplate</code></td><td title=3D"Surrounds the selection wi=
+th one of the template">Surround with Live Template...</td></tr><tr><td tit=
+le=3D"Comment/uncomment current line or selected block with line comments">=
+<code>CommentByLineComment</code></td><td title=3D"Comment/uncomment curren=
+t line or selected block with line comments">Comment with Line Comment</td>=
+</tr><tr><td title=3D"Comment/uncomment code with block comments"><code>Com=
+mentByBlockComment</code></td><td title=3D"Comment/uncomment code with bloc=
+k comments">Comment with Block Comment</td></tr><tr><td title=3D"Reformat c=
+ode"><code>ReformatCode</code></td><td title=3D"Reformat code">Reformat Cod=
+e...</td></tr><tr><td title=3D"Indent current line or selected block accord=
+ing to the code style settings"><code>AutoIndentLines</code></td><td title=
+=3D"Indent current line or selected block according to the code style setti=
+ngs">Auto-Indent Lines</td></tr><tr><td title=3D"Remove unused imports and =
+reorder/reorganize imports"><code>OptimizeImports</code></td><td title=3D"R=
+emove unused imports and reorder/reorganize imports">Optimize Imports...</t=
+d></tr><tr><td title=3D"Move selected statements one line down"><code>MoveS=
+tatementDown</code></td><td title=3D"Move selected statements one line down=
+">Move Statement Down</td></tr><tr><td title=3D"Move selected statements on=
+e line up"><code>MoveStatementUp</code></td><td title=3D"Move selected stat=
+ements one line up">Move Statement Up</td></tr></tbody></table><table borde=
+r=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" cl=
+ass=3D"group"><code><code class=3D"parent-id">MainMenu</code><span class=3D=
+"parent-id"> &gt; </span><code class=3D"parent-id">CodeMenu</code><span cla=
+ss=3D"parent-id"> &gt; </span><code>CodeCompletionGroup</code></code>
+                    (Complete Code)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Complete code"><code>CodeCompletion</code></td><td title=3D"Complete co=
+de">Basic</td></tr><tr><td title=3D"Complete word"><code>WordCompletion</co=
+de></td><td title=3D"Complete word">Complete Word</td></tr><tr><td title=3D=
+"Complete code basing on expected type"><code>SmartTypeCompletion</code></t=
+d><td title=3D"Complete code basing on expected type">SmartType</td></tr><t=
+r><td title=3D"Complete class name and add import for it"><code>ClassNameCo=
+mpletion</code></td><td title=3D"Complete class name and add import for it"=
+>Class Name</td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" =
+class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code =
+class=3D"parent-id">MainMenu</code><span class=3D"parent-id"> &gt; </span><=
+code>AnalyzeMenu</code></code>
+                    (Analyze)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Inspect code"><code>InspectCode</code></td><td title=3D"Inspect code">I=
+nspect Code...</td></tr><tr><td title=3D"Inspect code with editor settings"=
+><code>InspectCodeWithEditorProfile</code></td><td title=3D"Inspect code wi=
+th editor settings">Inspect Code With Editor Settings</td></tr><tr><td titl=
+e=3D"Load offline inspection results"><code>ViewOfflineInspection</code></t=
+d><td title=3D"Load offline inspection results">View Offline Inspection Res=
+ults...</td></tr><tr><td title=3D"Browse code choosen analysis item depends=
+ on"><code>ShowPackageDeps</code></td><td title=3D"Browse code choosen anal=
+ysis item depends on">Analyze Dependencies...</td></tr><tr><td title=3D"Bro=
+wse code choosen analysis item used in"><code>ShowBackwardPackageDeps</code=
+></td><td title=3D"Browse code choosen analysis item used in">Analyze Backw=
+ard Dependencies...</td></tr><tr><td title=3D"Browse code choosen analysis =
+item used in cycles"><code>ShowPackageCycles</code></td><td title=3D"Browse=
+ code choosen analysis item used in cycles">Analyze Cyclic Dependencies...<=
+/td></tr><tr><td title=3D"Show dependencies between modules in project"><co=
+de>ShowModulesDependencies</code></td><td title=3D"Show dependencies betwee=
+n modules in project">Analyze Module Dependencies...</td></tr><tr><td title=
+=3D"Locate duplicate code in project"><code>DupLocate</code></td><td title=
+=3D"Locate duplicate code in project">Locate Duplicates...</td></tr><tr><td=
+ title=3D""><code>Unscramble</code></td><td title=3D"">Analyze Stacktrace..=
+.</td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" class=3D"a=
+ctions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code class=3D"p=
+arent-id">MainMenu</code><span class=3D"parent-id"> &gt; </span><code>Refac=
+toringMenu</code></code>
+                    (Refactor)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Rename the selected symbol and correct all references"><code>RenameElem=
+ent</code></td><td title=3D"Rename the selected symbol and correct all refe=
+rences">Rename...</td></tr><tr><td title=3D"Change signature of the selecte=
+d method or class and correct all references"><code>ChangeSignature</code><=
+/td><td title=3D"Change signature of the selected method or class and corre=
+ct all references">Change Signature...</td></tr><tr><td title=3D"Convert me=
+thod or inner class to static and correct all references"><code>MakeStatic<=
+/code></td><td title=3D"Convert method or inner class to static and correct=
+ all references">Make Static...</td></tr><tr><td title=3D"Convert static me=
+thod to instance method and correct all references"><code>ConvertToInstance=
+Method</code></td><td title=3D"Convert static method to instance method and=
+ correct all references">Convert To Instance Method...</td></tr><tr><td tit=
+le=3D"Move the selected class, method, package or static member to another =
+package or class and correct all references"><code>Move</code></td><td titl=
+e=3D"Move the selected class, method, package or static member to another p=
+ackage or class and correct all references">Move...</td></tr><tr><td title=
+=3D"Create a copy of the selected class, file(s) or directory(es)"><code>Co=
+pyElement</code></td><td title=3D"Create a copy of the selected class, file=
+(s) or directory(es)">Copy...</td></tr><tr><td title=3D"Create a copy of th=
+e selected class, file or directory in the same package/directory"><code>Cl=
+oneElement</code></td><td title=3D"Create a copy of the selected class, fil=
+e or directory in the same package/directory">Clone...</td></tr><tr><td tit=
+le=3D"Delete the selected class, method or field, checking for usages"><cod=
+e>SafeDelete</code></td><td title=3D"Delete the selected class, method or f=
+ield, checking for usages">Safe Delete...</td></tr><tr><td title=3D"Turn th=
+e selected code fragment into a method"><code>ExtractMethod</code></td><td =
+title=3D"Turn the selected code fragment into a method">Extract Method...</=
+td></tr><tr><td title=3D"Finds code in current file that can be transformed=
+ into a call of selected method"><code>MethodDuplicates</code></td><td titl=
+e=3D"Finds code in current file that can be transformed into a call of sele=
+cted method">Replace Method Code Duplicates...</td></tr><tr><td title=3D"Pu=
+t a result of the selected expression into a variable"><code>IntroduceVaria=
+ble</code></td><td title=3D"Put a result of the selected expression into a =
+variable">Introduce Variable...</td></tr><tr><td title=3D"Put a result of t=
+he selected expression into a field"><code>IntroduceField</code></td><td ti=
+tle=3D"Put a result of the selected expression into a field">Introduce Fiel=
+d...</td></tr><tr><td title=3D"Replace selected expression with a constant =
+(static final field)"><code>IntroduceConstant</code></td><td title=3D"Repla=
+ce selected expression with a constant (static final field)">Introduce Cons=
+tant...</td></tr><tr><td title=3D"Turn the selected expression into method =
+parameter"><code>IntroduceParameter</code></td><td title=3D"Turn the select=
+ed expression into method parameter">Introduce Parameter...</td></tr><tr><t=
+d title=3D"Extract interface from the selected class"><code>ExtractInterfac=
+e</code></td><td title=3D"Extract interface from the selected class">Extrac=
+t Interface...</td></tr><tr><td title=3D"Extract superclass from the select=
+ed class"><code>ExtractSuperclass</code></td><td title=3D"Extract superclas=
+s from the selected class">Extract Superclass...</td></tr><tr><td title=3D"=
+Change usages of a class to those of its superclass or interface"><code>Tur=
+nRefsToSuper</code></td><td title=3D"Change usages of a class to those of i=
+ts superclass or interface">Use Interface Where Possible...</td></tr><tr><t=
+d title=3D"Pull class members to superclass or implemented interface"><code=
+>MembersPullUp</code></td><td title=3D"Pull class members to superclass or =
+implemented interface">Pull Members Up...</td></tr><tr><td title=3D"Push cl=
+ass members down to directly inheriting subclasses"><code>MemberPushDown</c=
+ode></td><td title=3D"Push class members down to directly inheriting subcla=
+sses">Push Members Down...</td></tr><tr><td title=3D"Replace inheritance wi=
+th delegation"><code>InheritanceToDelegation</code></td><td title=3D"Replac=
+e inheritance with delegation">Replace Inheritance with Delegation...</td><=
+/tr><tr><td title=3D"Inline the selected method or variable"><code>Inline</=
+code></td><td title=3D"Inline the selected method or variable">Inline...</t=
+d></tr><tr><td title=3D"Convert anonymous class into an inner class"><code>=
+AnonymousToInner</code></td><td title=3D"Convert anonymous class into an in=
+ner class">Convert Anonymous to Inner...</td></tr><tr><td title=3D"Replace =
+direct access to fields in the selected class with use of accessor methods"=
+><code>EncapsulateFields</code></td><td title=3D"Replace direct access to f=
+ields in the selected class with use of accessor methods">Encapsulate Field=
+s...</td></tr><tr><td title=3D"Turn the selected variable into a method"><c=
+ode>ReplaceTempWithQuery</code></td><td title=3D"Turn the selected variable=
+ into a method">Replace Temp with Query...</td></tr><tr><td title=3D"Create=
+ a static factory method and use it instead of a constructor"><code>Replace=
+ConstructorWithFactory</code></td><td title=3D"Create a static factory meth=
+od and use it instead of a constructor">Replace Constructor with Factory Me=
+thod...</td></tr><tr><td title=3D"Convert your code to use generic types"><=
+code>Generify</code></td><td title=3D"Convert your code to use generic type=
+s">Generify...</td></tr><tr><td title=3D"Open migration dialog"><code>Migra=
+te</code></td><td title=3D"Open migration dialog">Migrate...</td></tr><tr><=
+td title=3D"Migrate one type to another"><code>Type Migration</code></td><t=
+d title=3D"Migrate one type to another">Type Migration...</td></tr><tr><td =
+title=3D"Turn the selected code fragment into included file"><code>ExtractI=
+nclude</code></td><td title=3D"Turn the selected code fragment into include=
+d file">Extract Include File...</td></tr></tbody></table><table border=3D"1=
+" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D=
+"group"><code><code class=3D"parent-id">MainMenu</code><span class=3D"paren=
+t-id"> &gt; </span><code>BuildMenu</code></code>
+                    (Build)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Recompile all files in the project"><code>CompileProject</code></td><td=
+ title=3D"Recompile all files in the project">Rebuild Project</td></tr><tr>=
+<td title=3D"Compile all modified and dependent files in the project"><code=
+>CompileDirty</code></td><td title=3D"Compile all modified and dependent fi=
+les in the project">Make Project</td></tr><tr><td title=3D"Compile all modi=
+fied and dependent files in the module"><code>MakeModule</code></td><td tit=
+le=3D"Compile all modified and dependent files in the module">Make Module</=
+td></tr><tr><td title=3D"Compile the selected file or package"><code>Compil=
+e</code></td><td title=3D"Compile the selected file or package">Compile</td=
+></tr><tr><td title=3D"Generate Ant Build File from the Project"><code>Gene=
+rateAntBuild</code></td><td title=3D"Generate Ant Build File from the Proje=
+ct">Generate Ant Build</td></tr><tr><td title=3D"Archive module output dire=
+ctories into jar files"><code>BuildJar</code></td><td title=3D"Archive modu=
+le output directories into jar files">Build Jars...</td></tr></tbody></tabl=
+e><table border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th co=
+lspan=3D"2" class=3D"group"><code><code class=3D"parent-id">MainMenu</code>=
+<span class=3D"parent-id"> &gt; </span><code>RunMenu</code></code>
+                    (Run)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Open edit Run/Debug configurations dialog"><code>editRunConfigurations<=
+/code></td><td title=3D"Open edit Run/Debug configurations dialog">Edit Con=
+figurations</td></tr><tr><td title=3D"Stop process"><code>Stop</code></td><=
+td title=3D"Stop process">Stop</td></tr><tr><td title=3D"Reload all changed=
+ classes into application being debugged (HotSwap)"><code>Hotswap</code></t=
+d><td title=3D"Reload all changed classes into application being debugged (=
+HotSwap)">Reload Changed Classes</td></tr><tr><td title=3D"Step to the next=
+ line in this file"><code>StepOver</code></td><td title=3D"Step to the next=
+ line in this file">Step Over</td></tr><tr><td title=3D"Step to the next li=
+ne executed"><code>StepInto</code></td><td title=3D"Step to the next line e=
+xecuted">Step Into</td></tr><tr><td title=3D"Step to the first line execute=
+d after returning from this method"><code>StepOut</code></td><td title=3D"S=
+tep to the first line executed after returning from this method">Step Out</=
+td></tr><tr><td title=3D"Step over, disable all breakpoints before stepping=
+."><code>ForceStepOver</code></td><td title=3D"Step over, disable all break=
+points before stepping.">Force Step Over</td></tr><tr><td title=3D"Step int=
+o, ignore stepping filters for libraries, constructors, etc."><code>ForceSt=
+epInto</code></td><td title=3D"Step into, ignore stepping filters for libra=
+ries, constructors, etc.">Force Step Into</td></tr><tr><td title=3D"Run to =
+the line where the caret is"><code>RunToCursor</code></td><td title=3D"Run =
+to the line where the caret is">Run to Cursor</td></tr><tr><td title=3D"Mov=
+es execution point back to the method call dropping current method frames f=
+rom the stack"><code>Debugger.PopFrame</code></td><td title=3D"Moves execut=
+ion point back to the method call dropping current method frames from the s=
+tack">Pop Frame</td></tr><tr><td title=3D"Suspend program execution and ena=
+ble debugging"><code>Pause</code></td><td title=3D"Suspend program executio=
+n and enable debugging">Pause Program</td></tr><tr><td title=3D"Resume prog=
+ram execution"><code>Resume</code></td><td title=3D"Resume program executio=
+n">Resume Program</td></tr><tr><td title=3D"Evaluate arbitrary expression">=
+<code>EvaluateExpression</code></td><td title=3D"Evaluate arbitrary express=
+ion">Evaluate Expression...</td></tr><tr><td title=3D"Evaluate selected exp=
+ression"><code>QuickEvaluateExpression</code></td><td title=3D"Evaluate sel=
+ected expression">Quick Evaluate Expression</td></tr><tr><td title=3D"Show =
+the current program execution point"><code>ShowExecutionPoint</code></td><t=
+d title=3D"Show the current program execution point">Show Execution Point</=
+td></tr><tr><td title=3D"Toggle line breakpoint at caret"><code>ToggleLineB=
+reakpoint</code></td><td title=3D"Toggle line breakpoint at caret">Toggle L=
+ine Breakpoint</td></tr><tr><td title=3D"Toggle method breakpoint for the m=
+ethod at caret"><code>ToggleMethodBreakpoint</code></td><td title=3D"Toggle=
+ method breakpoint for the method at caret">Toggle Method Breakpoint</td></=
+tr><tr><td title=3D"Toggle field watchpoint for the field at caret"><code>T=
+oggleFieldBreakpoint</code></td><td title=3D"Toggle field watchpoint for th=
+e field at caret">Toggle Field Watchpoint</td></tr><tr><td title=3D"Enable/=
+disable breakpoint at the current line"><code>ToggleBreakpointEnabled</code=
+></td><td title=3D"Enable/disable breakpoint at the current line">Toggle Br=
+eakpoint Enabled</td></tr><tr><td title=3D"View and manage all breakpoints =
+and watchpoints"><code>ViewBreakpoints</code></td><td title=3D"View and man=
+age all breakpoints and watchpoints">View Breakpoints</td></tr><tr><td titl=
+e=3D"Save all threads information to a text file or clipboard"><code>Export=
+Threads</code></td><td title=3D"Save all threads information to a text file=
+ or clipboard">Export Threads...</td></tr></tbody></table><table border=3D"=
+1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" class=
+=3D"group"><code><code class=3D"parent-id">MainMenu</code><span class=3D"pa=
+rent-id"> &gt; </span><code>ToolsMenu</code></code>
+                    (Tools)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Save the selected text as live template"><code>SaveAsTemplate</code></t=
+d><td title=3D"Save the selected text as live template">Save as Live Templa=
+te...</td></tr><tr><td title=3D"Save current file as template"><code>SaveFi=
+leAsTemplate</code></td><td title=3D"Save current file as template">Save Fi=
+le as Template...</td></tr><tr><td title=3D"Run the JavaDoc tool"><code>Gen=
+erateJavadoc</code></td><td title=3D"Run the JavaDoc tool">Generate JavaDoc=
+...</td></tr><tr><td title=3D"Manage JDBC Data Sources"><code>DataSources</=
+code></td><td title=3D"Manage JDBC Data Sources">Data Sources...</td></tr><=
+/tbody></table><table border=3D"1" cellspacing=3D"0" class=3D"actions"><tbo=
+dy><tr><th colspan=3D"2" class=3D"group"><code><code class=3D"parent-id">Ma=
+inMenu</code><span class=3D"parent-id"> &gt; </span><code class=3D"parent-i=
+d">ToolsMenu</code><span class=3D"parent-id"> &gt; </span><code class=3D"pa=
+rent-id">Macros</code><span class=3D"parent-id"> &gt; </span><code>StanardM=
+acroActions</code></code>
+                    (Standard Macro Actions)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Playback last used macro"><code>PlaybackLastMacro</code></td><td title=
+=3D"Playback last used macro">Playback Last Macro</td></tr><tr><td title=3D=
+"Start/Stop recording of a new macro"><code>StartStopMacroRecording</code><=
+/td><td title=3D"Start/Stop recording of a new macro">Start/Stop Macro Reco=
+rding</td></tr><tr><td title=3D"Configure existing macros"><code>EditMacros=
+</code></td><td title=3D"Configure existing macros">Edit Macros...</td></tr=
+></tbody></table><table border=3D"1" cellspacing=3D"0" class=3D"actions"><t=
+body><tr><th colspan=3D"2" class=3D"group"><code><code class=3D"parent-id">=
+MainMenu</code><span class=3D"parent-id"> &gt; </span><code class=3D"parent=
+-id">ToolsMenu</code><span class=3D"parent-id"> &gt; </span><code></code></=
+code></th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=3D"Validate t=
+he current xml file"><code>ValidateXml</code></td><td title=3D"Validate the=
+ current xml file">Validate</td></tr><tr><td title=3D"Add current XML file =
+to the list of project's Ant build files"><code>AddAntBuildFile</code></td>=
+<td title=3D"Add current XML file to the list of project's Ant build files"=
+>Add as Ant Build File</td></tr><tr><td title=3D""><code>GenerateDTD</code>=
+</td><td title=3D"">Generate DTD from XML file</td></tr></tbody></table><ta=
+ble border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=
+=3D"2" class=3D"group"><code><code class=3D"parent-id">MainMenu</code><span=
+ class=3D"parent-id"> &gt; </span><code class=3D"parent-id">ToolsMenu</code=
+><span class=3D"parent-id"> &gt; </span><code></code></code>
+                    (Internal Actions)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D""><code>PsiViewer</code></td><td title=3D"">View PSI Structure</td></tr=
+><tr><td title=3D""><code>DebugListen</code></td><td title=3D"">Throw Debug=
+ Exception</td></tr><tr><td title=3D""><code>VirtualFileInfo</code></td><td=
+ title=3D"">Virtual File Info</td></tr><tr><td title=3D""><code>Merge3Files=
+</code></td><td title=3D"">Merge</td></tr><tr><td title=3D""><code>DecodeBy=
+tesAction</code></td><td title=3D"">Decode Bytes</td></tr><tr><td title=3D"=
+Show Local VCS statistics"><code>LocalVcs.ShowStatistics</code></td><td tit=
+le=3D"Show Local VCS statistics">Show Local VCS Statistics...</td></tr><tr>=
+<td title=3D""><code>LocalVcs.ShowRepHistory</code></td><td title=3D"">Repo=
+sitory History</td></tr><tr><td title=3D""><code>DropAnError</code></td><td=
+ title=3D"">Drop an error</td></tr><tr><td title=3D""><code>ShowUserActivit=
+ies</code></td><td title=3D"">Show Activities</td></tr></tbody></table><tab=
+le border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=
+=3D"2" class=3D"group"><code><code class=3D"parent-id">MainMenu</code><span=
+ class=3D"parent-id"> &gt; </span><code class=3D"parent-id">ToolsMenu</code=
+><span class=3D"parent-id"> &gt; </span><code class=3D"parent-id"></code><s=
+pan class=3D"parent-id"> &gt; </span><code>MemoryManagement</code></code>
+                    (Memory Management)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D""><code>DumpPsiMemoryCaches</code></td><td title=3D"">Dump what is cach=
+ed in PSI</td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" cl=
+ass=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code cl=
+ass=3D"parent-id">MainMenu</code><span class=3D"parent-id"> &gt; </span><co=
+de>WindowMenu</code></code>
+                    (Window)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Store current layout as default"><code>StoreDefaultLayout</code></td><t=
+d title=3D"Store current layout as default">Store Current Layout as Default=
+</td></tr><tr><td title=3D"Restore default layout"><code>RestoreDefaultLayo=
+ut</code></td><td title=3D"Restore default layout">Restore Default Layout</=
+td></tr><tr><td title=3D"Hide active tool window"><code>HideActiveWindow</c=
+ode></td><td title=3D"Hide active tool window">Hide Active Window</td></tr>=
+<tr><td title=3D"Hide all tool windows"><code>HideAllWindows</code></td><td=
+ title=3D"Hide all tool windows">Hide All Windows</td></tr><tr><td title=3D=
+"Activate last focused tool window"><code>JumpToLastWindow</code></td><td t=
+itle=3D"Activate last focused tool window">Jump to Last Window</td></tr><tr=
+><td title=3D"Pin/unpin active tool window"><code>TogglePinnedMode</code></=
+td><td title=3D"Pin/unpin active tool window">Pinned Mode</td></tr><tr><td =
+title=3D"Dock/undock active tool window"><code>ToggleDockMode</code></td><t=
+d title=3D"Dock/undock active tool window">Docked Mode</td></tr><tr><td tit=
+le=3D"Float/unfloat active tool window"><code>ToggleFloatingMode</code></td=
+><td title=3D"Float/unfloat active tool window">Floating Mode</td></tr><tr>=
+<td title=3D"Activate next tab"><code>NextTab</code></td><td title=3D"Activ=
+ate next tab">Select Next Tab</td></tr><tr><td title=3D"Activate previous t=
+ab"><code>PreviousTab</code></td><td title=3D"Activate previous tab">Select=
+ Previous Tab</td></tr><tr><td title=3D"Close active tool window tab"><code=
+>CloseActiveTab</code></td><td title=3D"Close active tool window tab">Close=
+ Active Tab</td></tr><tr><td title=3D"Pin active tool window or editor tab"=
+><code>PinActiveTab</code></td><td title=3D"Pin active tool window or edito=
+r tab">Pin Active Tab</td></tr><tr><td title=3D"Close active editor"><code>=
+CloseEditor</code></td><td title=3D"Close active editor">Close Active Edito=
+r</td></tr><tr><td title=3D"Close all editors in active tab group"><code>Cl=
+oseAllEditors</code></td><td title=3D"Close all editors in active tab group=
+">Close All Editors</td></tr><tr><td title=3D"Close all open editors except=
+ the active one"><code>CloseAllEditorsButActive</code></td><td title=3D"Clo=
+se all open editors except the active one">Close All Editors But Active</td=
+></tr><tr><td title=3D"Close all nonmodified editors"><code>CloseAllUnmodif=
+iedEditors</code></td><td title=3D"Close all nonmodified editors">Close All=
+ Unmodified Editors</td></tr><tr><td title=3D"Split editor area into 2 tab =
+groups and move the current tab to the right group"><code>SplitVertically</=
+code></td><td title=3D"Split editor area into 2 tab groups and move the cur=
+rent tab to the right group">Split Vertically</td></tr><tr><td title=3D"Spl=
+it editor area into 2 tab groups and move the current tab to the bottom gro=
+up"><code>SplitHorizontally</code></td><td title=3D"Split editor area into =
+2 tab groups and move the current tab to the bottom group">Split Horizontal=
+ly</td></tr><tr><td title=3D"Changes orientation of splitter"><code>ChangeS=
+plitOrientation</code></td><td title=3D"Changes orientation of splitter">Ch=
+ange Splitter Orientation</td></tr><tr><td title=3D"Unsplit Window"><code>U=
+nsplit</code></td><td title=3D"Unsplit Window">Unsplit</td></tr><tr><td tit=
+le=3D"Remove all splitters"><code>UnsplitAll</code></td><td title=3D"Remove=
+ all splitters">Unsplit All</td></tr><tr><td title=3D"Goto next splitter wi=
+ndow"><code>NextSplitter</code></td><td title=3D"Goto next splitter window"=
+>Goto Next Splitter</td></tr><tr><td title=3D"Goto previous splitter window=
+"><code>PrevSplitter</code></td><td title=3D"Goto previous splitter window"=
+>Goto Previous Splitter</td></tr></tbody></table><table border=3D"1" cellsp=
+acing=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"group">=
+<code><code class=3D"parent-id">MainMenu</code><span class=3D"parent-id"> &=
+gt; </span><code>HelpMenu</code></code>
+                    (Help)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Show help contents"><code>HelpTopics</code></td><td title=3D"Show help =
+contents">Help Topics</td></tr><tr><td title=3D"Show Tips of the Day"><code=
+>ShowTips</code></td><td title=3D"Show Tips of the Day">Tip of the Day</td>=
+</tr><tr><td title=3D"Show productivity features usages statistics"><code>P=
+roductivityGude</code></td><td title=3D"Show productivity features usages s=
+tatistics">Productivity Guide</td></tr><tr><td title=3D"Show online documen=
+tation"><code>OnlineDocAction</code></td><td title=3D"Show online documenta=
+tion">Online Documentation</td></tr><tr><td title=3D"Look what's new featur=
+es in IntelliJ IDEA 5.0"><code>WhatsNewAction</code></td><td title=3D"Look =
+what's new features in IntelliJ IDEA 5.0">What's New in IDEA 5.0</td></tr><=
+tr><td title=3D"Open PDF file with the default keymap reference card."><cod=
+e>Help.KeymapReference</code></td><td title=3D"Open PDF file with the defau=
+lt keymap reference card.">Default Keymap Reference</td></tr><tr><td title=
+=3D"Enter registration data"><code>Register</code></td><td title=3D"Enter r=
+egistration data">Register...</td></tr><tr><td title=3D"Check for available=
+ update"><code>CheckForUpdate</code></td><td title=3D"Check for available u=
+pdate">Check for Update...</td></tr><tr><td title=3D"Show information about=
+ IDEA"><code>About</code></td><td title=3D"Show information about IDEA">Abo=
+ut</td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" class=3D"=
+actions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code>Bookmarks=
+</code></code>
+                    (Bookmarks)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D""><code>ToggleBookmark0</code></td><td title=3D"">Toggle Bookmark 0</td=
+></tr><tr><td title=3D""><code>ToggleBookmark1</code></td><td title=3D"">To=
+ggle Bookmark 1</td></tr><tr><td title=3D""><code>ToggleBookmark2</code></t=
+d><td title=3D"">Toggle Bookmark 2</td></tr><tr><td title=3D""><code>Toggle=
+Bookmark3</code></td><td title=3D"">Toggle Bookmark 3</td></tr><tr><td titl=
+e=3D""><code>ToggleBookmark4</code></td><td title=3D"">Toggle Bookmark 4</t=
+d></tr><tr><td title=3D""><code>ToggleBookmark5</code></td><td title=3D"">T=
+oggle Bookmark 5</td></tr><tr><td title=3D""><code>ToggleBookmark6</code></=
+td><td title=3D"">Toggle Bookmark 6</td></tr><tr><td title=3D""><code>Toggl=
+eBookmark7</code></td><td title=3D"">Toggle Bookmark 7</td></tr><tr><td tit=
+le=3D""><code>ToggleBookmark8</code></td><td title=3D"">Toggle Bookmark 8</=
+td></tr><tr><td title=3D""><code>ToggleBookmark9</code></td><td title=3D"">=
+Toggle Bookmark 9</td></tr><tr><td title=3D""><code>GotoBookmark0</code></t=
+d><td title=3D"">Go to Bookmark 0</td></tr><tr><td title=3D""><code>GotoBoo=
+kmark1</code></td><td title=3D"">Go to Bookmark 1</td></tr><tr><td title=3D=
+""><code>GotoBookmark2</code></td><td title=3D"">Go to Bookmark 2</td></tr>=
+<tr><td title=3D""><code>GotoBookmark3</code></td><td title=3D"">Go to Book=
+mark 3</td></tr><tr><td title=3D""><code>GotoBookmark4</code></td><td title=
+=3D"">Go to Bookmark 4</td></tr><tr><td title=3D""><code>GotoBookmark5</cod=
+e></td><td title=3D"">Go to Bookmark 5</td></tr><tr><td title=3D""><code>Go=
+toBookmark6</code></td><td title=3D"">Go to Bookmark 6</td></tr><tr><td tit=
+le=3D""><code>GotoBookmark7</code></td><td title=3D"">Go to Bookmark 7</td>=
+</tr><tr><td title=3D""><code>GotoBookmark8</code></td><td title=3D"">Go to=
+ Bookmark 8</td></tr><tr><td title=3D""><code>GotoBookmark9</code></td><td =
+title=3D"">Go to Bookmark 9</td></tr></tbody></table><table border=3D"1" ce=
+llspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"gro=
+up"><code><code>DebuggerActions</code></code></th></tr><tr><th>ID</th><th>N=
+ame</th></tr><tr><td title=3D""><code>Debugger.AdjustArrayRange</code></td>=
+<td title=3D"">Adjust Range...</td></tr><tr><td title=3D""><code>Debugger.I=
+nspect</code></td><td title=3D"">Inspect</td></tr><tr><td title=3D""><code>=
+Debugger.CopyValue</code></td><td title=3D"">Copy Value</td></tr><tr><td ti=
+tle=3D""><code>Debugger.CustomizeContextView</code></td><td title=3D"">Cust=
+omize Data Views...</td></tr><tr><td title=3D""><code>Debugger.CustomizeThr=
+eadsView</code></td><td title=3D"">Customize Threads View...</td></tr><tr><=
+td title=3D""><code>Debugger.NewWatch</code></td><td title=3D"">New Watch..=
+.</td></tr><tr><td title=3D""><code>Debugger.EditWatch</code></td><td title=
+=3D"">Edit Watch</td></tr><tr><td title=3D""><code>Debugger.EditFrameSource=
+</code></td><td title=3D"">EditFrameSource</td></tr><tr><td title=3D""><cod=
+e>Debugger.EditNodeSource</code></td><td title=3D"">EditNodeSource</td></tr=
+><tr><td title=3D""><code>Debugger.EditTypeSource</code></td><td title=3D""=
+>Jump to Object Source</td></tr><tr><td title=3D""><code>Debugger.RemoveAll=
+Watches</code></td><td title=3D"">Remove All Watches</td></tr><tr><td title=
+=3D""><code>Debugger.RemoveWatch</code></td><td title=3D"">Remove Watch</td=
+></tr><tr><td title=3D""><code>Debugger.ViewAsGroup</code></td><td title=3D=
+"">View as</td></tr><tr><td title=3D""><code>Debugger.SetValue</code></td><=
+td title=3D"">Set Value...</td></tr><tr><td title=3D""><code>Debugger.ShowF=
+rame</code></td><td title=3D"">Show Frame</td></tr><tr><td title=3D""><code=
+>Debugger.ResumeThread</code></td><td title=3D"">Resume</td></tr><tr><td ti=
+tle=3D""><code>Debugger.FreezeThread</code></td><td title=3D"">Freeze</td><=
+/tr><tr><td title=3D"Mute/unmute all breakpoints in a debug session."><code=
+>Debugger.MuteBreakpoints</code></td><td title=3D"Mute/unmute all breakpoin=
+ts in a debug session.">Mute Breakpoints</td></tr><tr><td title=3D"Toggles =
+whether all threads or only current thread will be suspended while stepping=
+."><code>Debugger.ToggleStepThreadSuspendPolicy</code></td><td title=3D"Tog=
+gles whether all threads or only current thread will be suspended while ste=
+pping.">Suspend All Threads While Stepping</td></tr><tr><td title=3D""><cod=
+e>Debugger.AddToWatch</code></td><td title=3D"">Add to Watches</td></tr></t=
+body></table><table border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody=
+><tr><th colspan=3D"2" class=3D"group"><code><code>Debugger.Representation<=
+/code></code></th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=3D"">=
+<code>Debugger.AutoRenderer</code></td><td title=3D"">Auto</td></tr></tbody=
+></table><table border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr=
+><th colspan=3D"2" class=3D"group"><code><code>EditorPopupMenu</code></code=
+>
+                    (Editor Popup Menu)
+                  </th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=
+=3D"Add selected element to migration roots"><code>Add to migration roots</=
+code></td><td title=3D"Add selected element to migration roots">Add to migr=
+ation roots</td></tr><tr><td title=3D"Validate selected JSP files"><code>Va=
+lidateJsp</code></td><td title=3D"Validate selected JSP files">Validate JSP=
+</td></tr><tr><td title=3D"Add selected file into exploded deployment direc=
+tory or J2EE archive"><code>PackageFile</code></td><td title=3D"Add selecte=
+d file into exploded deployment directory or J2EE archive">Package file</td=
+></tr><tr><td title=3D"Compare current selection with clipboard"><code>Comp=
+areClipboardWithSelection</code></td><td title=3D"Compare current selection=
+ with clipboard">Compare with Clipboard</td></tr><tr><td title=3D"Show Appl=
+ied Styles For Tag"><code>ShowAppliedStylesAction</code></td><td title=3D"S=
+how Applied Styles For Tag">Show Applied Styles For Tag</td></tr></tbody></=
+table><table border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><t=
+h colspan=3D"2" class=3D"group"><code><code>ChangeScheme</code></code></th>=
+</tr><tr><th>ID</th><th>Name</th></tr><tr><td title=3D"Change current color=
+ scheme"><code>ChangeColorScheme</code></td><td title=3D"Change current col=
+or scheme">Switch Color Scheme</td></tr><tr><td title=3D"Change current cod=
+e style scheme"><code>ChangeCodeStyleScheme</code></td><td title=3D"Change =
+current code style scheme">Switch Code Style Scheme</td></tr><tr><td title=
+=3D"Change current keymap"><code>ChangeKeymap</code></td><td title=3D"Chang=
+e current keymap">Switch Keymap</td></tr><tr><td title=3D"Change current Lo=
+ok&amp;Feel"><code>ChangeLaf</code></td><td title=3D"Change current Look&am=
+p;Feel">Switch Look&amp;Feel</td></tr><tr><td title=3D"Change current edito=
+r inspection profile"><code>ChangeInspectionProfile</code></td><td title=3D=
+"Change current editor inspection profile">Switch Editor Highlighting</td><=
+/tr><tr><td title=3D"Change Current Customization Schema"><code>ChangeCusto=
+mizationSchema</code></td><td title=3D"Change Current Customization Schema"=
+>Switch Customization Schema</td></tr></tbody></table><table border=3D"1" c=
+ellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"gr=
+oup"><code><code>EditorTabPopupMenu</code></code></th></tr><tr><th>ID</th><=
+th>Name</th></tr><tr><td title=3D"Move Editor To Opposite Tab Group"><code>=
+MoveEditorToOppositeTabGroup</code></td><td title=3D"Move Editor To Opposit=
+e Tab Group">Move Editor To Opposite Tab Group</td></tr></tbody></table><ta=
+ble border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=
+=3D"2" class=3D"group"><code><code>ProjectViewPopupMenu</code></code></th><=
+/tr><tr><th>ID</th><th>Name</th></tr><tr><td title=3D"Associate selected fi=
+le with one of file types"><code>AssociateWithFileType</code></td><td title=
+=3D"Associate selected file with one of file types">Associate with File Typ=
+e</td></tr><tr><td title=3D""><code>SynchronizeCurrentFile</code></td><td t=
+itle=3D"">Synchronize selected file</td></tr></tbody></table><table border=
+=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" cla=
+ss=3D"group"><code><code>J2EEViewPopupMenu</code></code></th></tr><tr><th>I=
+D</th><th>Name</th></tr><tr><td title=3D"Open editor for the selected item"=
+><code>OpenCustomEditor</code></td><td title=3D"Open editor for the selecte=
+d item">Edit...</td></tr></tbody></table><table border=3D"1" cellspacing=3D=
+"0" class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><c=
+ode>FavoritesViewPopupMenu</code></code></th></tr><tr><th>ID</th><th>Name</=
+th></tr><tr><td title=3D"Remove selected node from favorites"><code>RemoveF=
+romFavorites</code></td><td title=3D"Remove selected node from favorites">R=
+emove From Favorites</td></tr></tbody></table><table border=3D"1" cellspaci=
+ng=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"group"><co=
+de><code>TypeHierarchyPopupMenu</code></code></th></tr><tr><th>ID</th><th>N=
+ame</th></tr><tr><td title=3D""><code>TypeHierarchy.BaseOnThisType</code></=
+td><td title=3D"">Base On This Type</td></tr><tr><td title=3D""><code>TypeH=
+ierarchy.Class</code></td><td title=3D"">Class Hierarchy</td></tr><tr><td t=
+itle=3D""><code>TypeHierarchy.Subtypes</code></td><td title=3D"">Subtypes H=
+ierarchy</td></tr><tr><td title=3D""><code>TypeHierarchy.Supertypes</code><=
+/td><td title=3D"">Supertypes Hierarchy</td></tr></tbody></table><table bor=
+der=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" =
+class=3D"group"><code><code>MethodHierarchyPopupMenu</code></code></th></tr=
+><tr><th>ID</th><th>Name</th></tr><tr><td title=3D"Implement Method (from M=
+ethod Hierarchy)"><code>MethodHierarchy.ImplementMethodAction</code></td><t=
+d title=3D"Implement Method (from Method Hierarchy)">Implement Method</td><=
+/tr><tr><td title=3D"Override Method (from Method Hierarchy)"><code>MethodH=
+ierarchy.OverrideMethodAction</code></td><td title=3D"Override Method (from=
+ Method Hierarchy)">Override Method</td></tr><tr><td title=3D"Show hierarch=
+y for method of selected class/interface"><code>MethodHierarchy.BaseOnThisT=
+ype</code></td><td title=3D"Show hierarchy for method of selected class/int=
+erface">Base On This Type</td></tr></tbody></table><table border=3D"1" cell=
+spacing=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"group=
+"><code><code>CallHierarchyPopupMenu</code></code></th></tr><tr><th>ID</th>=
+<th>Name</th></tr><tr><td title=3D"Show call hierarchy for selected method"=
+><code>CallHierarchy.BaseOnThisType</code></td><td title=3D"Show call hiera=
+rchy for selected method">Base On This Method</td></tr></tbody></table><tab=
+le border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspan=
+=3D"2" class=3D"group"><code><code>Lvcs.DirectoryHistoryPopup</code></code>=
+</th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=3D"Show changes"><=
+code>Lvcs.ShowLvcsDiffAction</code></td><td title=3D"Show changes">Compare =
+Versions</td></tr><tr><td title=3D"Rollback"><code>Lvcs.RollbackFileAction<=
+/code></td><td title=3D"Rollback">Rollback File</td></tr></tbody></table><t=
+able border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><th colspa=
+n=3D"2" class=3D"group"><code><code>Vcs.CheckinProjectPopup</code></code></=
+th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=3D"Show changes"><co=
+de>Vcs.ShowDiffAction</code></td><td title=3D"Show changes">Show Changes</t=
+d></tr><tr><td title=3D"Rollback changes"><code>Vcs.RollbackChanges</code><=
+/td><td title=3D"Rollback changes">Rollback Changes</td></tr><tr><td title=
+=3D"Edit source"><code>Vcs.EditSourceAction</code></td><td title=3D"Edit so=
+urce">Edit Source</td></tr><tr><td title=3D"Exclude from commit"><code>Vcs.=
+ExcludeAction</code></td><td title=3D"Exclude from commit">Exclude from Com=
+mit</td></tr><tr><td title=3D"Include into commit"><code>Vcs.IncludeAction<=
+/code></td><td title=3D"Include into commit">Include into Commit</td></tr><=
+/tbody></table><table border=3D"1" cellspacing=3D"0" class=3D"actions"><tbo=
+dy><tr><th colspan=3D"2" class=3D"group"><code><code>TestTreePopupMenu</cod=
+e></code></th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=3D""><cod=
+e>openAssertEqualsDiff</code></td><td title=3D"">View assertEquals Differen=
+ce</td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" class=3D"=
+actions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code>TestStati=
+sticsTablePopupMenu</code></code></th></tr><tr><th>ID</th><th>Name</th></tr=
+><tr><td title=3D""><code>JUnitTesting.SelectInTree</code></td><td title=3D=
+"">Select in Tree</td></tr></tbody></table><table border=3D"1" cellspacing=
+=3D"0" class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"group"><code=
+><code>UsageView.Popup</code></code></th></tr><tr><th>ID</th><th>Name</th><=
+/tr><tr><td title=3D"Include this usage(s) into processing"><code>UsageView=
+.Include</code></td><td title=3D"Include this usage(s) into processing">Inc=
+lude</td></tr><tr><td title=3D"Exlude this usage(s) from processing"><code>=
+UsageView.Exclude</code></td><td title=3D"Exlude this usage(s) from process=
+ing">Exclude</td></tr></tbody></table><table border=3D"1" cellspacing=3D"0"=
+ class=3D"actions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code=
+>GuiDesigner.EditorPopupMenu</code></code></th></tr><tr><th>ID</th><th>Name=
+</th></tr><tr><td title=3D"Preview form"><code>GuiDesigner.PreviewForm</cod=
+e></td><td title=3D"Preview form">Preview</td></tr><tr><td title=3D""><code=
+>GuiDesigner.DataBindingWizard</code></td><td title=3D"">Data Binding Wizar=
+d...</td></tr><tr><td title=3D""><code>GuiDesigner.LayOutHorizontally</code=
+></td><td title=3D"">Lay Out Horizontally</td></tr><tr><td title=3D""><code=
+>GuiDesigner.LayOutVertically</code></td><td title=3D"">Lay Out Vertically<=
+/td></tr><tr><td title=3D""><code>GuiDesigner.LayOutInGrid</code></td><td t=
+itle=3D"">Lay Out In a Grid</td></tr><tr><td title=3D""><code>GuiDesigner.B=
+reakLayout</code></td><td title=3D"">Break Layout</td></tr><tr><td title=3D=
+"Expand selection structurally"><code>GuiDesigner.ExpandSelection</code></t=
+d><td title=3D"Expand selection structurally">Expand Selection</td></tr><tr=
+><td title=3D"Shrink selection structurally"><code>GuiDesigner.ShrinkSelect=
+ion</code></td><td title=3D"Shrink selection structurally">Shrink Selection=
+</td></tr></tbody></table><table border=3D"1" cellspacing=3D"0" class=3D"ac=
+tions"><tbody><tr><th colspan=3D"2" class=3D"group"><code><code>GuiDesigner=
+.PropertyInspectorPopupMenu</code></code></th></tr><tr><th>ID</th><th>Name<=
+/th></tr><tr><td title=3D"Show a popup window with JavaDoc for selected pro=
+perty"><code>GuiDesigner.QuickJavadoc</code></td><td title=3D"Show a popup =
+window with JavaDoc for selected property">Quick JavaDoc</td></tr></tbody><=
+/table><table border=3D"1" cellspacing=3D"0" class=3D"actions"><tbody><tr><=
+th colspan=3D"2" class=3D"group"><code><code>StructuralSearchActions</code>=
+</code></th></tr><tr><th>ID</th><th>Name</th></tr><tr><td title=3D"Structur=
+al Search"><code>StructuralSearchPlugin.StructuralSearchAction</code></td><=
+td title=3D"Structural Search">Search Structurally...</td></tr><tr><td titl=
+e=3D"Structural Replace"><code>StructuralSearchPlugin.StructuralReplaceActi=
+on</code></td><td title=3D"Structural Replace">Replace Structurally...</td>=
+</tr></tbody></table><p>
+          This file was generated by
+          <a href=3D"http://www.kano.net/">Keith Lea</a>
+          using
+          <a href=3D"http://keithlea.com/idea-actions/convert.xsl">this XSL
+            stylesheet</a>
+          using the file
+          <code>ActionManager.xml</code>
+          .
+          This file is located inside
+          <code>lib/resources.jar</code>
+          , in your
+          IDEA installation folder. under its
+          <code>idea/</code>
+          folder.
+        </p>
+
+
+
+
+<div style=3D"position: static; display: none; width: 0px; height: 0px; bor=
+der: none; padding: 0px; margin: 0px;"><div id=3D"trans-tooltip"><div id=3D=
+"tip-left-top" style=3D"background: url(&quot;chrome-extension://ikkbfngojl=
+johpekonpldkamedehakni/imgs/map/tip-left-top.png&quot;);"></div><div id=3D"=
+tip-top" style=3D"background: url(&quot;chrome-extension://ikkbfngojljohpek=
+onpldkamedehakni/imgs/map/tip-top.png&quot;) repeat-x;"></div><div id=3D"ti=
+p-right-top" style=3D"background: url(&quot;chrome-extension://ikkbfngojljo=
+hpekonpldkamedehakni/imgs/map/tip-right-top.png&quot;);"></div><div id=3D"t=
+ip-right" style=3D"background: url(&quot;chrome-extension://ikkbfngojljohpe=
+konpldkamedehakni/imgs/map/tip-right.png&quot;) repeat-y;"></div><div id=3D=
+"tip-right-bottom" style=3D"background: url(&quot;chrome-extension://ikkbfn=
+gojljohpekonpldkamedehakni/imgs/map/tip-right-bottom.png&quot;);"></div><di=
+v id=3D"tip-bottom" style=3D"background: url(&quot;chrome-extension://ikkbf=
+ngojljohpekonpldkamedehakni/imgs/map/tip-bottom.png&quot;) repeat-x;"></div=
+><div id=3D"tip-left-bottom" style=3D"background: url(&quot;chrome-extensio=
+n://ikkbfngojljohpekonpldkamedehakni/imgs/map/tip-left-bottom.png&quot;);">=
+</div><div id=3D"tip-left" style=3D"background: url(&quot;chrome-extension:=
+//ikkbfngojljohpekonpldkamedehakni/imgs/map/tip-left.png&quot;);"></div><di=
+v id=3D"trans-content"></div></div><div id=3D"tip-arrow-bottom" style=3D"ba=
+ckground: url(&quot;chrome-extension://ikkbfngojljohpekonpldkamedehakni/img=
+s/map/tip-arrow-bottom.png&quot;);"></div><div id=3D"tip-arrow-top" style=
+=3D"background: url(&quot;chrome-extension://ikkbfngojljohpekonpldkamedehak=
+ni/imgs/map/tip-arrow-top.png&quot;);"></div></div><div id=3D"fanyiWrapper"=
+ style=3D"height: 32px; width: 33px; font-family: &#24494;&#36719;&#38597;&=
+#40657;; font-size: 14px; text-align: center; line-height: 32px; color: rgb=
+(255, 255, 255); background-color: rgb(67, 149, 255); border-radius: 2px; c=
+ursor: pointer; z-index: 99999; left: 76px; top: 7396px; position: absolute=
+;">&#35793;</div><div id=3D"fanyiWrapper" style=3D"height: 32px; width: 33p=
+x; font-family: &#24494;&#36719;&#38597;&#40657;; font-size: 14px; text-ali=
+gn: center; line-height: 32px; color: rgb(255, 255, 255); background-color:=
+ rgb(67, 149, 255); border-radius: 2px; cursor: pointer; z-index: 99999; le=
+ft: 76px; top: 7396px; position: absolute;">&#35793;</div></body></html>
+------MultipartBoundary--DdDeZk1VudLpoLIcHZeKsDKDFULVMuA7YiIrqFVu9x------
