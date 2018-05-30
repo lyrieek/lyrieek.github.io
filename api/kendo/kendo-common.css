@@ -1,0 +1,12 @@
+html,
+body,
+article {
+    height: 100%;
+}
+
+#page-article ul {
+    float: left;
+    width: 20%;
+    border: solid 1px red;
+    height: 100%;
+}
