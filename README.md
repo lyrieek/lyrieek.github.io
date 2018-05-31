@@ -1,9 +1,14 @@
-# 实验性质
-这是一个静态功能试验厂,诞生了许多有益于合理化设计元素的页面的的case
+# 收集箱
+这是一个小小的百宝箱，也是一个创意工厂
 
-例如
->古风色调 https://lyrieek.github.io/color.html
+### 列表
 
-后续还会有更多有趣的功能
+[HTML转义符大全](https://lyrieek.github.io/api/html_code)
+
+### 参考
+
+[古风色调](https://lyrieek.github.io/color)
+
+功能还在收集中
 
 敬请期待
