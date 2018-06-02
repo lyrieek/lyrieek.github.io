@@ -6,6 +6,11 @@
 - [HTML转义符大全](https://lyrieek.github.io/api/html_code)
 - [gitMoji](https://lyrieek.github.io/gitmoji)
 
+### API
+
+- [lodash](https://lyrieek.github.io/api/lodash/lodash)
+- [jslite](https://lyrieek.github.io/api/jslite/jslite)
+
 ### 收集
 - [font-icon](https://lyrieek.github.io/font-icon)
 
