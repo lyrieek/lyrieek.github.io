@@ -19,11 +19,9 @@
         "$": true,
         "jQuery": true,
         "angular": true,
-        "kendo": true,
         "_": true,
         "moment": true,
         "hotkeys": true,
-        "isDialog": true,
         "translate": true,
         "toastr": true
     },
