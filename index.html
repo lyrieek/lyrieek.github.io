@@ -1,41 +1,31 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Tian Hao CodeFactory</title>
-		<style type="text/css">
-			html,body{
-				width: 100%;
-				height: 100%;
-				margin: 0 0;
-				padding: 0 0;
-			}
-		</style>
-		<script type="text/javascript" src="jquery-2.2.4.js"></script>
-		<script type="text/javascript" src="common-1.0.js"></script>
-		<script type="text/javascript">
-				var storageFun = [];
 
-				var storage = function (param) {
-						if (!!param) { storageFun[storageFun.length] = []["filter"]["constructor"](param); }
-				}
+<head>
+    <meta charset="UTF-8">
+    <title>Tian Hao CodeFactory</title>
+    <style type="text/css">
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0 0;
+            padding: 0 0;
+        }
+    </style>
+    <script type="text/javascript" src="src/jquery-2.2.4.js"></script>
+    <script type="text/javascript" src="src/common-1.0.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#content').html();
+        });
+    </script>
+</head>
 
-				var exec = function () {
-						for (var i = 0; i < storageFun.length; i++) {
-								storageFun[i]();
-						}
-				}
-
-				$(function () {
-						$('#content').html();
-				});
-		</script>
-	</head>
-
-	<body>
-			<div contenteditable="true" onfocus="">
-				<span id='content'>Content</span>
-			</div>
-	</body>
+<body>
+    <div contenteditable="true" onfocus="">
+        <span id='content'>Content</span>
+    </div>
+</body>
 
 </html>

@@ -15,5 +15,4 @@ $(function() {
         $(this).info();
     })
 
-
 });

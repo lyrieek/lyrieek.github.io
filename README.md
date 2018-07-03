@@ -18,6 +18,7 @@
 ### 参考
 
 - [古风色调](https://lyrieek.github.io/color)
+- [图片轮切](https://lyrieek.github.io/demo/img-5)
 
 
 功能还在收集中
