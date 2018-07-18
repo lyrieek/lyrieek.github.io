@@ -17,7 +17,8 @@
             margin: 20px auto;
         }
 
-        #holder.hover,#holder:hover {
+        #holder.hover,
+        #holder:hover {
             border: 7px dashed #0c0;
         }
 
@@ -25,6 +26,10 @@
             display: block;
             margin: 10px auto;
             border: 1px solid black;
+        }
+
+        #img:not([src]) {
+            display: none;
         }
 
         input {
@@ -51,7 +56,7 @@
             <input onchange="img.style.transform=this.value" value='rotate(7deg)' />
         </nav>
         <article>
-            <div id="holder"><img id="img" src="" /></div>
+            <div id="holder"><img id="img" /></div>
             <input id="upload" style="display:none;" type="file" />
         </article>
     </body>
