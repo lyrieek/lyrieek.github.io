@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width">
+    <title>Image preview</title>
+    <style type="text/css">
+        * {
+            vertical-align: middle;
+            font-family: sans-serif;
+        }
+
+        #holder {
+            border: 7px dashed #ccc;
+            min-height: 300px;
+            margin: 20px auto;
+        }
+
+        #holder.hover,#holder:hover {
+            border: 7px dashed #0c0;
+        }
+
+        #img {
+            display: block;
+            margin: 10px auto;
+            border: 1px solid black;
+        }
+
+        input {
+            width: 85px;
+        }
+
+        span {
+            padding-left: 20px;
+        }
+
+        button {
+            height: 27px;
+        }
+    </style>
+
+    <body>
+        <nav>
+            <button>⚡️</button>
+            <button onclick="img.style.borderColor=(img.style.borderColor === 'white') ? 'black' : 'white'">框线</button>
+            <button onclick="img.style.borderColor=(img.style.borderColor === 'white') ? 'black' : 'white'">框线</button>
+            <span>width:</span>
+            <input onchange="img.style.width=this.value" value='auto' />
+            <span>transform:</span>
+            <input onchange="img.style.transform=this.value" value='rotate(7deg)' />
+        </nav>
+        <article>
+            <div id="holder"><img id="img" src="" /></div>
+            <input id="upload" style="display:none;" type="file" />
+        </article>
+    </body>
+    <script type="text/javascript">
+        (function() {
+            var holder = document.getElementById('holder')
+            var img = document.getElementById('img')
+
+            function previewfile(file) {
+                var reader = new FileReader();
+                reader.onload = function(event) {
+                    img.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+
+            holder.ondragover = function() {
+                this.className = 'hover';
+                return false;
+            }
+            holder.ondragend = function() {
+                this.className = '';
+                return false;
+            }
+            holder.ondrop = function(e) {
+                this.className = '';
+                e.preventDefault();
+                previewfile(e.dataTransfer.files[0]);
+            }
+
+            holder.onclick = function() {
+                document.getElementById('upload').click();
+            }
+
+            document.getElementById('upload').onchange = function(e) {
+                previewfile(this.files[0]);
+            }
+
+            // tools
+
+        })();
+    </script>
+
+</html>
