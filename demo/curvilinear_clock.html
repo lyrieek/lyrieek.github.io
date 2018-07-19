@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>curvilinear clock </title>
+  <title>曲线时钟</title>
 </head>
 
 <body>
@@ -27,8 +27,7 @@
   <script>
     (function(w) {
 
-      function Relogio(container) {
-
+      let Relogio = function(container) {
         this.container = container;
         this.initialize();
       }
@@ -208,7 +207,6 @@
       }
 
       function update() {
-
         var time = new Date();
         this.clockdata.h = time.getHours();
         this.clockdata.m = time.getMinutes();
@@ -220,10 +218,8 @@
       };
 
       function loop() {
-
         update.call(this);
         draw.call(this);
-
         requestAnimationFrame(loop.bind(this));
       };
 
@@ -247,10 +243,7 @@
     }(window))
 
 
-    var relogio = new Relogio(document.querySelector(".relogio"));
-
-
-
+    new Relogio(document.querySelector(".relogio"));
 
     var elt = document.getElementById("todaydatetime");
     setInterval(function() {
@@ -259,7 +252,7 @@
       var m = now.getMinutes();
       var s = now.getSeconds();
       var ms = now.getMilliseconds();
-      elt.innerHTML = h + "小时:" + m + "分:" + s + "秒:" + ms;
+      elt.innerHTML = h + ":" + m + ":" + s + "." + ms;
     }, 100);
   </script>
 
