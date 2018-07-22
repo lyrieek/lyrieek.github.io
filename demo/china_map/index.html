@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>中国地图</title>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script src="js/raphael.js"></script>
+  <script src="js/chinamapPath.js"></script>
+  <script src="js/chinamap.js"></script>
+  <style type="text/css">
+    * {
+      font: 12px Arial, 'Songti', Tahoma, Sans-Serif;
+    }
+
+    #ChinaMap {
+      padding-right: 100px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      margin: 0px auto;
+      padding-top: 10px;
+      position: relative;
+      text-align: center;
+    }
+
+    #tiplayer {
+      padding-right: 5px;
+      padding-left: 5px;
+      z-index: 1000;
+      min-height: 1em;
+      background: #000;
+      max-width: 250px;
+      padding-bottom: 5px;
+      color: #fff;
+      padding-top: 5px;
+      position: absolute;
+      text-align: left;
+      word-wrap: break-word;
+      -moz-border-radius: 3px;
+      -khtml-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+    }
+
+    .ToolTip {
+      padding-right: 5px;
+      padding-left: 5px;
+      z-index: 1000;
+      min-height: 1em;
+      background: #000;
+      max-width: 350px;
+      padding-bottom: 5px;
+      color: #fff;
+      padding-top: 5px;
+      position: absolute;
+      text-align: left;
+      word-wrap: break-word;
+      -moz-border-radius: 3px;
+      -khtml-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+    }
+
+    .ToolTip {
+      border-right: #c5b270 1px solid;
+      padding-right: 15px;
+      border-top: #c5b270 1px solid;
+      padding-left: 15px;
+      background: #fffbd6;
+      padding-bottom: 0px;
+      border-left: #c5b270 1px solid;
+      color: #bb861c;
+      line-height: 30px;
+      padding-top: 0px;
+      border-bottom: #c5b270 1px solid;
+      top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="ChinaMap">
+
+    <div id="map"></div>
+
+  </div>
+
+</body>
+
+</html>
