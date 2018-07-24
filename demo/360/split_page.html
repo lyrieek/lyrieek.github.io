@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<!-- source http://www.sucaihuo.com -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Tianhao">
+  <title>滑块特效</title>
+  <style type="text/css">
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0 0;
+      padding: 0 0;
+    }
+
+    .center {
+      background: url(./img/t01f7cff3a354dd1b98.png) center center no-repeat;
+    }
+
+    .more {
+      background: #4abaec;
+    }
+
+    .center2 {
+      position: relative;
+      background: url(./img/t01f57bbc1da2993a9c.png) center center no-repeat;
+    }
+
+    .middle {
+      position: relative;
+      height: 1800px;
+      background: #e8ebed;
+    }
+
+    .automiddle {
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .m4 {
+      position: relative;
+      background: url(./img/t01fbd50b545f104d03.png) no-repeat;
+      width: 500px;
+      height: 355px;
+      top: -68px;
+      left: 241px;
+      margin: 0 auto;
+      opacity: 0;
+    }
+
+    .m3 {
+      position: relative;
+      background: url(./img/t01a09078852a316c89.png) no-repeat;
+      width: 491px;
+      height: 357px;
+      top: -44px;
+      left: -232px;
+      margin: 0 auto;
+      opacity: 0;
+    }
+
+    .m2 {
+      position: relative;
+      background: url(./img/t01ad71e1663b46aed4.png) no-repeat;
+      width: 502px;
+      height: 382px;
+      margin: 0 auto;
+      top: -11px;
+      left: 236px;
+      opacity: 0;
+
+    }
+
+    .m1 {
+      position: relative;
+      background: url(./img/t014df9f8be8f83d640.png) no-repeat;
+      width: 544px;
+      height: 353px;
+      top: 75px;
+      left: -238px;
+      margin: 0 auto;
+      opacity: 0;
+    }
+
+    .m5 {
+      position: relative;
+      background: url(./img/t019666dd8423b12caf.png) no-repeat;
+      width: 625px;
+      height: 263px;
+      margin: 0 auto;
+      left: -15px;
+      top: -283px;
+      opacity: 0;
+    }
+
+    .line {
+      position: absolute;
+      border-left: 3px dotted #cfd6da;
+      height: 0;
+      width: 0;
+      left: 0;
+      top: 0;
+      display: none;
+    }
+
+    .hover {
+      width: 233px;
+      height: 66px;
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      left: 7px;
+    }
+
+    .hover:hover {
+      background: url(./img/t01ab12a4bd80d78a1a.png);
+    }
+
+    .bottom {
+      cursor: pointer;
+      width: 75px;
+      height: 75px;
+      background: url(./img/t01ab12a4bd80d78a1a.png) 75px 0;
+      position: absolute;
+      bottom: -37px;
+      left: 50%;
+      margin-left: -36px;
+      z-index: 1;
+    }
+
+    .star {
+      background: url(./img/t01ab12a4bd80d78a1a.png) -617px 46px;
+      width: 22px;
+      height: 22px;
+      margin: 16px 0 0 25px;
+    }
+
+    .tip {
+      width: 24px;
+      height: 85px;
+      position: fixed;
+      right: 60px;
+      top: 48%;
+      background: url(./img/t01a6da6ce066ce3084.png) -6px 0px;
+    }
+
+    .tip a {
+      display: block;
+      width: 20px;
+      height: 22px;
+      margin-bottom: 15px;
+    }
+
+    .m5-cover {
+      background: #e8ebed;
+      height: 290px;
+      width: 5px;
+      position: relative;
+      margin: 0 auto;
+      left: 2px;
+    }
+  </style>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      var n = 0;
+      $(window).scroll(function() {
+        if (n == 0 && $(window).scrollTop() > 150) {
+          n = 1;
+          $('.line').show().animate({
+            'height': '1800'
+          }, 1000, function() {
+            $('.automiddle div').each(function() {
+              var that = this;
+              var top = parseInt($(this).css('top').replace('px', ''));
+              $(that).css({
+                'top': top - 100
+              }).animate({
+                'top': top + 30,
+                'opacity': '0.6'
+              }, 600, function() {
+                $(that).animate({
+                  'top': top - 10,
+                  'opacity': '0.8'
+                }, 200, function() {
+                  $(that).animate({
+                    'top': top,
+                    'opacity': '1'
+                  }, 200);
+                })
+              })
+            });
+          });
+        }
+        let bgPosition = '-6px 0'
+        if ($(window).scrollTop() < $(window).height() / 2) {
+          bgPosition = '-6px 0'
+        } else if ($(window).scrollTop() < $(window).height() / 2 + 1800 && $(window).scrollTop() >= $(window).height() / 2) {
+          bgPosition = '-36px 0'
+        } else {
+          bgPosition = '-68px -3px'
+        }
+        $('.tip').css('background-position', bgPosition);
+      })
+
+      $(window).resize(function() {
+        $('.screen,.center,.center2').css({
+          'height': $(window).height()
+        });
+        $('.line').css('left', $(window).width() / 2);
+        $('.hover').css('top', $(window).height() / 2 + 9);
+      }).resize();
+      setInterval(function() {
+        $('.star').animate({
+          'margin-top': '38px'
+        }, 1000, function() {
+          $('.star').css('margin-top', '16px');
+        })
+      }, 1000);
+      var b = $('.bottom');
+      b.eq(0).click(function() {
+        $('html,body').animate({
+          'scrollTop': $(window).height()
+        }, 1000);
+      })
+      b.eq(1).click(function() {
+        $('html,body').animate({
+          'scrollTop': $(window).height() + 1800
+        }, 1000);
+      })
+      $('.center2 a').click(function() {
+        external.AppCmd(external.GetSID(window), "", "main.openurl", "chrome://newtab", "1.0", function(r, s) {
+          window.opener = null;
+          window.open('', '_self');
+          window.close();
+        })
+      })
+      $('.tip a').click(function() {
+        var i = $(this).index();
+        if (i == 0) {
+          $('html,body').stop(true, true).animate({
+            'scrollTop': 0
+          }, 1000);
+        } else if (i == 1) {
+          $('html,body').stop(true, true).animate({
+            'scrollTop': $(window).height()
+          }, 1000);
+        } else if (i == 2) {
+          $('html,body').stop(true, true).animate({
+            'scrollTop': $(window).height() + 1800
+          }, 1000);
+        }
+      })
+
+      $('html,body').animate({
+        'scrollTop': '37px'
+      }, 100);
+    });
+  </script>
+</head>
+
+<body>
+  <div class="screen" style="background: #00a200">
+    <div class="bottom">
+      <div class="star">
+      </div>
+    </div>
+
+    <div class="center"></div>
+  </div>
+  <div class="middle">
+    <div class="line"></div>
+    <div class="automiddle">
+      <div class="m1"></div>
+      <div class="m2"></div>
+      <div class="m3"></div>
+      <div class="m4"></div>
+      <div class="m5-cover"></div>
+      <div class="m5"></div>
+    </div>
+    <div class="bottom">
+      <div class="star">
+      </div>
+    </div>
+  </div>
+  <div class="screen more">
+    <div class="center2">
+      <a href="#" class="hover"></a>
+    </div>
+  </div>
+  <div class="tip">
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+  </div>
+
+</html>
