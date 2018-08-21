@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!-- <base href="/" /> -->
+  <!-- <meta http-equiv="refresh" content="2">-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Local Storage</title>
+
+  <link rel="stylesheet" href="https://cdn.bootcss.com/zui/1.8.1/css/zui.min.css" />
+  <style media="screen" type="text/css">
+  #content {
+    font-size: 16px;
+  }
+
+  .del {
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .del:hover{
+    background-color: #fff1da;
+  }
+  </style>
+
+  <script src="https://cdn.bootcss.com/zui/1.8.1/lib/jquery/jquery.js"></script>
+  <script src="https://cdn.bootcss.com/zui/1.8.1/js/zui.min.js"></script>
+
+  <script type="text/javascript">
+  $(() => {
+    Array(localStorage.length).fill().map((none, i) => {
+      $("#content").append(
+        `<tr data-map="${localStorage.key(i)}">
+            <td>${localStorage.key(i)}</td>
+            <td contenteditable="true" class='value'>${localStorage.getItem(localStorage.key(i))}</td>
+            <td onclick="localStorage.removeItem('${localStorage.key(i)}');location.reload();"
+              class="del" >Delete</td>
+        </tr>`
+      );
+    });
+
+    $('tr').keyup(function() {
+      localStorage.setItem($(this).data('map'), $(this).children(
+        '.value').html())
+    });
+
+    $("#new").click(function () {
+      localStorage.setItem($("#newKey").val(),"");
+      location.reload();
+    })
+  });
+  </script>
+
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-xs-11">
+      <input type="text" class="form-control" id="newKey">
+    </div>
+    <div class="col-xs-1">
+      <button class="btn btn-primary btn-block" id="new" type="button">Add</button>
+    </div>
+  </div>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Key</th>
+        <th>Value</th>
+        <th width="10%;"></th>
+      </tr>
+    </thead>
+    <tbody id="content"></tbody>
+  </table>
+</body>
+
+</html>
