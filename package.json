@@ -1,0 +1,17 @@
+{
+  "name": "lyrieek",
+  "version": "1.0.0",
+  "description": "test and try",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyrieek/lyrieek.github.io.git"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "zui": "1.8.1"
+  },
+  "scripts": {
+    "build": "node lib/build.js"
+  }
+}
