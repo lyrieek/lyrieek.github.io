@@ -3,15 +3,30 @@
   "version": "1.0.0",
   "description": "test and try",
   "license": "Apache-2.0",
+  "keywords": [
+    "blog"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lyrieek/lyrieek.github.io.git"
   },
+  "main": "app.js",
   "dependencies": {
+    "fs-extra": "^7.0.0",
+    "gulp": "^3.9.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "gulp-useref": "^3.1.5",
+    "gulp-util": "^3.0.8",
     "lodash": "^4.17.10",
+    "stream-combiner2": "^1.1.1",
     "zui": "1.8.1"
   },
   "scripts": {
-    "build": "node lib/build.js"
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "eslint": "^5.4.0"
   }
 }

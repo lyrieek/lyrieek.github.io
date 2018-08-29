@@ -1,3 +1,5 @@
+require("lodash");
+
 (function() {
 
     jQuery.fn.extend({
