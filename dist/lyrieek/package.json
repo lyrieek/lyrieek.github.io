@@ -1,16 +1,9 @@
 {
   "name": "lyrieek",
   "version": "1.0.0",
-  "description": "test and try",
-  "license": "Apache-2.0",
-  "keywords": [
-    "blog"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lyrieek/lyrieek.github.io"
-  },
-  "main": "app.js",
+  "description": "A Vue.js project",
+  "author": "lyrieek <tianhao7@foxmail.com>",
+  "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
@@ -21,18 +14,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "jqlite": "^0.2.42",
-    "lodash": "^4.17.10",
-    "vue": "^2.5.17",
-    "zui": "1.8.1"
+    "vue": "^2.5.2",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-minify": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
-    "gulp-useref": "^3.1.5",
-    "gulp-util": "^3.0.8",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
