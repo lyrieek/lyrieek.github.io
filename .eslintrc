@@ -17,13 +17,8 @@
     },
     "globals":{
         "$": true,
-        "jQuery": true,
-        "angular": true,
-        "_": true,
-        "moment": true,
-        "hotkeys": true,
-        "translate": true,
-        "toastr": true
+        "Promise": true,
+        "_": true
     },
     "rules": {
         // 禁止条件表达式中出现赋值操作符
