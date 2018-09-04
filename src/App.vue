@@ -2,28 +2,25 @@
 <div id="app">
   <a class="github-fork-ribbon" href="https://github.com/lyrieek/lyrieek.github.io" title="GitHub"></a>
   <div class="header-container">
-    <div class="header-bg" :style="{'background-color': bgc}"></div>
-    <div class="header">
-      <div class="intro-wrap">
-        <div class="intro">
-          <h1 style="text-shadow: 5px 5px #1177aa;">快速,全面,丰富的帮助文档</h1>
-          <p>帮助文档</p>
-        </div>
-      </div>
-    </div>
+    <h1 style="text-shadow: 5px 5px #1177aa;">快速,全面,丰富的帮助文档</h1>
+    <p>帮助文档</p>
   </div>
 
+  <div>
+    <kendo></kendo>
+    <!-- <router-view></router-view> -->
   </div>
 </div>
 </template>
 
 <script>
+import kendo from './views/kendo'
 
 export default {
   data() {
-    return {
-    }
-  }
+    return {}
+  },
+  components: { kendo }
 }
 </script>
 
@@ -37,7 +34,7 @@ html {
   font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
 }
 
-h1{
+h1 {
   font-size: 4.7em;
 }
 
@@ -48,7 +45,7 @@ h1{
   background-color: #4ebdef;
 }
 
-.header-container *{
+.header-container * {
   color: #fff;
 }
 </style>
