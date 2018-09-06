@@ -7,20 +7,18 @@
   </div>
 
   <div>
-    <kendo></kendo>
-    <!-- <router-view></router-view> -->
+    <!-- <kendo></kendo> -->
+    <router-view></router-view>
   </div>
 </div>
 </template>
 
 <script>
-import kendo from './views/kendo'
 
 export default {
   data() {
     return {}
-  },
-  components: { kendo }
+  }
 }
 </script>
 

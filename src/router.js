@@ -9,9 +9,11 @@ export default new VueRouter({
 		alias: '/'
 	},{
 		path: '/kendo',
-		component: require('./views/kendo'),
-		alias: '/'
+		component: require('./Kendo')
+		// component: {
+    //   // template: "<a>123</a>"
+    // }
 	}, {
 		path: '*', redirect: '/'
 	}]
-})
+});
