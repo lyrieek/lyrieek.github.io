@@ -5,6 +5,6 @@ import router from './router.js'
 
 new Vue({
   el: '#wrap',
-  components: { App },
-  router
+  router,
+  render: h => h(App)
 })
