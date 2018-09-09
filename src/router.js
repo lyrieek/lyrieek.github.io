@@ -5,14 +5,14 @@ Vue.use(VueRouter)
 export default new VueRouter({
 	routes: [{
 		path: '/index',
-		component: require('./App'),
+		component: require('./App.vue'),
 		alias: '/'
 	},{
 		path: '/kendo',
-		component: require('./Kendo')
-		// component: {
-    //   // template: "<a>123</a>"
-    // }
+		// component: require('./Kendo.vue')
+		component: {
+      template: "<a>123</a>"
+    }
 	}, {
 		path: '*', redirect: '/'
 	}]

@@ -3,12 +3,10 @@
   <a class="github-fork-ribbon" href="https://github.com/lyrieek/lyrieek.github.io" title="GitHub"></a>
   <div class="header-container">
     <h1 style="text-shadow: 5px 5px #1177aa;">快速,全面,丰富的帮助文档</h1>
-    <p>帮助文档</p>
+    <p @click="jump">帮助文档</p>
   </div>
 
   <div>
-    <!-- <kendo></kendo> -->
-    <router-view></router-view>
   </div>
 </div>
 </template>
@@ -18,6 +16,11 @@
 export default {
   data() {
     return {}
+  },
+  methods: {
+    jump: function () {
+      this.$router.push({path: '/kendo'});
+    }
   }
 }
 </script>
