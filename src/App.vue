@@ -6,16 +6,12 @@
     <p @click="jump">帮助文档</p>
   </div>
 
-  <div>
-  </div>
+  <router-view></router-view>
 </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {}
-  },
   methods: {
     jump: function () {
       this.$router.push({path: '/kendo'});
