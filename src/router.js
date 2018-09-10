@@ -11,9 +11,10 @@ export default new VueRouter({
 		path: '/kendo',
 		// component: require('./Kendo.vue')
 		component: {
-      template: "<a>123</a>"
-    }
-	}, {
-		path: '*', redirect: '/'
+			template: "<a>123</a>"
+		}
 	}]
+	// , {
+	// 	path: '*', redirect: '/'
+	// }]
 });
