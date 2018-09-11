@@ -21,7 +21,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "jqlite": "^0.2.42",
+    "jslite": "^1.1.12",
     "lodash": "^4.17.10",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
