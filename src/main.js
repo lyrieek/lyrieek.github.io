@@ -1,7 +1,10 @@
-import Vue from 'vue';
-import App from './App';
-import router from './router.js';
-require('jslite');
+import Vue from 'vue'
+import $ from 'JSLite'
+import router from './router.js'
+import App from './App'
+
+
+console.log($);
 
 export default new Vue({
   router,

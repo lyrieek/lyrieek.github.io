@@ -5,12 +5,12 @@
     <h1 style="text-shadow: 5px 5px #1177aa;">快速,全面,丰富的帮助文档</h1>
     <p @click="jump">帮助文档</p>
   </div>
-
   <router-view></router-view>
 </div>
 </template>
 
 <script>
+
 export default {
   methods: {
     jump: function () {
