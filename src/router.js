@@ -8,10 +8,8 @@ export default new VueRouter({
 		path: '/index',
 		component: {
 			template: `<pre>
-				我去这么快就转点了，vue真特么坑
-				刚查到原因在https://github.com/vuejs/vue-loader/releases/tag/v13.0.0
-				不过我就喜欢这么坑的</pre>
-			`
+				搞出来了，element-ui要用postcssrc不早说
+				</pre>`
 		},
 		alias: '/'
 	},{
