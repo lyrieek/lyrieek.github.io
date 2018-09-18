@@ -2,7 +2,9 @@
 	<div id="app">
 		<a class="github-fork-ribbon" href="https://github.com/lyrieek/lyrieek.github.io" title="GitHub"></a>
 		<el-menu id="nav-menu" mode="horizontal" @select="select" router>
-			<li class="el-menu-item el-icon-star-on" style="margin-right: 10%;"></li>
+			<li class="el-menu-item" style="margin-right: 10%;border-bottom-color: transparent;">
+				<router-link to="/index" class="el-icon-star-on" style="text-decoration: none;" />
+			</li>
 			<el-menu-item index="kendo">指南</el-menu-item>
 			<el-menu-item index="standard">标准</el-menu-item>
 			<el-menu-item index="api">API</el-menu-item>
@@ -16,11 +18,6 @@
 			</li>
 			<el-menu-item index="message" disabled>消息</el-menu-item>
 		</el-menu>
-		<div class="line"></div>
-		<div class="header-container">
-			<h1 style="text-shadow: 5px 5px #1177aa;">快速,全面,丰富的前端帮助文档</h1>
-			<p @click="jump">帮助文档</p>
-		</div>
 		<router-view></router-view>
 	</div>
 </template>
@@ -31,11 +28,6 @@
 			// throw new Error('oops')
 		},
 		methods: {
-			jump: function() {
-				this.$router.push({
-					path: "/kendo"
-				});
-			},
 			select: (key, keyPath) => {
 				console.log(key + ":" + keyPath);
 			}
@@ -45,8 +37,7 @@
 				input: ''
 			}
 		}
-	};
-
+	}
 </script>
 
 <style>
@@ -59,23 +50,9 @@
 		font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 	}
 
-	h1 {
-		font-size: 4.7em;
-	}
-
-	.header-container {
-		margin-top: 20px;
-		padding: 50px;
-		padding-left: 20%;
-		background-color: #4ebdef;
-	}
-
-	.header-container * {
-		color: #fff;
-	}
-
 	#nav-menu {
-		padding-left: 12%;
+		padding: 0px 12.5%;
 	}
+
 
 </style>

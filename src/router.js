@@ -6,15 +6,11 @@ Vue.use(VueRouter)
 export default new VueRouter({
 	routes: [{
 		path: '/index',
-		component: {
-			template: `<pre>
-				搞出来了，element-ui要用postcssrc不早说
-				</pre>`
-		},
+		component: require('./views/Home').default,
 		alias: '/'
 	},{
 		path: '/kendo',
-		component: require('./Kendo').default
+		component: require('./views/Kendo').default
 	}, {
 		path: '*', redirect: '/'
 	}]
