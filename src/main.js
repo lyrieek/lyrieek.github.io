@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import $ from 'JSLite'
 import router from './router.js'
-import App from './App'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import App from './App.vue';
 
-
-console.log($);
+Vue.use(ElementUI);
 
 export default new Vue({
   router,
