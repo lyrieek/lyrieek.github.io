@@ -23,8 +23,10 @@ const webpackConfig = merge(baseConfig, {
 	devtool: config.build.productionSourceMap ? config.build.devtool : false,
 	output: {
 		path: config.build.assetsRoot,
-		filename: utils.assetsPath('js/[name].[chunkhash].js'),
-		chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+		filename: utils.assetsPath('js/[name].js'),
+		chunkFilename: utils.assetsPath('js/[id].js')
+		// filename: utils.assetsPath('js/[name].[chunkhash].js'),
+		// chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
 	},
 	plugins: [
 		new webpack.DefinePlugin({
@@ -42,20 +44,14 @@ const webpackConfig = merge(baseConfig, {
 			parallel: true
 		}),
 		new ExtractTextPlugin({
-			filename: utils.assetsPath('css/[name].[contenthash].css'),
+			filename: utils.assetsPath('css/[name].css'),
+			// filename: utils.assetsPath('css/[name].[contenthash].css'),
 			allChunks: true
 		}),
 		new OptimizeCSSPlugin({
 			cssProcessorOptions: config.build.productionSourceMap
-				? {
-					safe: true,
-					map: {
-						inline: false
-					}
-				}
-				: {
-					safe: true
-				}
+				? { safe: true, map: { inline: false } }
+				: { safe: true }
 		}),
 		new HtmlWebpackPlugin({
 			filename: config.build.index,
