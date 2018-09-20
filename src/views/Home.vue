@@ -5,6 +5,8 @@
 			<h1 style="text-shadow: 5px 5px #1177aa;">快速,全面,丰富的前端帮助文档</h1>
 			<p @click="jump">帮助文档</p>
 		</div>
+    <hr>
+    <p>目前尚在开发中</p>
 	</div>
 </template>
 
