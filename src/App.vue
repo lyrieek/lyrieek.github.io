@@ -44,6 +44,11 @@
 	* {
 		margin: 0;
 		padding: 0;
+		font-size: 14px;
+	}
+
+	h2 {
+		font-size: 18px;
 	}
 
 	html {
