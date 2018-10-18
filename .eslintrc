@@ -16,8 +16,6 @@
         }
     },
     "globals":{
-        "$": true,
-        "Promise": true,
         "_": true
     },
     "rules": {
@@ -27,11 +25,11 @@
         "no-dupe-args": 2,
         "no-dupe-keys": 2,
         "no-duplicate-case": 2,
-        "no-empty": 2,
+        "no-empty": 1,
         "no-empty-character-class": 2,
         "no-ex-assign": 2,
         "no-extra-parens": 0,
-        "no-extra-semi": 2,
+        "no-extra-semi": 1,
         "no-func-assign": 2,
         "no-inner-declarations": [2, "functions"],
         "no-invalid-regexp": 2,
@@ -45,7 +43,6 @@
         "no-unreachable": 2,
         "use-isnan": 2,
 
-
         "accessor-pairs": 2,
         "array-callback-return": 0,
         "block-scoped-var": 0,
@@ -53,14 +50,14 @@
         "consistent-return": 0,
         "default-case": 2,
         "dot-location": [2, "property"],
-        "eqeqeq": [2, "allow-null"],
+        "eqeqeq": [1, "allow-null"],
         "guard-for-in": 2,
         "no-alert": 0,
         "no-caller": 2,
         "no-case-declarations": 2,
         "no-div-regex": 2,
         "no-else-return": 0,
-        "no-empty-function": 2,
+        "no-empty-function": 1,
         "no-empty-pattern": 2,
         "no-eq-null": 1,
         "no-extra-bind": 2,
@@ -74,8 +71,7 @@
         "no-iterator": 2,
         "no-labels": 2,
         "no-lone-blocks": 2,
-        "no-loop-func": 1,
-        "no-multi-spaces": 2,
+        "no-multi-spaces": 1,
         "no-multi-str": 2,
         "no-native-reassign": 2,
         "no-new": 2,
@@ -85,7 +81,7 @@
         "no-octal-escape": 2,
         "no-param-reassign": 0,
         "no-proto": 2,
-        "no-redeclare": 2,
+        "no-redeclare": 1,
         "no-return-assign": 0,
         "no-script-url": 0,
         "no-self-assign": 2,
@@ -96,17 +92,14 @@
         "no-unused-expressions": 0,
         "no-unused-labels": 2,
         "no-useless-call": 2,
-        "no-useless-concat": 2,
+        "no-useless-concat": 1,
         "no-useless-escape": 0,
         "no-void": 0,
         "no-warning-comments": 0,
         "no-with": 2,
-        "radix": 2,
         "vars-on-top": 0,
         "wrap-iife": [2, "any"],
-        "yoda": [2, "never"],
-
-
+        "yoda": [1, "never"],
 
         "init-declarations": 0,
         "no-catch-shadow": 0,
@@ -118,22 +111,22 @@
         "no-undef": 2,
         "no-undef-init": 2,
         "no-undefined": 0,
-        "no-unused-vars": [2, {
+        "no-unused-vars": [1, {
             "vars": "all",
             "args": "none"
         }],
         "no-use-before-define": 0,
 
-        "array-bracket-spacing": [2, "never"],
+        "array-bracket-spacing": [1, "never"],
         "block-spacing": [1, "never"],
-        "brace-style": [2, "1tbs", {
+        "brace-style": [1, "1tbs", {
             "allowSingleLine": true
         }],
-        "comma-style": [2, "last"],
+        "comma-style": [1, "last"],
         "computed-property-spacing": [2, "never"],
         "func-names": 0,
         "eol-last": 2,
-        "key-spacing": [2, {
+        "key-spacing": [1, {
             "beforeColon": false,
             "afterColon": true
         }],
@@ -163,7 +156,7 @@
         "no-lonely-if": 0,
         "no-mixed-operators": 0,
         "no-mixed-spaces-and-tabs": 2,
-        "no-multiple-empty-lines": [2, {
+        "no-multiple-empty-lines": [1, {
             "max": 2
         }],
         "no-negated-condition": 0,
@@ -175,17 +168,16 @@
         "no-ternary": 0,
         "no-trailing-spaces": 2,
         "no-underscore-dangle": 0,
-        "no-unneeded-ternary": 2,
+        "no-unneeded-ternary": 1,
         "no-whitespace-before-property": 0,
         "object-curly-newline": 0,
         "object-curly-spacing": 0,
         "object-property-newline": 0,
         "one-var-declaration-per-line": 0,
         "operator-assignment": 0,
-        "operator-linebreak": [2, "after", {
+        "operator-linebreak": [1, "before", {
             "overrides": {
-                "?": "before",
-                ":": "before"
+                "=": "after"
             }
         }],
         "padded-blocks": 0,
@@ -193,7 +185,7 @@
         "semi-spacing": 0,
         "sort-vars": 0,
         "space-before-function-paren": [0, "always"],
-        "space-in-parens": [2, "never"],
+        "space-in-parens": [1, "never"],
         "space-unary-ops": [2, {
             "words": true,
             "nonwords": false
