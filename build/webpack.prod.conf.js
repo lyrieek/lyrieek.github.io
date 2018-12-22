@@ -1,16 +1,17 @@
 'use strict'
 const path = require('path')
-const utils = require('./utils')
 const webpack = require('webpack')
+const utils = require('./utils')
 const config = require('../config')
+const special = require('./special.js')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const webpackConfig = merge(baseConfig, {
 	module: {
@@ -99,24 +100,8 @@ const webpackConfig = merge(baseConfig, {
 	]
 });
 
-['color', 'font-icon'].map((fileName) =>
-	webpackConfig.plugins.push(
-		new HtmlWebpackPlugin({
-			filename: fileName + '.html',
-			template: fileName + '.html',
-			inject: true,
-			minify: {
-				removeComments: true,
-				collapseWhitespace: true,
-				removeAttributeQuotes: true,
-				minifyCSS: true,
-				minifyJS: true
-			},
-			chunks: [],
-			chunksSortMode: 'dependency'
-		})
-	));
-
+console.log(special);
+special.default(webpackConfig);
 
 if (config.build.productionGzip) {
 	const CompressionWebpackPlugin = require('compression-webpack-plugin')
