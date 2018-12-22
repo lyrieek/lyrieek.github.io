@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 exports.default = function(config) {
-	['color', 'font-icon'].map((fileName) =>
+	['color', 'font-icon', 'gitmoji', 'image-tool'].map((fileName) =>
 		config.plugins.push(
 			new HtmlWebpackPlugin({
 				filename: '../'+fileName + '.html',
