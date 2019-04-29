@@ -16,7 +16,8 @@
         }
     },
     "globals":{
-        "_": true
+        "_": true,
+        "Promise": true
     },
     "rules": {
         "no-cond-assign": 2,
