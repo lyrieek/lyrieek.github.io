@@ -8,7 +8,6 @@ const baseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-const portfinder = require('portfinder')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -66,36 +65,26 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 			inject: true
 		}),
 		// copy custom static assets
-		new CopyWebpackPlugin([{
-			from: path.resolve(__dirname, '../static'),
-			to: config.dev.assetsSubDirectory,
-			ignore: ['.*']
-		}])
+		// new CopyWebpackPlugin([{
+		// 	from: path.resolve(__dirname, '../static'),
+		// 	to: config.dev.assetsSubDirectory,
+		// 	ignore: ['.*']
+		// }])
 	]
 })
 
 module.exports = new Promise((resolve, reject) => {
-	portfinder.basePort = process.env.PORT || config.dev.port
-	portfinder.getPort((err, port) => {
-		if (err) {
-			reject(err)
-		} else {
-			// publish the new Port, necessary for e2e tests
-			process.env.PORT = port
-			// add port to devServer config
-			devWebpackConfig.devServer.port = port
+	devWebpackConfig.devServer.port = config.dev.port
 
-			// Add FriendlyErrorsPlugin
-			devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
-				compilationSuccessInfo: {
-					messages: [`Start in here: http://${devWebpackConfig.devServer.host}:${port}`]
-				},
-				onErrors: config.dev.notifyOnErrors
-					? utils.createNotifierCallback()
-					: undefined
-			}))
+	// Add FriendlyErrorsPlugin
+	devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
+		compilationSuccessInfo: {
+			messages: [`Start in here: http://${devWebpackConfig.devServer.host}:${config.dev.port}`]
+		},
+		onErrors: config.dev.notifyOnErrors
+			? utils.createNotifierCallback()
+			: undefined
+	}))
 
-			resolve(devWebpackConfig)
-		}
-	})
+	resolve(devWebpackConfig)
 })

@@ -32,7 +32,7 @@ const webpackConfig = merge(baseConfig, {
 	plugins: [
 		new webpack.DefinePlugin({
 			'process.env': {
-				NODE_ENV: 'production'
+				NODE_ENV: JSON.stringify("'production'")
 			}
 		}),
 		new UglifyJsPlugin({
@@ -58,6 +58,7 @@ const webpackConfig = merge(baseConfig, {
 			filename: config.build.index,
 			template: 'src/index.html',
 			inject: true,
+			title: "T-Doc",
 			minify: {
 				removeComments: true,
 				collapseWhitespace: true,
@@ -92,11 +93,11 @@ const webpackConfig = merge(baseConfig, {
 		new CleanWebpackPlugin(utils.resolve('dist'), {
 			root: utils.resolve()
 		}),
-		new CopyWebpackPlugin([{
-			from: utils.resolve('static'),
-			to: config.build.assetsSubDirectory,
-			ignore: ['.*']
-		}])
+		// new CopyWebpackPlugin([{
+		// 	from: utils.resolve('static'),
+		// 	to: config.build.assetsSubDirectory,
+		// 	ignore: ['.*']
+		// }])
 	]
 });
 
