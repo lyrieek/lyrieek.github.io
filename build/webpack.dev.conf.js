@@ -62,6 +62,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			template: 'src/index.html',
+			title: 'T-Doc',
 			inject: true
 		}),
 		// copy custom static assets
