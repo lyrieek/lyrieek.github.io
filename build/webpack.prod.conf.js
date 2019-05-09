@@ -92,12 +92,7 @@ const webpackConfig = merge(baseConfig, {
 		}),
 		new CleanWebpackPlugin(utils.resolve('dist'), {
 			root: utils.resolve()
-		}),
-		// new CopyWebpackPlugin([{
-		// 	from: utils.resolve('static'),
-		// 	to: config.build.assetsSubDirectory,
-		// 	ignore: ['.*']
-		// }])
+		})
 	]
 });
 
