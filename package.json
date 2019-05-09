@@ -13,15 +13,13 @@
   "main": "app.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "clear": "rm -rf ./node_modules"
   },
   "dependencies": {
     "element-ui": "^2.8.2",
-    "jslite": "^1.1.12",
-    "lodash": "^4.17.11",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.3",
-    "zui": "^1.8.1"
+    "vue-router": "^3.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -92,5 +90,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "__npminstall_done": false
 }
