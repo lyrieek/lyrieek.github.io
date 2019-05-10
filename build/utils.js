@@ -2,7 +2,6 @@
 const path = require('path')
 const config = require('../config')
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const packageConfig = require('../package.json')
 
 //从项目根目录获取文件
@@ -51,7 +50,7 @@ exports.cssLoaders = function(options) {
 			})
 		}
 
-		if (process.env.NODE_ENV === 'development') {
+		if (process.env.NODE_ENV !== 'production') {
 			return ['vue-style-loader'].concat(loaders)
 		} else {
 			// https://github.com/webpack-contrib/mini-css-extract-plugin/issues/126
