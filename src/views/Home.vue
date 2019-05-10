@@ -63,6 +63,7 @@
 	}
 
 	#mainContent{
+		margin: 0 0 !important;
 		padding: 25px 10%;
 		text-align: center;
 	}
