@@ -36,7 +36,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 		overlay: config.dev.errorOverlay ? { warnings: true, errors: true } : false,
 		publicPath: config.dev.assetsPublicPath,
 		proxy: config.dev.proxyTable,
-		// quiet: true, //Print only startup messages
+		quiet: true, //Print only startup messages
 		watchOptions: {
 			poll: config.dev.poll
 		}
