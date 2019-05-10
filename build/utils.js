@@ -1,7 +1,8 @@
 'use strict'
 const path = require('path')
 const config = require('../config')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+// const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const packageConfig = require('../package.json')
 
 //从项目根目录获取文件
@@ -50,15 +51,11 @@ exports.cssLoaders = function(options) {
 			})
 		}
 
-		// Extract CSS when that option is specified
-		// (which is the case during production build)
-		if (options.extract) {
-			return ExtractTextPlugin.extract({
-				use: loaders,
-				fallback: 'vue-style-loader'
-			})
-		} else {
+		if (process.env.NODE_ENV === 'development') {
 			return ['vue-style-loader'].concat(loaders)
+		} else {
+			// https://github.com/webpack-contrib/mini-css-extract-plugin/issues/126
+			// return [MiniCssExtractPlugin.loader].concat(loaders)
 		}
 	}
 

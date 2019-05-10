@@ -6,8 +6,7 @@ const config = require('../config')
 const special = require('./special.js')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base.conf')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
@@ -17,7 +16,6 @@ const webpackConfig = merge(baseConfig, {
 	module: {
 		rules: utils.styleLoaders({
 			sourceMap: config.build.productionSourceMap,
-			extract: true,
 			usePostCSS: true
 		})
 	},
@@ -26,8 +24,27 @@ const webpackConfig = merge(baseConfig, {
 		path: config.build.assetsRoot,
 		filename: utils.assetsPath('js/[name].js'),
 		chunkFilename: utils.assetsPath('js/[id].js')
-		// filename: utils.assetsPath('js/[name].[chunkhash].js'),
-		// chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+	},
+	optimization: {
+		runtimeChunk: {
+			name: "manifest"
+		},
+		splitChunks: {
+			chunks: "all",
+			// name(module, chunks, cacheGroupKey) {
+			// 	return module + chunks + cacheGroupKey;
+			// },
+			name: true,//false
+			automaticNameDelimiter: '-',
+			cacheGroups: {
+				vendors: {
+					test: /[\\/]node_modules[\\/]/,
+					reuseExistingChunk: true,
+					filename: utils.assetsPath('js/[name].bundle.js'),
+					chunks: 'all'
+				}
+			}
+		}
 	},
 	plugins: [
 		new webpack.DefinePlugin({
@@ -44,10 +61,9 @@ const webpackConfig = merge(baseConfig, {
 			sourceMap: config.build.productionSourceMap,
 			parallel: true
 		}),
-		new ExtractTextPlugin({
-			filename: utils.assetsPath('css/[name].css'),
-			// filename: utils.assetsPath('css/[name].[contenthash].css'),
-			allChunks: true
+		new MiniCssExtractPlugin({
+			// filename: '[name]-[id].css'
+			filename: utils.assetsPath('css/[name].[contenthash].css')
 		}),
 		new OptimizeCSSPlugin({
 			cssProcessorOptions: config.build.productionSourceMap
@@ -70,33 +86,12 @@ const webpackConfig = merge(baseConfig, {
 		}),
 		new webpack.HashedModuleIdsPlugin(),
 		new webpack.optimize.ModuleConcatenationPlugin(),
-		new webpack.optimize.CommonsChunkPlugin({
-			name: 'vendor',
-			minChunks(module) {
-				return (
-					module.resource && /\.js$/.test(module.resource) && module.resource.indexOf(
-						path.join(__dirname, '../node_modules')
-					) === 0
-				)
-			}
-		}),
-		new webpack.optimize.CommonsChunkPlugin({
-			name: 'manifest',
-			minChunks: Infinity
-		}),
-		new webpack.optimize.CommonsChunkPlugin({
-			name: 'app',
-			async: 'vendor-async',
-			children: true,
-			minChunks: 3
-		}),
 		new CleanWebpackPlugin(utils.resolve('dist'), {
 			root: utils.resolve()
 		})
 	]
 });
 
-console.log(special);
 special.default(webpackConfig);
 
 if (config.build.productionGzip) {

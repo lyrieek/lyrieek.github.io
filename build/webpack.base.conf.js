@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
 
@@ -18,6 +19,7 @@ const createLintingRule = () => ({
 })
 
 module.exports = {
+	mode: process.env.NODE_ENV,
 	context: path.resolve(__dirname, '../'),
 	entry: {
 		app: './src/main.js'
@@ -67,6 +69,12 @@ module.exports = {
 					limit: 10000,
 					name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
 				}
+			}, {
+				test: /\.css$/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					'css-loader'
+				]
 			}
 		]
 	},
