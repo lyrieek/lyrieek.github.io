@@ -57,6 +57,7 @@
 
 	#nav-menu {
 		padding: 0px 12.5%;
+		background: rgb(239, 243, 246);
 	}
 
 </style>

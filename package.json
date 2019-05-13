@@ -20,7 +20,8 @@
     "element-ui": "^2.8.2",
     "mini-css-extract-plugin": "^0.6.0",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.3"
+    "vue-router": "^3.0.3",
+    "vuescroll": "^4.12.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

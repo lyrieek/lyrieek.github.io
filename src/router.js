@@ -8,10 +8,20 @@ export default new VueRouter({
 		path: '/index',
 		component: require('./views/Home').default,
 		alias: '/'
-	},{
-		path: '/kendo',
-		component: require('./views/Kendo').default
 	}, {
-		path: '*', redirect: '/'
+		path: '/404',
+		component: require('./views/404').default
+	}, {
+		path: '/kendo',
+		component: require('./views/Kendo').default,
+		children: [
+			{ path: '', component: require('./views/kendo/Alert').default },
+			{ path: 'Alert', component: require('./views/kendo/Alert').default },
+			{ path: 'AutoComplete', component: require('./views/kendo/AutoComplete').default },
+			{ path: '*', component: require('./views/404').default }
+		]
+	}, {
+		path: '*',
+		redirect: '/404'
 	}]
 });
