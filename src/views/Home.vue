@@ -3,9 +3,9 @@
 		<div class="line"></div>
 		<div class="header-container">
 			<h1 style="text-shadow: 5px 5px #1177aa;">快速,全面,丰富的前端帮助文档</h1>
-			<p @click="jump">
+			<div>
 				<pre>我将分批次开发文档，第一批包括CSS3 & HTML5 & ES6，第二批包括NPM & Webpack & Gulp，第二批包括Vue & Angular & React</pre>
-			</p>
+			</div>
 		</div>
 		<hr>
 		<el-row id="mainContent" :gutter="26">
@@ -28,22 +28,47 @@
 				</div>
 			</el-col>
 		</el-row>
+
+		<el-divider></el-divider>
+		<div>
+			<el-row :gutter="20" style="margin:20px">
+				<el-col :span="6">
+					<div class="grid-content bg-purple">
+						<el-card class="box-card">
+							<div slot="header" class="clearfix">
+								<span>Kendo</span>
+								<el-button style="float: right; padding: 3px 0" @click="leap('/kendo')" type="text">查看</el-button>
+							</div>
+							<div>快速构建引人注目、高性能、响应迅速的Web应用程序,支持jquery/angular/react/vue库</div>
+							<el-divider></el-divider>
+							<div>The ultimate collection of JavaScript UI components with libraries for jQuery, Angular, React, and Vue. Quickly build eye-catching, high-performance, responsive web applications—regardless of your JavaScript framework choice.</div>
+							<!-- <div v-for="o in 4" :key="o" class="text item">{{'列表内容 ' + o }}</div> -->
+						</el-card>
+					</div>
+				</el-col>
+				<el-col :span="6">
+					<div class="grid-content bg-purple"></div>
+				</el-col>
+				<el-col :span="6">
+					<div class="grid-content bg-purple"></div>
+				</el-col>
+				<el-col :span="6">
+					<div class="grid-content bg-purple"></div>
+				</el-col>
+			</el-row>
+		</div>
 	</div>
 </template>
 
 <script>
 	export default {
-		render(h) {
-			console.log('home');
-		},
 		methods: {
-			jump: function() {
-				this.$router.push({
-					path: "/kendo"
-				});
+			leap: function(e) {
+				document.getElementById('github-fork-ribbon').style.display = 'none';
+				this.$router.push(e);
 			}
 		}
-	}
+	};
 
 </script>
 
@@ -62,13 +87,13 @@
 		color: #fff;
 	}
 
-	#mainContent{
+	#mainContent {
 		margin: 0 0 !important;
 		padding: 25px 10%;
 		text-align: center;
 	}
 
-	#mainContent>div>div{
+	#mainContent>div>div {
 		border: 1px #b6deee solid;
 		border-radius: 10px;
 		background: #a5e2fa;
@@ -77,7 +102,7 @@
 		line-height: 25px;
 	}
 
-	#mainContent>div>div>h2{
+	#mainContent>div>div>h2 {
 		padding-bottom: 10px;
 	}
 
