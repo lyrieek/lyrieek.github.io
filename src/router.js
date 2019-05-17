@@ -3,22 +3,24 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
+const getRoutes = (mapper, file) => ({
+	path: mapper,
+	component: resolve => require(['@/views/' + (file || mapper.substring(1))], resolve)
+})
+
 export default new VueRouter({
 	routes: [{
 		path: '/index',
-		component: require('./views/Home').default,
+		component: resolve => require(['@/views/Home'], resolve),
 		alias: '/'
-	}, {
-		path: '/404',
-		component: require('./views/404').default
-	}, {
-		path: '/kendo',
-		component: require('./views/Kendo').default,
+	}, getRoutes("/404"), {
+		path: '/kendo-ui',
+		component: resolve => require(['@/views/Kendo'], resolve),
 		children: [
-			{ path: '', component: require('./views/kendo/Alert').default },
-			{ path: 'Alert', component: require('./views/kendo/Alert').default },
-			{ path: 'AutoComplete', component: require('./views/kendo/AutoComplete').default },
-			{ path: '*', component: require('./views/404').default }
+			getRoutes("", "kendo/Alert"),
+			getRoutes("Alert", "kendo/Alert"),
+			getRoutes("AutoComplete", "kendo/AutoComplete"),
+			getRoutes("*", "404")
 		]
 	}, {
 		path: '*',

@@ -195,7 +195,6 @@
 
 
         "arrow-body-style": 2,
-        "arrow-parens": 2,
         "arrow-spacing": [2, {
             "before": true,
             "after": true

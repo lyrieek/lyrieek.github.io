@@ -51,7 +51,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			template: 'src/index.html',
-			title: 'T-Doc',
+			title: 'TH-Doc',
 			inject: true
 		})
 	]

@@ -27,11 +27,11 @@ const webpackConfig = merge(baseConfig, {
 	output: {
 		path: config.build.assetsRoot,
 		filename: utils.assetsPath('js/[name].js'),
-		chunkFilename: utils.assetsPath('js/[id].js')
+		chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
 	},
 	optimization: {
 		runtimeChunk: {
-			name: "manifest"
+			name: "runtime"
 		},
 		splitChunks: {
 			chunks: "all",
@@ -44,7 +44,7 @@ const webpackConfig = merge(baseConfig, {
 				vendors: {
 					test: /[\\/]node_modules[\\/]/,
 					reuseExistingChunk: true,
-					filename: utils.assetsPath('js/[name].bundle.js'),
+					filename: utils.assetsPath('js/[name].[chunkhash].bundle.js'),
 					chunks: 'all'
 				}
 			}
@@ -73,7 +73,7 @@ const webpackConfig = merge(baseConfig, {
 			filename: config.build.index,
 			template: 'src/index.html',
 			inject: true,
-			title: "T-Doc",
+			title: "TH-Doc",
 			minify: {
 				removeComments: true,
 				collapseWhitespace: true,
