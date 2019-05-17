@@ -2,7 +2,6 @@
 const path = require('path')
 const utils = require('./utils')
 const config = require('./config')
-const vueLoaderConfig = require('./vue-loader.conf')
 const { VueLoaderPlugin } = require('vue-loader')
 
 
@@ -16,6 +15,10 @@ const createLintingRule = () => ({
 		emitWarning: !config.dev.showEslintErrorsInOverlay
 	}
 })
+
+const sourceMapEnabled = process.env.NODE_ENV === 'production'
+	? config.build.productionSourceMap
+	: config.dev.cssSourceMap
 
 module.exports = {
 	mode: process.env.NODE_ENV,
@@ -42,7 +45,20 @@ module.exports = {
 			...(config.dev.useEslint ? [createLintingRule()] : []), {
 				test: /\.vue$/,
 				loader: 'vue-loader',
-				options: vueLoaderConfig
+				options: {
+					loaders: utils.cssLoaders({
+						sourceMap: sourceMapEnabled,
+						extract: process.env.NODE_ENV === 'production'
+					}),
+					cssSourceMap: sourceMapEnabled,
+					cacheBusting: config.dev.cacheBusting,
+					transformToRequire: {
+						video: ['src', 'poster'],
+						source: 'src',
+						img: 'src',
+						image: 'xlink:href'
+					}
+				}
 			}, {
 				test: /\.js$/,
 				loader: 'babel-loader',

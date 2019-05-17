@@ -6,7 +6,6 @@ const special = require('./special.js')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base.conf')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -69,11 +68,6 @@ const webpackConfig = merge(baseConfig, {
 		new MiniCssExtractPlugin({
 			// filename: '[name]-[id].css'
 			filename: utils.assetsPath('css/[name].[contenthash].css')
-		}),
-		new OptimizeCSSPlugin({
-			cssProcessorOptions: config.build.productionSourceMap
-				? { safe: true, map: { inline: false } }
-				: { safe: true }
 		}),
 		new HtmlWebpackPlugin({
 			filename: config.build.index,
