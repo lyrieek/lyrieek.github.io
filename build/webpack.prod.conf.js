@@ -1,7 +1,7 @@
 'use strict'
 const webpack = require('webpack')
 const utils = require('./utils')
-const config = require('../config')
+const config = require('./config')
 const special = require('./special.js')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base.conf')
