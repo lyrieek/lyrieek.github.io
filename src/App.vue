@@ -41,18 +41,33 @@
 </script>
 
 <style>
-	* {
-		margin: 0;
-		padding: 0;
-		font-size: 14px;
-	}
-
-	h2 {
-		font-size: 18px;
+	h1 {
+		font-size: 4.7em;
 	}
 
 	html {
 		font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+	}
+
+	body {
+		font-size: 16px;
+		line-height: 1.5;
+		padding: 0;
+		margin: 0;
+	}
+
+	code {
+		border-radius: 5px;
+		border: 1px solid #cde7f5;
+		/*cadetblue;*/
+	}
+
+	.el-card {
+		height: 21em;
+	}
+
+	.el-card>.el-card__body {
+		height: 14.5em;
 	}
 
 	#nav-menu {
