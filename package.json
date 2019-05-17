@@ -18,12 +18,12 @@
   },
   "dependencies": {
     "element-ui": "^2.8.2",
-    "mini-css-extract-plugin": "^0.6.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuescroll": "^4.12.2"
   },
   "devDependencies": {
+    "mini-css-extract-plugin": "^0.6.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
@@ -40,11 +40,8 @@
     "babel-register": "^6.22.0",
     "chalk": "^2.0.1",
     "child_process": "^1.0.2",
-    "chromedriver": "^2.27.2",
     "clean-webpack-plugin": "^0.1.19",
-    "consolidate": "^0.15.1",
     "copy-webpack-plugin": "^4.6.0",
-    "cross-spawn": "^5.0.1",
     "css-loader": "^2.1.1",
     "eslint": "^4.15.0",
     "eslint-config-standard": "^10.2.1",
@@ -60,9 +57,7 @@
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.8.0",
     "jest-serializer-vue": "^0.3.0",
-    "nightwatch": "^1.1.7",
     "node-notifier": "^5.1.2",
-    "ora": "^1.2.0",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
@@ -90,6 +85,5 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ],
-  "__npminstall_done": false
+  ]
 }
