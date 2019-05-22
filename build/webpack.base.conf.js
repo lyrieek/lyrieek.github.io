@@ -24,11 +24,12 @@ module.exports = {
 	mode: process.env.NODE_ENV,
 	context: path.resolve(__dirname, '../'),
 	entry: {
-		app: './src/main.js'
+		app: './src/main.js',
+		vue: ['vue']
 	},
 	output: {
 		path: config.build.assetsRoot,
-		filename: '[name].js',
+		filename: '[name].min.js',
 		publicPath: process.env.NODE_ENV === 'production'
 			? config.build.assetsPublicPath
 			: config.dev.assetsPublicPath

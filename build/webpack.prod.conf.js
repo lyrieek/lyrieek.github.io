@@ -27,7 +27,7 @@ const webpackConfig = merge(baseConfig, {
 	output: {
 		path: config.build.assetsRoot,
 		filename: utils.assetsPath('js/[name].js'),
-		chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+		chunkFilename: utils.assetsPath('js/[name].[contenthash].js')
 	},
 	optimization: {
 		runtimeChunk: {
@@ -38,16 +38,18 @@ const webpackConfig = merge(baseConfig, {
 			// name(module, chunks, cacheGroupKey) {
 			// 	return module + chunks + cacheGroupKey;
 			// },
+			minSize: 102400,
+			maxSize: 0,
 			name: true,//false
-			automaticNameDelimiter: '-',
-			cacheGroups: {
-				vendors: {
-					test: /[\\/]node_modules[\\/]/,
-					reuseExistingChunk: true,
-					filename: utils.assetsPath('js/[name].[chunkhash].bundle.js'),
-					chunks: 'all'
-				}
-			}
+			automaticNameDelimiter: '-'
+			// cacheGroups: {
+			// 	vendors: {
+			// 		test: /[\\/]node_modules[\\/]/,
+			// 		reuseExistingChunk: true,
+			// 		filename: utils.assetsPath('js/[name].[chunkhash].bundle.js'),
+			// 		chunks: 'all'
+			// 	}
+			// }
 		}
 	},
 	plugins: [
