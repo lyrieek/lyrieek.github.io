@@ -9,6 +9,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const webpackConfig = merge(baseConfig, {
 	module: {
@@ -26,7 +27,8 @@ const webpackConfig = merge(baseConfig, {
 	devtool: config.build.productionSourceMap ? config.build.devtool : false,
 	output: {
 		path: config.build.assetsRoot,
-		filename: utils.assetsPath('js/[name].js'),
+		filename: (chunkData) => chunkData.chunk.name === 'vue-bucket'
+			? utils.assetsPath('js/vue-bucket/[name].[contenthash].js') : utils.assetsPath('js/[name].[contenthash].js'),
 		chunkFilename: utils.assetsPath('js/[name].[contenthash].js')
 	},
 	optimization: {
@@ -40,16 +42,8 @@ const webpackConfig = merge(baseConfig, {
 			// },
 			minSize: 102400,
 			maxSize: 0,
-			name: true,//false
+			name: true, //false
 			automaticNameDelimiter: '-'
-			// cacheGroups: {
-			// 	vendors: {
-			// 		test: /[\\/]node_modules[\\/]/,
-			// 		reuseExistingChunk: true,
-			// 		filename: utils.assetsPath('js/[name].[chunkhash].bundle.js'),
-			// 		chunks: 'all'
-			// 	}
-			// }
 		}
 	},
 	plugins: [
@@ -68,8 +62,15 @@ const webpackConfig = merge(baseConfig, {
 			parallel: true
 		}),
 		new MiniCssExtractPlugin({
-			// filename: '[name]-[id].css'
-			filename: utils.assetsPath('css/[name].[contenthash].css')
+			filename: utils.assetsPath('css/[name][[contenthash]].css')
+		}),
+		new OptimizeCssAssetsPlugin({
+			assetNameRegExp: /.css$/g,
+			cssProcessor: require('cssnano'),
+			cssProcessorPluginOptions: {
+				preset: ['default', { discardComments: { removeAll: true } }]
+			},
+			canPrint: true
 		}),
 		new HtmlWebpackPlugin({
 			filename: config.build.index,
