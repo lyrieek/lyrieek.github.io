@@ -2,102 +2,152 @@
 <html lang="en">
 
 <head>
-    <meta charset=utf-8>
-    <meta name="viewport" content="width=device-width">
-    <title>Image preview</title>
-    <style type="text/css">
-        * {
-            vertical-align: middle;
-            font-family: sans-serif;
-        }
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width">
+	<title>Image preview</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/sunny/jquery-ui.css"> -->
+	<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<style type="text/css">
+		* {
+			vertical-align: middle;
+			font-family: sans-serif;
+		}
 
-        #holder {
-            border: 7px dashed #ccc;
-            min-height: 300px;
-            margin: 20px auto;
-        }
+		#holder {
+			border: 7px dashed #ccc;
+			min-height: 300px;
+			margin: 20px auto;
+		}
 
-        #holder.hover,
-        #holder:hover {
-            border: 7px dashed #0c0;
-        }
+		#holder.hover,
+		#holder:hover {
+			border: 7px dashed #0c0;
+		}
 
-        #img {
-            display: block;
-            margin: 10px auto;
-            border: 1px solid black;
-        }
+		#img {
+			display: block;
+			margin: 10px auto;
+			border: 1px solid black;
+		}
 
-        #img:not([src]) {
-            display: none;
-        }
+		#img:not([src]) {
+			display: none;
+		}
 
-        input {
-            width: 85px;
-        }
+		input {
+			width: 120px;
+		}
 
-        span {
-            padding-left: 20px;
-        }
+		#transformNumber {
+			width: 100px;
+		}
 
-        button {
-            height: 27px;
-        }
-    </style>
+		#transformSlider {
+			width: 200px;
+			display: inline-block;
+			margin-left: 20px;
+		}
 
-    <body>
-        <nav>
-            <button>⚡️</button>
-            <button onclick="img.style.borderColor=(img.style.borderColor === 'white') ? 'black' : 'white'">框线</button>
-            <button onclick="img.style.borderColor=(img.style.borderColor === 'white') ? 'black' : 'white'">框线</button>
-            <span>width:</span>
-            <input onchange="img.style.width=this.value" value='auto' />
-            <span>transform:</span>
-            <input onchange="img.style.transform=this.value" value='rotate(7deg)' />
-        </nav>
-        <article>
-            <div id="holder"><img id="img" /></div>
-            <input id="upload" style="display:none;" type="file" />
-        </article>
-    </body>
-    <script type="text/javascript">
-        (function() {
-            var holder = document.getElementById('holder')
-            var img = document.getElementById('img')
+		.control-wrap {
+			display: inline-block;
+		}
 
-            function previewfile(file) {
-                var reader = new FileReader();
-                reader.onload = function(event) {
-                    img.src = event.target.result;
-                };
-                reader.readAsDataURL(file);
-            }
+	</style>
 
-            holder.ondragover = function() {
-                this.className = 'hover';
-                return false;
-            }
-            holder.ondragend = function() {
-                this.className = '';
-                return false;
-            }
-            holder.ondrop = function(e) {
-                this.className = '';
-                e.preventDefault();
-                previewfile(e.dataTransfer.files[0]);
-            }
+<body>
+	<nav>
+		<button class="ui-button">⚡️</button>
+		<button class="ui-button" onclick="img.style.borderColor=(img.style.borderColor === 'white') ? 'black' : 'white'">框线</button>
+		<button class="ui-button" onclick="img.style.borderColor=(img.style.borderColor === 'white') ? 'black' : 'white'">框线</button>
+		<span>width:</span>
+		<input class="ui-button" onchange="img.style.width=this.value" value='auto' />
+		<span>transform:</span>
+		<input class="ui-button" id="transformNumber" onchange="img.style.transform=this.value" value='rotate(7deg)' />
+		<div id="transformSlider"></div>
 
-            holder.onclick = function() {
-                document.getElementById('upload').click();
-            }
+		<div class="control-wrap">
+			<div class="control-bar">
+				<label for="radio-img">Image</label>
+				<input type="radio" name="radio-image-type" id="radio-img" value="img">
+				<label for="radio-canvas">Canvas</label>
+				<input type="radio" name="radio-image-type" id="radio-canvas" value="canvas">
+			</div>
+		</div>
+	</nav>
+	<article>
+		<div id="holder">
+			<img id="img" />
+			<canvas style="display: none;" id="canvas"></canvas>
+		</div>
+		<input id="upload" style="display:none;" type="file" />
+	</article>
+</body>
+<script type="text/javascript">
+	$(function() {
+		const holder = document.getElementById('holder')
+		const img = document.getElementById('img')
+		const canvas = document.getElementById("canvas");
+		let image = new Image();
 
-            document.getElementById('upload').onchange = function(e) {
-                previewfile(this.files[0]);
-            }
+		function previewfile(file) {
+			var reader = new FileReader();
+			reader.onload = function(event) {
+				img.src = event.target.result;
+				image.src = img.src;
+				image.onload = function() {
+					canvas.width = this.width;
+					canvas.height = this.height;
+					canvas.getContext("2d").drawImage(this, 0, 0);
+				}
+			}
+			reader.readAsDataURL(file);
+		}
 
-            // tools
+		holder.ondragover = function() {
+			this.className = 'hover';
+			return false;
+		}
+		holder.ondragend = function() {
+			this.className = '';
+			return false;
+		}
+		holder.ondrop = function(e) {
+			this.className = '';
+			e.preventDefault();
+			previewfile(e.dataTransfer.files[0]);
+		}
 
-        })();
-    </script>
+		holder.onclick = function() {
+			document.getElementById('upload').click();
+		}
+
+		document.getElementById('upload').onchange = function(e) {
+			previewfile(this.files[0]);
+		}
+		$("#transformSlider").slider({
+			min: 0,
+			max: 360,
+			slide: function(event, ui) {
+				const val = `rotate(${ui.value}deg)`;
+				$("#transformNumber").val(val);
+				img.style.transform = val;
+			}
+		});
+		$(".control-bar").controlgroup();
+		$('[name="radio-image-type"]').click((e) => {
+			if (e.currentTarget.value === 'canvas') {
+				img.style.display = 'none';
+				canvas.style.display = 'block';
+			} else {
+				img.style.display = 'block';
+				canvas.style.display = 'none';
+			}
+		}).checkboxradio();
+
+	});
+
+</script>
 
 </html>
