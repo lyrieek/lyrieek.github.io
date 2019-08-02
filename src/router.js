@@ -14,12 +14,12 @@ export default new VueRouter({
 		component: resolve => require(['@/views/Home'], resolve),
 		alias: '/'
 	}, getRoutes("/404"), {
-		path: '/kendo-ui',
+		path: '/kendo',
 		component: resolve => require(['@/views/Kendo'], resolve),
 		children: [
 			getRoutes("", "kendo/Alert"),
-			getRoutes("Alert", "kendo/Alert"),
-			getRoutes("AutoComplete", "kendo/AutoComplete"),
+			getRoutes("alert", "kendo/Alert"),
+			getRoutes("autocomplete", "kendo/AutoComplete"),
 			getRoutes("*", "404")
 		]
 	}, {

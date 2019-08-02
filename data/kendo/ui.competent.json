@@ -5,254 +5,250 @@
     },
     {
         "text": "AutoComplete",
-        "href": "/kendo-ui/api/javascript/ui/autocomplete"
+        "href": "/kendo/autocomplete"
     },
     {
         "text": "Button",
-        "href": "/kendo-ui/api/javascript/ui/button"
+        "href": "/kendo/button"
     },
     {
         "text": "ButtonGroup",
-        "href": "/kendo-ui/api/javascript/ui/buttongroup"
+        "href": "/kendo/buttongroup"
     },
     {
         "text": "Calendar",
-        "href": "/kendo-ui/api/javascript/ui/calendar"
+        "href": "/kendo/calendar"
     },
     {
         "text": "Chat",
-        "href": "/kendo-ui/api/javascript/ui/chat"
+        "href": "/kendo/chat"
     },
     {
         "text": "ColorPalette",
-        "href": "/kendo-ui/api/javascript/ui/colorpalette"
+        "href": "/kendo/colorpalette"
     },
     {
         "text": "ColorPicker",
-        "href": "/kendo-ui/api/javascript/ui/colorpicker"
+        "href": "/kendo/colorpicker"
     },
     {
         "text": "ComboBox",
-        "href": "/kendo-ui/api/javascript/ui/combobox"
+        "href": "/kendo/combobox"
     },
     {
         "text": "Confirm",
-        "href": "/kendo-ui/api/javascript/ui/confirm"
+        "href": "/kendo/confirm"
     },
     {
         "text": "ContextMenu",
-        "href": "/kendo-ui/api/javascript/ui/contextmenu"
+        "href": "/kendo/contextmenu"
     },
     {
         "text": "DateInput",
-        "href": "/kendo-ui/api/javascript/ui/dateinput"
+        "href": "/kendo/dateinput"
     },
     {
         "text": "DatePicker",
-        "href": "/kendo-ui/api/javascript/ui/datepicker"
+        "href": "/kendo/datepicker"
     },
     {
         "text": "DateRangePicker",
-        "href": "/kendo-ui/api/javascript/ui/daterangepicker"
+        "href": "/kendo/daterangepicker"
     },
     {
         "text": "DateTimePicker",
-        "href": "/kendo-ui/api/javascript/ui/datetimepicker"
+        "href": "/kendo/datetimepicker"
     },
     {
         "text": "Dialog",
-        "href": "/kendo-ui/api/javascript/ui/dialog"
+        "href": "/kendo/dialog"
     },
     {
         "text": "Draggable",
-        "href": "/kendo-ui/api/javascript/ui/draggable"
+        "href": "/kendo/draggable"
     },
     {
         "text": "DropDownList",
-        "href": "/kendo-ui/api/javascript/ui/dropdownlist"
+        "href": "/kendo/dropdownlist"
     },
     {
         "text": "DropDownTree",
-        "href": "/kendo-ui/api/javascript/ui/dropdowntree"
+        "href": "/kendo/dropdowntree"
     },
     {
         "text": "DropTarget",
-        "href": "/kendo-ui/api/javascript/ui/droptarget"
+        "href": "/kendo/droptarget"
     },
     {
         "text": "DropTargetArea",
-        "href": "/kendo-ui/api/javascript/ui/droptargetarea"
+        "href": "/kendo/droptargetarea"
     },
     {
         "text": "Editor",
-        "href": "/kendo-ui/api/javascript/ui/editor"
+        "href": "/kendo/editor"
     },
     {
         "text": "FilterMenu",
-        "href": "/kendo-ui/api/javascript/ui/filtermenu"
+        "href": "/kendo/filtermenu"
     },
     {
         "text": "FlatColorPicker",
-        "href": "/kendo-ui/api/javascript/ui/flatcolorpicker"
+        "href": "/kendo/flatcolorpicker"
     },
     {
         "text": "Gantt",
-        "href": "/kendo-ui/api/javascript/ui/gantt"
+        "href": "/kendo/gantt"
     },
     {
         "text": "Grid",
-        "href": "/kendo-ui/api/javascript/ui/grid"
+        "href": "/kendo/grid"
     },
     {
         "text": "ListBox",
-        "href": "/kendo-ui/api/javascript/ui/listbox"
+        "href": "/kendo/listbox"
     },
     {
         "text": "ListView",
-        "href": "/kendo-ui/api/javascript/ui/listview"
+        "href": "/kendo/listview"
     },
     {
         "text": "MaskedTextBox",
-        "href": "/kendo-ui/api/javascript/ui/maskedtextbox"
+        "href": "/kendo/maskedtextbox"
     },
     {
         "text": "MediaPlayer",
-        "href": "/kendo-ui/api/javascript/ui/mediaplayer"
+        "href": "/kendo/mediaplayer"
     },
     {
         "text": "Menu",
-        "href": "/kendo-ui/api/javascript/ui/menu"
+        "href": "/kendo/menu"
     },
     {
         "text": "MultiColumnComboBox",
-        "href": "/kendo-ui/api/javascript/ui/multicolumncombobox"
+        "href": "/kendo/multicolumncombobox"
     },
     {
         "text": "MultiSelect",
-        "href": "/kendo-ui/api/javascript/ui/multiselect"
+        "href": "/kendo/multiselect"
     },
     {
         "text": "MultiViewCalendar",
-        "href": "/kendo-ui/api/javascript/ui/multiviewcalendar"
+        "href": "/kendo/multiviewcalendar"
     },
     {
         "text": "Notification",
-        "href": "/kendo-ui/api/javascript/ui/notification"
+        "href": "/kendo/notification"
     },
     {
         "text": "NumericTextBox",
-        "href": "/kendo-ui/api/javascript/ui/numerictextbox"
+        "href": "/kendo/numerictextbox"
     },
     {
         "text": "Pager",
-        "href": "/kendo-ui/api/javascript/ui/pager"
+        "href": "/kendo/pager"
     },
     {
         "text": "PanelBar",
-        "href": "/kendo-ui/api/javascript/ui/panelbar"
+        "href": "/kendo/panelbar"
     },
     {
         "text": "PivotConfigurator",
-        "href": "/kendo-ui/api/javascript/ui/pivotconfigurator"
+        "href": "/kendo/pivotconfigurator"
     },
     {
         "text": "PivotGrid",
-        "href": "/kendo-ui/api/javascript/ui/pivotgrid"
+        "href": "/kendo/pivotgrid"
     },
     {
         "text": "Popup",
-        "href": "/kendo-ui/api/javascript/ui/popup"
+        "href": "/kendo/popup"
     },
     {
         "text": "ProgressBar",
-        "href": "/kendo-ui/api/javascript/ui/progressbar"
+        "href": "/kendo/progressbar"
     },
     {
         "text": "Prompt",
-        "href": "/kendo-ui/api/javascript/ui/prompt"
+        "href": "/kendo/prompt"
     },
     {
         "text": "RangeSlider",
-        "href": "/kendo-ui/api/javascript/ui/rangeslider"
+        "href": "/kendo/rangeslider"
     },
     {
         "text": "ResponsivePanel",
-        "href": "/kendo-ui/api/javascript/ui/responsivepanel"
+        "href": "/kendo/responsivepanel"
     },
     {
         "text": "RippleContainer",
-        "href": "/kendo-ui/api/javascript/ui/ripplecontainer"
+        "href": "/kendo/ripplecontainer"
     },
     {
         "text": "Scheduler",
-        "href": "/kendo-ui/api/javascript/ui/scheduler"
+        "href": "/kendo/scheduler"
     },
     {
         "text": "ScrollView",
-        "href": "/kendo-ui/api/javascript/ui/scrollview"
+        "href": "/kendo/scrollview"
     },
     {
         "text": "Slider",
-        "href": "/kendo-ui/api/javascript/ui/slider"
+        "href": "/kendo/slider"
     },
     {
         "text": "Sortable",
-        "href": "/kendo-ui/api/javascript/ui/sortable"
+        "href": "/kendo/sortable"
     },
     {
         "text": "Splitter",
-        "href": "/kendo-ui/api/javascript/ui/splitter"
+        "href": "/kendo/splitter"
     },
     {
         "text": "Spreadsheet",
-        "href": "/kendo-ui/api/javascript/ui/spreadsheet"
+        "href": "/kendo/spreadsheet"
     },
     {
         "text": "Switch",
-        "href": "/kendo-ui/api/javascript/ui/switch"
+        "href": "/kendo/switch"
     },
     {
         "text": "TabStrip",
-        "href": "/kendo-ui/api/javascript/ui/tabstrip"
+        "href": "/kendo/tabstrip"
     },
     {
         "text": "TimePicker",
-        "href": "/kendo-ui/api/javascript/ui/timepicker"
+        "href": "/kendo/timepicker"
     },
     {
         "text": "ToolBar",
-        "href": "/kendo-ui/api/javascript/ui/toolbar"
+        "href": "/kendo/toolbar"
     },
     {
         "text": "Tooltip",
-        "href": "/kendo-ui/api/javascript/ui/tooltip"
+        "href": "/kendo/tooltip"
     },
     {
         "text": "TreeList",
-        "href": "/kendo-ui/api/javascript/ui/treelist"
+        "href": "/kendo/treelist"
     },
     {
         "text": "TreeView",
-        "href": "/kendo-ui/api/javascript/ui/treeview"
-    },
-    {
-        "text": "ui",
-        "href": "/kendo-ui/api/javascript/ui/ui"
+        "href": "/kendo/treeview"
     },
     {
         "text": "Upload",
-        "href": "/kendo-ui/api/javascript/ui/upload"
+        "href": "/kendo/upload"
     },
     {
         "text": "Validator",
-        "href": "/kendo-ui/api/javascript/ui/validator"
+        "href": "/kendo/validator"
     },
     {
         "text": "Widget",
-        "href": "/kendo-ui/api/javascript/ui/widget"
+        "href": "/kendo/widget"
     },
     {
         "text": "Window",
-        "href": "/kendo-ui/api/javascript/ui/window"
+        "href": "/kendo/window"
     }
 ]
