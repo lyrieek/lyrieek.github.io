@@ -44,15 +44,17 @@
 					</el-dropdown>
 				</el-header>
 
-				<el-main>
-					<h1 style="margin:0 0;">Kendo</h1>
-					<h3 @click="test">Build Better JavaScript Apps Faster</h3>
-					<!-- <pre>
+				<vue-scroll>
+					<el-main>
+						<h1 style="margin:0 0;">Kendo</h1>
+						<h3 @click="test">Build Better JavaScript Apps Faster</h3>
+						<!-- <pre>
 The ultimate collection of JavaScript UI components with libraries for jQuery, Angular, React, and Vue. Quickly build eye-catching, high-performance, responsive web applications—regardless of your JavaScript framework choice.
     </pre> -->
-					<el-divider></el-divider>
-					<router-view></router-view>
-				</el-main>
+						<el-divider></el-divider>
+						<router-view></router-view>
+					</el-main>
+				</vue-scroll>
 			</el-container>
 		</el-container>
 	</div>

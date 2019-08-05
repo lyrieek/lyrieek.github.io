@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Elevator</title>
+    <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
+	<script src="https://cdn.bootcss.com/jslite/1.1.12/JSLite.js"></script>
+	<script>
+		const storey = 12;
+		const loop = (direction, before, after, interval) => {
+			if (typeof after === 'number') {
+				interval = after;
+				after = undefined;
+			}
+			let index = 0;
+			if (!direction) {
+				index = storey;
+			}
+			const timer = setInterval(() => {
+				if (direction ? (index >= storey) : (index <= 0)) {
+					return clearInterval(timer);
+				}
+				if (index !== 0) {
+					typeof after === 'function' && after($("#list>li").eq(direction ? index - 1 : index));
+				}
+				if (direction) {
+					$("#currentStorey").text(storey - index);
+				}
+				before($("#list>li").eq(direction ? index : index - 1));
+				direction ? index++ : index--;
+				if (!direction) {
+					$("#currentStorey").text(storey - index);
+				}
+			}, interval || 200);
+		}
+
+		const clacPerson = () => $('#currentPerson').html(`共有${$('.person').length}人,其中♂${$('.gender-male').length}人,♀${$('.gender-female').length}人`);
+		$(function() {
+			for (let index = 0; index < storey; index++) {
+				$("#list").append(`<li tabindex=${index}><div class='wait'></div></li>`)
+			}
+			$("#ranBtn").click(function() {
+				$("#list>li>.wait").each((i, e) => {
+					for (let i = 0; i < (Math.random() * 10).toFixed(0); i++) {
+						let sex = Math.random() > 0.5;
+						$(e).append(`<span class='person ${sex ? 'gender-female' : 'gender-male'}'>${sex ? '♀' : '♂'}</span>`);
+					}
+				});
+				clacPerson();
+			});
+			const arrive = (e) => {
+				e.addClass('hover').find('.person').filter(function() {
+					return $(this).index() < 5;
+				}).remove();
+				clacPerson();
+			}
+			$("#upBtn").click(() => loop(false, arrive, (e) => e.removeClass('hover')));
+			$("#downBtn").click(() => loop(true, arrive, (e) => e.removeClass('hover')));
+		});
+
+	</script>
+	<style>
+		li {
+			list-style: none;
+			background: skyblue;
+			width: 50px;
+			height: 50px;
+			margin: 5px;
+		}
+
+		.hover {
+			background: blue;
+			margin-left: 20px;
+		}
+
+		.person {
+			height: 50px;
+			vertical-align: text-top;
+		}
+
+		.wait {
+			padding-left: 65px;
+			line-height: 50px;
+		}
+
+		.hover>.wait {
+			padding-left: 50px;
+		}
+
+		.wait::before {
+			width: 20px;
+			vertical-align: text-top;
+			content: '_';
+		}
+
+	</style>
+</head>
+
+<body>
+	<div>
+		<button id="upBtn">向上移动</button>
+		<button id="downBtn">向下移动</button>
+		<button id="ranBtn">突然放很多人进去</button>
+		<label>当前楼层:</label>
+		<span id="currentStorey">0</span>
+		<label>当前滞留乘客:</label>
+		<span id="currentPerson">无乘客</span>
+	</div>
+	<ul id="list"></ul>
+</body>
+
+</html>
