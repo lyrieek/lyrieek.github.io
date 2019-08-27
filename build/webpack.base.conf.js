@@ -16,7 +16,7 @@ const createLintingRule = () => ({
 	}
 })
 
-const sourceMapEnabled = process.env.NODE_ENV === 'production'
+const sourceMap = process.env.NODE_ENV === 'production'
 	? config.build.productionSourceMap
 	: config.dev.cssSourceMap
 
@@ -41,10 +41,10 @@ module.exports = {
 				loader: 'vue-loader',
 				options: {
 					loaders: utils.cssLoaders({
-						sourceMap: sourceMapEnabled,
+						sourceMap: sourceMap,
 						extract: process.env.NODE_ENV === 'production'
 					}),
-					cssSourceMap: sourceMapEnabled,
+					cssSourceMap: sourceMap,
 					cacheBusting: config.dev.cacheBusting,
 					transformToRequire: {
 						video: ['src', 'poster'],
