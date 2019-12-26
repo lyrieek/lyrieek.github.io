@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		*,
+		*:after,
+		*:before {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		body,
+		html {
+			font-size: 100%;
+			padding: 0;
+			margin: 0;
+		}
+
+		.clearfix:before,
+		.clearfix:after {
+			content: " ";
+			display: table;
+		}
+
+		.clearfix:after {
+			clear: both;
+		}
+
+		body {
+			font-family: "Microsoft YaHei", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif;
+			color: #47a3da;
+		}
+
+		a {
+			color: #f0f0f0;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #000;
+		}
+
+		.main,
+		.container>header {
+			width: 95%;
+			max-width: 69em;
+			margin: 0 auto;
+			padding: 0 1.875em 3.125em;
+		}
+
+		.container>header {
+			padding: 2.875em 1.875em 1.875em;
+		}
+
+		.container>header h1 {
+			font-size: 2.125em;
+			line-height: 1.3;
+			margin: 0;
+			float: left;
+			font-weight: 400;
+		}
+
+		.container>header span {
+			display: block;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.5em;
+			padding: 0 0 0.6em 0.1em;
+		}
+
+		.container>header nav {
+			float: right;
+		}
+
+		.container>header nav a {
+			display: block;
+			float: left;
+			position: relative;
+			width: 2.5em;
+			height: 2.5em;
+			background: #fff;
+			border-radius: 50%;
+			color: transparent;
+			margin: 0 0.1em;
+			border: 4px solid #47a3da;
+			text-indent: -8000px;
+		}
+
+		.container>header nav a:after {
+			content: attr(data-info);
+			color: #47a3da;
+			position: absolute;
+			width: 600%;
+			top: 120%;
+			text-align: right;
+			right: 0;
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		.container>header nav a:hover:after {
+			opacity: 1;
+		}
+
+		.container>header nav a:hover {
+			background: #47a3da;
+		}
+
+		.icon-drop:before,
+		.icon-arrow-left:before {
+			font-family: 'fontawesome';
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 2;
+			text-align: center;
+			color: #47a3da;
+			-webkit-font-smoothing: antialiased;
+			text-indent: 8000px;
+			padding-left: 8px;
+		}
+
+		.container>header nav a:hover:before {
+			color: #fff;
+		}
+
+
+		.cbp_tmtimeline {
+			margin: 30px 0 0 0;
+			padding: 0;
+			list-style: none;
+			position: relative;
+		}
+
+		/* The line */
+		.cbp_tmtimeline:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 10px;
+			background: #afdcf8;
+			left: 20%;
+			margin-left: -10px;
+		}
+
+		/* The date/time */
+		.cbp_tmtimeline>li .cbp_tmtime {
+			display: block;
+			width: 25%;
+			padding-right: 100px;
+			position: absolute;
+		}
+
+		.cbp_tmtimeline>li .cbp_tmtime span {
+			display: block;
+			text-align: right;
+		}
+
+		.cbp_tmtimeline>li .cbp_tmtime span:first-child {
+			font-size: 2.5em;
+		}
+
+		.cbp_tmtimeline>li .cbp_tmtime span:last-child {
+			font-size: 1.7em;
+			color: #6cbfee;
+		}
+
+		.cbp_tmtimeline>li:nth-child(odd) .cbp_tmtime span:last-child {
+			color: #6cbfee;
+		}
+
+		/* Right content */
+		.cbp_tmtimeline>li .cbp_tmlabel {
+			margin: 0 0 15px 25%;
+			background: #3594cb;
+			color: #fff;
+			padding: 2em;
+			font-size: 1.2em;
+			font-weight: 300;
+			line-height: 1.4;
+			position: relative;
+			border-radius: 5px;
+		}
+
+		.cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel {
+			background: #6cbfee;
+		}
+
+		.cbp_tmtimeline>li .cbp_tmlabel h2 {
+			margin-top: 0px;
+			padding: 0 0 10px 0;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+		}
+
+		.cbp_tmtimeline>li .cbp_tmlabel:after {
+			right: 100%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-right-color: #3594cb;
+			border-width: 10px;
+			top: 10px;
+		}
+
+		.cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel:after {
+			border-right-color: #6cbfee;
+		}
+
+		.cbp_tmtimeline>li .cbp_tmicon {
+			width: 40px;
+			height: 40px;
+			font-family: 'ecoico';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			font-size: 1.4em;
+			line-height: 40px;
+			-webkit-font-smoothing: antialiased;
+			position: relative;
+			color: #fff;
+			background: #46a4da;
+			border-radius: 50%;
+			box-shadow: 0 0 0 8px #afdcf8;
+			text-align: center;
+			left: 20%;
+			top: 0;
+			float: left;
+			margin: 0 0 0 -25px;
+		}
+
+		.cbp_tmlabel a {
+			text-decoration: underline;
+		}
+
+		.cbp_tmlabel a:before {
+			content: '[';
+		}
+
+		.cbp_tmlabel a:after {
+			content: ']';
+		}
+
+        .cbp_tmtimeline li{
+            padding-bottom: 30px;
+        }
+
+		@media screen and (max-width: 65.375em) {
+			.cbp_tmtimeline>li .cbp_tmtime span:last-child {
+				font-size: 1.5em;
+			}
+		}
+
+		@media screen and (max-width: 47.2em) {
+			.cbp_tmtimeline:before {
+				display: none;
+			}
+
+			.cbp_tmtimeline>li .cbp_tmtime {
+				width: 100%;
+				position: relative;
+				padding: 0 0 20px 0;
+			}
+
+			.cbp_tmtimeline>li .cbp_tmtime span {
+				text-align: left;
+			}
+
+			.cbp_tmtimeline>li .cbp_tmlabel {
+				margin: 0 0 30px 0;
+				padding: 1em;
+				font-weight: 400;
+				font-size: 95%;
+			}
+
+			.cbp_tmtimeline>li .cbp_tmlabel:after {
+				right: auto;
+				left: 20px;
+				border-right-color: transparent;
+				border-bottom-color: #3594cb;
+				top: -20px;
+			}
+
+			.cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel:after {
+				border-right-color: transparent;
+				border-bottom-color: #6cbfee;
+			}
+
+			.cbp_tmtimeline>li .cbp_tmicon {
+				position: relative;
+				float: right;
+				left: auto;
+				margin: -55px 5px 0 0px;
+			}
+		}
+
+	</style>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript">
+		$(() => {
+			const group = [{
+				label: "2015年",
+				data: [{
+					label: "2月12日",
+					text: "东京涩谷区制定了新条例案，向同性情侣颁发“相当于结婚的关系”证明书，并提交下个月的区议会。区内要求持有证明书的情侣与结婚同等对待。<a href='https://www.asahi.com/articles/ASH2D32VPH2DUTIL004.html'>朝日新闻</a>，<a href='https://it-it.facebook.com/nhknewsweb/photos/%E5%90%8C%E6%80%A7%E3%82%AB%E3%83%83%E3%83%97%E3%83%AB%E3%81%AB%E7%B5%90%E5%A9%9A%E7%9B%B8%E5%BD%93%E8%A8%BC%E6%98%8E%E6%9B%B8-%E6%9D%B1%E4%BA%AC%E6%B8%8B%E8%B0%B7%E5%8C%BA%E6%9D%B1%E4%BA%AC%E6%B8%8B%E8%B0%B7%E5%8C%BA%E3%81%AF%E5%90%8C%E6%80%A7%E3%81%AE%E3%82%AB%E3%83%83%E3%83%97%E3%83%AB%E3%81%AB%E7%B5%90%E5%A9%9A%E3%81%AB%E7%9B%B8%E5%BD%93%E3%81%99%E3%82%8B%E9%96%A2%E4%BF%82%E3%81%A8%E8%AA%8D%E3%82%81%E3%82%8B%E8%A8%BC%E6%98%8E%E6%9B%B8%E3%82%92%E7%99%BA%E8%A1%8C%E3%81%99%E3%82%8B%E6%96%B0%E3%81%9F%E3%81%AA%E6%9D%A1%E4%BE%8B%E6%A1%88%E3%82%92%E3%81%BE%E3%81%A8%E3%82%81%E6%9D%A5%E6%9C%88%E3%81%AE%E5%8C%BA%E8%AD%B0%E4%BC%9A%E3%81%AB%E6%8F%90%E5%87%BA%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%81%AA/1017824334912063/'>NHK</a>"
+				}, {
+					label: "4月1日",
+					text: "8点30分，东京涩谷区实施了<a href='https://ja.wikipedia.org/wiki/%E6%B8%8B%E8%B0%B7%E5%8C%BA%E7%94%B7%E5%A5%B3%E5%B9%B3%E7%AD%89%E5%8F%8A%E3%81%B3%E5%A4%9A%E6%A7%98%E6%80%A7%E3%82%92%E5%B0%8A%E9%87%8D%E3%81%99%E3%82%8B%E7%A4%BE%E4%BC%9A%E3%82%92%E6%8E%A8%E9%80%B2%E3%81%99%E3%82%8B%E6%9D%A1%E4%BE%8B'>《促进尊重性别平等和多样性的社会法令》</a>，开启了伴侣证明制度， 这是日本全国第一例。"
+				}, {
+					label: "10月28日",
+					text: "东京都涩谷区开始受理申请，東小雪和増原裕子在居民登记处提交，收据编号为1“收据和证书签发凭证”，<a href='https://www.asahi.com/articles/ASHBW6F9SHBWUTIL048.html'>朝日新闻</a> <a href='http://www.xinhuanet.com/world/2015-10/28/c_128367765.htm'>新华网</a>"
+				}, {
+					label: "11月1日",
+					text: "东京都世田谷区通过了伴侣证明制度， 这是日本全国第二例。"
+				}, {
+					label: "11月5日",
+					text: "东京涩谷区向東小雪和増原裕子颁发了第一份证书，東小雪在Twitter晒出了她们的<a href='https://twitter.com/koyuki_higashi/status/662052077821014016'>证书照片</a>"
+				}, {
+					label: "11月30日",
+					text: "兵库县宝冢市计划于次年6月开始实施伴侣证明制度。"
+				}, {
+					label: "12月25日",
+					text: "三重县伊贺市计划于次年4月开始实施伴侣证明制度。"
+				}]
+			}, {
+				label: "2016年",
+				data: [{
+					label: "4月1日",
+					text: "三重县伊贺市通过了伴侣证明制度， 这是日本全国第三例。"
+				}, {
+					label: "6月1日",
+					text: "兵库县宝冢市通过了伴侣证明制度， 这是日本全国第四例。"
+				}, {
+					label: "6月1日",
+					text: "冲绳县那霸市通过了伴侣证明制度， 这是日本全国第五例。"
+				}]
+			}, {
+				label: "2017年",
+				data: [{
+					label: "5月5日",
+					text: "一对三十多岁和四十多岁的男性夫夫被大阪市委托监护十几岁的男孩，并被认证为养父母。该市在详细研究了生活条件，包括对寄养父母制度和财务稳定性的了解后，批准了这对同性情侣为养父母。<a href='https://www.sankei.com/life/news/170406/lif1704060003-n1.html'>产经新闻</a>"
+				}, {
+					label: "6月1日",
+					text: "北海道札幌市通过了伴侣证明制度， 这是日本全国第六例。"
+				}]
+			}, {
+				label: "2018年",
+				data: [{
+					label: "4月2日",
+					text: "福冈县福冈市通过了伴侣证明制度， 这是日本全国第七例。"
+				}, {
+					label: "7月9日",
+					text: "大阪府大阪市通过了伴侣证明制度， 这是日本全国第八例。"
+				}, {
+					label: "8月20日",
+					text: "东京都中野区通过了伴侣证明制度， 这是日本全国第九例。"
+				}]
+			}, {
+				label: "2019年",
+				data: [{
+					label: "1月1日",
+					text: "群马县大泉町通过了伴侣证明制度， 这是日本全国第十例。"
+				}, {
+					label: "1月29日",
+					text: "千叶县千叶市通过了伴侣证明制度， 这是日本全国第11例。"
+				}, {
+					label: "3月25日",
+					text: "茨城县议会修订伴侣证明制度，将其结合了LGBT的不歧视原则，修正案遭到了自民党的反对，茨城县知事大井川和彦在新闻发布会上表示，他将继续考虑引入伴侣证明制度。"
+				}, {
+					label: "4月1日",
+					text: "东京都江户川区，丰岛区，府中市，神奈川县横须贺市，小田原市，大阪府堺市，枚方市，冈山县总社市，熊本县熊本市通过了伴侣证明制度。当天，岐阜县飞驒市准备引入，但尚未得到市议会的批准。这一天九市的共同通过使得全国出现了20例。"
+				}, {
+					label: "6月3日",
+					text: "枥木县鹿沼市通过了伴侣证明制度， 这是日本全国第21例。当天，立宪民主党，日本共产党和社会民主党向下议院提交了一项修正《民法典》的法案（婚姻平等法案），指出该法律应明确规定应允许同性婚姻。<a href='https://cdp-japan.jp/news/20190603_1752'>立宪民主党官网</a><a href='https://headlines.yahoo.co.jp/hl?a=20190603-00010003-bfj-soci'>雅虎</a>"
+				}, {    
+					label: "6月10日",
+					text: "宫崎县宫崎市通过了伴侣证明制度， 这是日本全国第22例。"
+				}, {
+					label: "7月1日",
+					text: "福冈县北九州市通过了伴侣证明制度，茨城县全县通过了伴侣证明制度，这是日本全国第23例与第24例。"
+				}, {
+					label: "9月1日",
+					text: "爱知县西尾市通过了伴侣证明制度， 这是日本全国第25例。"
+				}, {
+					label: "9月2日",
+					text: "长崎县长崎市通过了伴侣证明制度， 这是日本全国第26例。"
+				}, {
+					label: "10月11日",
+					text: "兵库县三田市通过了伴侣证明制度， 这是日本全国第27例。"
+				}, {
+					label: "11月22日",
+					text: "大阪府交野市通过了伴侣证明制度， 这是日本全国第28例。"
+				}, {
+					label: "12月2日",
+					text: "神奈川县横滨市通过了伴侣证明制度， 这是日本全国第29例。"
+				}, {
+					label: "12月3日",
+					text: "香川县三丰市决定于2020年1月1日通过伴侣证明制度。<a href='https://www.asahi.com/articles/ASMD24SFDMD2PLXB00F.html'>朝日新闻</a>"
+				}, {
+					label: "12月4日",
+					text: "大阪府大东市，神奈川县镰仓市通过了伴侣证明制度， 这是日本全国第30例与31例。"
+				}]
+			}, {
+				label: "未来...",
+				data: [{
+					label: "12月3日",
+					text: "埼玉县，大分县，香川县高松市，鹿儿岛县，明石市的议会也开始讨论引入伴侣证明制度的问题"
+				}]
+			}]
+
+			group.forEach(dataItem => {
+				let header = `<span>${dataItem.label}</span>`;
+				dataItem.data.forEach(item => {
+					$('#timeline_bar').append(`<li>
+                        <time class="cbp_tmtime">${header}<span>${item.label}</span></time>
+                        <div class="cbp_tmicon"></div>
+                        <div class="cbp_tmlabel">${item.text}</div>
+                    </li>`);
+					header = '';
+				});
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="main">
+			<ul id="timeline_bar" class="cbp_tmtimeline"></ul>
+		</div>
+	</div>
+</body>
+
+</html>
