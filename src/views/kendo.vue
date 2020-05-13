@@ -32,7 +32,7 @@
 			</el-aside>
 
 			<el-container>
-				<el-header style="text-align: left; font-size: 12px">
+				<el-header style="text-align: left; font-size: 12px;height: 10px;">
 					<el-button type="text" icon="el-icon-refresh" @click="load"></el-button>
 					<el-dropdown>
 						<i class="el-icon-setting"></i>
@@ -44,22 +44,27 @@
 					</el-dropdown>
 				</el-header>
 
-				<el-main>
-					<h1>Kendo</h1>
-					<h3 @click="test">Build Better JavaScript Apps Faster</h3>
-					<pre>
+				<vue-scroll>
+					<el-main>
+						<h1 style="margin:0 0;">Kendo</h1>
+						<h3 @click="test">Build Better JavaScript Apps Faster</h3>
+						<!-- <pre>
 The ultimate collection of JavaScript UI components with libraries for jQuery, Angular, React, and Vue. Quickly build eye-catching, high-performance, responsive web applications—regardless of your JavaScript framework choice.
-    </pre>
-					<router-view></router-view>
-				</el-main>
+    </pre> -->
+						<el-divider></el-divider>
+						<router-view></router-view>
+					</el-main>
+				</vue-scroll>
 			</el-container>
 		</el-container>
 	</div>
 </template>
 
 <script>
+	import '../styles/code.css'
+
 	export default {
-		mounted(h) {
+		mounted() {
 			this.load();
 		},
 		data() {
@@ -77,9 +82,16 @@ The ultimate collection of JavaScript UI components with libraries for jQuery, A
 			test() {
 				console.log(123);
 
-				this.$router.push("/kendo/Alert");
+				this.$router.push("/kendo/alert");
 			}
 		}
 	}
 
 </script>
+
+<style>
+	div.action-buttons {
+		display: none;
+	}
+
+</style>

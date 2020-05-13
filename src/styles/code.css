@@ -1,0 +1,83 @@
+.prettyprint {
+	font-size: 12px;
+	padding: 20px;
+	background-color: #ffffff;
+	border: 2px dashed #ebecee;
+	margin: 5px 0;
+}
+
+pre {
+	margin: 4px 0;
+	overflow: auto;
+	background-color: #fff;
+	border: 1px solid #e4e4e4;
+	border-radius: 0;
+}
+
+code {
+	display: inline-block;
+	padding: 0 5px 1px;
+	color: #000;
+	background-color: #fcfcfc;
+	font-size: 90%;
+	line-height: 1.4em;
+	font-family: 'RobotoMono', Consolas, Menlo, Courier, monospace;
+	letter-spacing: -0.04em;
+	text-transform: none;
+	border: 1px solid #e4e4e4;
+	border-radius: 0;
+}
+
+pre code {
+	border: 0;
+}
+
+a code {
+	color: #ec407a;
+}
+
+pre .nocode {
+	background-color: transparent;
+	color: #000;
+}
+
+pre .str,
+pre .atv {
+	color: #2db245;
+}
+
+pre .kwd {
+	color: #ff3399;
+}
+
+pre .com {
+	color: #9933cc;
+}
+
+pre .typ {
+	color: #000;
+}
+
+pre .lit {
+	color: #0099ff;
+}
+
+pre .pun {
+	color: #333;
+}
+
+pre .pln {
+	color: #3e526b;
+}
+
+pre .tag {
+	color: #3e526b;
+}
+
+pre .atn {
+	color: #3e526b;
+}
+
+pre .dec {
+	color: #3e526b;
+}
