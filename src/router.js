@@ -23,6 +23,13 @@ export default new VueRouter({
 			getRoutes("*", "404")
 		]
 	}, {
+		path: '/blog',
+		component: resolve => require(['@/views/Blog'], resolve),
+		children: [
+			getRoutes("", "blog/Index"),
+			getRoutes("*", "404")
+		]
+	}, {
 		path: '*',
 		redirect: '/404'
 	}]

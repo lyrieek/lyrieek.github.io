@@ -6,6 +6,7 @@
 				<router-link to="/index" class="el-icon-star-on" style="text-decoration: none;" />
 			</li>
 			<el-menu-item index="kendo">指南</el-menu-item>
+			<el-menu-item index="blog">日志</el-menu-item>
 			<el-menu-item index="standard">标准</el-menu-item>
 			<el-menu-item index="api">API</el-menu-item>
 			<el-submenu index="_">
