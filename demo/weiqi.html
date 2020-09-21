@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://d3js.org/d3.v6.min.js" charset="utf-8"></script>
+	<style>
+	div {
+		text-align: center;
+	}
+
+	svg {
+		background: ivory
+	}
+
+	</style>
+	<script>
+	window.onload = function() {
+		const width = 190 * 3;
+		const height = 190 * 3;
+		const padding = 25;
+		let way = 19;
+
+		const svg = d3.select('#container')
+			.append('svg')
+			.attr('width', width + padding * 2 + 'px')
+			.attr('height', height + padding * 2 + 'px');
+
+
+		for (let y = 0; y < way; y++) {
+			let gridLineXArray = [];
+			let gridLineYArray = [];
+
+			for (let x = 0; x < way; x++) {
+				gridLineXArray.push([width / way * x + padding, width / way * y + padding])
+				gridLineYArray.push([height / way * y + padding, height / way * x + padding])
+			}
+
+			svg.append("text")
+				.attr("x", "0")
+				.attr('y', height / way * (y + 1))
+				.text(19 - y)
+
+			svg.append("text")
+				.attr("x", width / way * y + padding - 5)
+				.attr('y', height + padding)
+				.text(String.fromCharCode(65 + y))
+
+			svg.append("path")
+				.attr("class", "line")
+				.attr('stroke', '#000')
+				.attr("d", d3.line()(gridLineXArray));
+
+			svg.append("path")
+				.attr("class", "line")
+				.attr('stroke', '#000')
+				.attr("d", d3.line()(gridLineYArray));
+		}
+
+		//绘制星位 9路以上才绘制星位
+		if (way > 9) {
+			const star = [];
+			star.push([3, 3]);
+			star.push([way - 4, 3]);
+			star.push([3, way - 4]);
+			star.push([way - 4, way - 4]);
+			//19路及以上才绘制全星位
+			if (way >= 19) {
+				const val = (way - way % 2) / 2;
+				star.push([val, 3]);
+				star.push([3, val]);
+				star.push([val, val]);
+				star.push([val, way - 4]);
+				star.push([way - 4, val]);
+			}
+			for (const item of star) {
+				svg.append("circle")
+					// .attr('fill', '#000')
+					.attr('r', '4')
+					.attr("cx", width / way * item[0] + padding)
+					.attr("cy", height / way * item[1] + padding);
+			}
+		}
+
+	};
+
+	</script>
+</head>
+
+<body>
+	<div id="container"></div>
+</body>
+
+</html>
