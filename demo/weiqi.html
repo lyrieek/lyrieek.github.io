@@ -15,6 +15,10 @@
 		background: ivory
 	}
 
+	svg.editingMode {
+		background: lightyellow
+	}
+
 	</style>
 	<script>
 	window.onload = function() {
@@ -22,6 +26,9 @@
 		const height = 190 * 3;
 		const padding = 25;
 		let way = 19;
+		let playerRole = 1; //1: black, 0:white
+		let currentRole = 1;
+		let isEditingMode = false;
 
 		const svg = d3.select('#container')
 			.append('svg')
@@ -84,6 +91,78 @@
 			}
 		}
 
+		const calcChessPiecePoint = function(offset) {
+			let compareNum = (offset - padding) % (width / way);
+			if (compareNum > width / way / 2) {
+				compareNum -= width / way;
+			}
+			return offset - compareNum;
+		}
+
+		const rendererChessPiece = function(chessPiece) {
+			chessPieces.current = chessPiece;
+			if (currentRole === 1) {
+				chessPiece.attr('class', 'CP_black')
+				chessPiece.attr('fill', '#000')
+			} else {
+				chessPiece.attr('class', 'CP_white')
+				chessPiece.attr('fill', '#FFF')
+			}
+			if (!isEditingMode) {
+				currentRole = Math.abs(currentRole - 1);
+				return;
+			}
+		}
+
+		const chessPieces = Object.create(null);
+
+		chessPieces.selecting = svg.append("circle")
+			.attr('fill', '#777')
+			.attr('r', 13)
+			.attr('stroke', "black")
+			.style('display', 'none')
+
+		svg.on("mousemove", function(d, i) {
+			if (currentRole === 1) {
+				chessPieces.selecting.attr('fill', '#555')
+			} else {
+				chessPieces.selecting.attr('fill', '#CCC')
+			}
+			// (d.offsetX - padding) / (width / way)
+			chessPieces.selecting.attr('cx', calcChessPiecePoint(d.offsetX));
+			chessPieces.selecting.attr('cy', calcChessPiecePoint(d.offsetY));
+			// chessPieces.selecting.attr('cx', d.offsetX);
+
+			chessPieces.selecting.style('display', undefined);
+		})
+		chessPieces.selecting.on('click', () => rendererChessPiece(chessPieces.selecting.clone()))
+		svg.on("mouseout", function(d, i) {
+			if (d.offsetX < 0) {
+				chessPieces.selecting.attr('display', 'none')
+			}
+		})
+
+		d3.select('#editCP_btn').on('click', (e) => {
+			isEditingMode = e.target.checked;
+			if (isEditingMode) {
+				svg.attr('class', 'editingMode')
+				d3.select('#editingToolbar').style('display', 'inline');
+				if (currentRole === 1) {
+					d3.select('#switchBlackCP').attr('checked', 'checked');
+				} else {
+					d3.select('#switchWhiteCP').attr('checked', 'checked');
+				}
+
+			} else {
+				svg.attr('class', null)
+				d3.select('#editingToolbar').style('display', 'none');
+				d3.selectAll('.CP_black,.CP_white').on('click', null);
+			}
+		})
+		d3.selectAll('[name="role"]').on('click', (e) => {
+			currentRole = Number(e.target.value);
+		})
+
 	};
 
 	</script>
@@ -91,6 +170,16 @@
 
 <body>
 	<div id="container"></div>
+	<div id="toolbar">
+		<input type="checkbox" name="edit" id="editCP_btn" />
+		<label for="editCP_btn">编辑模式</label>
+		<span id="editingToolbar" style="display: none;">
+			<input type="radio" name="role" value=1 id="switchBlackCP" />
+			<label for="switchBlackCP">黑棋</label>
+			<input type="radio" name="role" value=0 id="switchWhiteCP" />
+			<label for="switchWhiteCP">白棋</label>
+		</span>
+	</div>
 </body>
 
 </html>
