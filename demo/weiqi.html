@@ -99,6 +99,12 @@
 			return offset - compareNum;
 		}
 
+		const removeChessPieceHandler = (e) => {
+			if (isEditingMode) {
+				e.target.remove();
+			}
+		}
+
 		const rendererChessPiece = function(chessPiece) {
 			chessPieces.current = chessPiece;
 			if (currentRole === 1) {
@@ -112,6 +118,7 @@
 				currentRole = Math.abs(currentRole - 1);
 				return;
 			}
+			chessPiece.on('click', removeChessPieceHandler);
 		}
 
 		const chessPieces = Object.create(null);
@@ -153,6 +160,7 @@
 					d3.select('#switchWhiteCP').attr('checked', 'checked');
 				}
 
+				d3.selectAll('.CP_black,.CP_white').on('click', removeChessPieceHandler);
 			} else {
 				svg.attr('class', null)
 				d3.select('#editingToolbar').style('display', 'none');
