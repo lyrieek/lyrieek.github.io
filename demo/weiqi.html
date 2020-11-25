@@ -144,11 +144,11 @@
 			chessPieces.selecting.style('display', undefined);
 		})
 		chessPieces.selecting.on('click', () => rendererChessPiece(chessPieces.selecting.clone()))
-		svg.on("mouseout", function(d, i) {
-			if (d.offsetX < 0) {
-				chessPieces.selecting.attr('display', 'none')
-			}
-		})
+		// svg.on("mouseout", function(d, i) {
+		// 	if (d.offsetX < 0) {
+		// 		chessPieces.selecting.attr('display', 'none')
+		// 	}
+		// })
 
 		d3.select('#editCP_btn').on('click', (e) => {
 			isEditingMode = e.target.checked;
