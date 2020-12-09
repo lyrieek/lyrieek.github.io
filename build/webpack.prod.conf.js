@@ -76,7 +76,7 @@ const webpackConfig = merge(baseConfig, {
 			filename: config.build.index,
 			template: 'src/index.html',
 			inject: true,
-			title: "TH-Doc",
+			title: "Lyrieek",
 			minify: {
 				removeComments: true,
 				collapseWhitespace: true,

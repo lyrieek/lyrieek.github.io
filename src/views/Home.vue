@@ -4,8 +4,8 @@
 		<div class="header-container">
 			<object style="float:left;" data="/resources/logo.svg" type="image/svg+xml"></object>
 			<div style="margin-left:250px; padding-top: 30px;">
-				<h1 style="text-shadow: 5px 5px #1177aa;margin: 0;">TH-Doc</h1>
-				<strong style="font-size:1.1em">TH-Doc是一个全面,丰富,开源,便于查找的在线帮助文档</strong>
+				<h1 style="text-shadow: 5px 5px #1177aa;margin: 0;">Lyrieek</h1>
+				<strong style="font-size:1.1em">Lyrieek是一个全面,丰富,开源,便于查找的在线帮助文档</strong>
 			</div>
 		</div>
 
@@ -19,7 +19,7 @@
 			<el-col :span="8">
 				<div class="grid-content bg-purple">
 					<h2>维护轻便</h2>
-					<span>TH-Doc使用Vue + Element-UI构建,配置轻巧,便于改动,并在vue-cli的配置基础上进行了一些整合</span>
+					<span>Lyrieek使用Vue + Element-UI构建,配置轻巧,便于改动,并在vue-cli的配置基础上进行了一些整合</span>
 				</div>
 			</el-col>
 			<el-col :span="8">
@@ -31,7 +31,7 @@
 		</el-row> -->
 
 		<div id="desperation">
-			<p>安装TH-Doc项目到本地</p>
+			<p>安装Lyrieek项目到本地</p>
 			<pre v-highlightjs><code class="bash">git clone https://github.com/lyrieek/lyrieek.github.io.git</code></pre>
 			<p>启动</p>
 			<pre v-highlightjs><code class="bash">npm i
