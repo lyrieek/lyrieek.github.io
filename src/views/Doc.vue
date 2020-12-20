@@ -94,7 +94,6 @@ npm run dev</code></pre>
 		<el-divider />
 
 		<div style="text-align:center;color:gray;margin-bottom:20px;">
-			<object style="display: block;margin: 0 auto;width:120px;" data="/resources/author.svg" type="image/svg+xml"></object>
 			<small>Copyright 2019 Lyrieek™</small>
 		</div>
 	</div>

@@ -51,7 +51,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			template: 'src/index.html',
-			title: 'Lyrieek',
+			title: 'Lyrieek Blog | 是梦还是解脱',
 			inject: true
 		})
 	]

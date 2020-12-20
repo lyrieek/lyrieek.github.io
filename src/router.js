@@ -11,7 +11,7 @@ const getRoutes = (mapper, file) => ({
 export default new VueRouter({
 	routes: [{
 		path: '/index',
-		component: resolve => require(['@/views/Home'], resolve),
+		component: resolve => require(['@/views/Doc'], resolve),
 		alias: '/'
 	}, getRoutes("/404"), {
 		path: '/kendo',
